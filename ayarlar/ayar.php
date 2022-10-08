@@ -24,6 +24,7 @@
       $siteAdresi = $ayarlar["siteAdresi"];
       $dolarKuru = $ayarlar["DolarKuru"];
       $euroKuru = $ayarlar["EuroKuru"];
+      $kargoBaraji = $ayarlar["kargoBaraji"];
    } else {
       echo "site ayar sorgusu hatali";
       die();

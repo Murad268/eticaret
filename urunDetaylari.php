@@ -13,7 +13,9 @@
 ?>
 <div class="goodWrapper">
    <?php
-      $goodImageFetch = $db->prepare("SELECT * FROM goods WHERE id = ? ");
+      $updateSeenFetch = $db->prepare("UPDATE goods SET goruntulenmeSayisi=goruntulenmeSayisi+1 WHERE id = ? AND durumu = 1");
+      $updateSeenFetch->execute([$gelenId]);
+      $goodImageFetch = $db->prepare("SELECT * FROM goods WHERE id = ? AND durumu = 1");
       $goodImageFetch->execute([$gelenId]);
       $goodImages = $goodImageFetch->fetch(PDO::FETCH_ASSOC);
 
@@ -120,13 +122,13 @@
             ?>
          
             <div class="goodWrapper__details__btn">
-               <button class="btn btn-primary text-white">SEPETE EKLE</button>
+               <button disabled class="btn btn-primary text-white">Xahiş edirik bir ayaqqabı ölçüsü seçin</button>
             </div>
          </div>
          <div class="goodWrapper__details__order">
             <div class="goodWrapper__details__order__select">
                <select name="variant" id="">
-                  <option value="">Lütfen Numara Seçiniz</option>
+                  <option value="main">Lütfen Numara Seçiniz</option>
                   <?php
                      $fetchVariants = $db->prepare("SELECT * FROM urunvariantlari WHERE urunİd = ?");
                      $fetchVariants->execute([$gelenId]);

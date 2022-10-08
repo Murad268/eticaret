@@ -64,7 +64,7 @@
 
 
                   <td width="20"><img style="margin-top: -1px;" src="assets/images/SepetBeyaz16x16.png" alt=""></td>  
-                  <td class="maviAlanMenusu" width="103"><a  href="">Alışveriş Sepeti</a></td>    
+                  <td class="maviAlanMenusu" width="103"><a  href="index.php?sayfaKodu=56">Alışveriş Sepeti</a></td>    
                </tr>
             </table>
             <table width="1065" height="80" align="center" border="0" cellpadding="0" cellspacing="0">
@@ -141,7 +141,7 @@
                      <table width="250" align="center" border="0" cellpadding="0" cellspacing="0">
                         <tr>
                            <td class="footer"width="20">
-                              <a href=""><img style="margin-top: 5px;" src="assets/images/Facebook16x16.png" alt=""></a>
+                              <a href=""><img src="assets/images/Facebook16x16.png" alt=""></a>
                            </td>
                            <td class="footer" width="230"><a target="_blank" href="<?=$SosyalLinkFacebook?>">Facebook</a></td>
                         </tr>
@@ -167,7 +167,7 @@
                      <table width="250" align="center" border="0" cellpadding="0" cellspacing="0">
                         <tr>
                            <td class="footer" width="20">
-                              <a href=""><img style="margin-top: 5px;" src="assets/images/Twitter16x16.png" alt=""></a>
+                              <a href=""><img src="assets/images/Twitter16x16.png" alt=""></a>
                            </td>
                            <td class="footer" width="250"><a target="_blank"  href="<?=$SosyalLinkTwitter?>">Twitter</a></td>
                         </tr>
@@ -185,7 +185,7 @@
                      <table width="250" align="center" border="0" cellpadding="0" cellspacing="0">
                         <tr>
                            <td class="footer" width="20">
-                              <a href=""><img style="margin-top: 5px;" src="assets/images/LinkedIn16x16.png" alt=""></a>
+                              <a href=""><img src="assets/images/LinkedIn16x16.png" alt=""></a>
                            </td>
                            <td class="footer" width="250"><a target="_blank" href="<?=$SosyalLinkLinkedin?>">Linkedin</a></td>
                         </tr>
@@ -203,7 +203,7 @@
                      <table width="250" align="center" border="0" cellpadding="0" cellspacing="0">
                         <tr>
                            <td class="footer" width="20">
-                              <a href=""><img style="margin-top: 5px;" src="assets/images/Instagram16x16.png" alt=""></a>
+                              <a href=""><img src="assets/images/Instagram16x16.png" alt=""></a>
                            </td>
                            <td class="footer" width="250"><a target="_blank" href="<?=$SosyalLinkInstagram?>">Instagram</a></td>
                         </tr>
@@ -221,7 +221,7 @@
                      <table width="250" align="center" border="0" cellpadding="0" cellspacing="0">
                         <tr>
                            <td class="footer" width="20">
-                              <a href=""><img style="margin-top: 5px;" src="assets/images/YouTube16x16.png" alt=""></a>
+                              <a href=""><img src="assets/images/YouTube16x16.png" alt=""></a>
                            </td>
                            <td class="footer" width="250"><a target="_blank" href="<?=$SosyalLinkYoutube?>">Youtube</a></td>
                         </tr>
@@ -239,7 +239,7 @@
                      <table width="250" align="center" border="0" cellpadding="0" cellspacing="0">
                         <tr>
                            <td class="footer" width="20">
-                              <a href=""><img style="margin-top: 5px;" src="assets/images/Pinterest16x16.png" alt=""></a>
+                              <a href=""><img src="assets/images/Pinterest16x16.png" alt=""></a>
                            </td>
                            <td class="footer" width="250"><a target="_blank" href="">Printerest</a></td>
                         </tr>
@@ -277,7 +277,7 @@
       
    </table>
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
    <script type="text/javascript" src="ayarlar/function.js" language="javascript"></script>
    <script type="text/javascript" src="freamworks/jquery/jquery-3.6.1.min.js" language="javascript"></script>
   
@@ -312,7 +312,6 @@
       })
    })
 
- 
 
 </script>
 </html>

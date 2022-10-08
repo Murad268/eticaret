@@ -30,6 +30,9 @@ if(addCart && cartSelect) {
       if(e.target.value == "none") {
          addCart.disabled = true;
          addCart.textContent = "Bu mal hazırda stokda yoxdur";
+      } else if(e.target.value == "main") {
+         addCart.disabled = true;
+         addCart.textContent = "Xahiş edirik bir ayaqqabı ölçüsü seçin";
       } else {
          addCart.disabled = false;
          addCart.textContent = "Sepete Ekle";

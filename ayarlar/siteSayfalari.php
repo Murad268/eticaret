@@ -63,4 +63,8 @@
    $sayfa[53] = "addFav.php";
    $sayfa[54] = "deleteFromFav.php";
    $sayfa[55] = "sepeteEkle.php";
+   $sayfa[56] = "sepet.php";
+   $sayfa[57] = "sepetSil.php";
+   $sayfa[58] = "artdirAzalt.php";
+   $sayfa[59] = "adresKargo.php";
 ?>
