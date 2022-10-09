@@ -64,3 +64,20 @@ if(addCart && cartSelect) {
    })
 }
 
+
+
+let kart = document.querySelector(".kart label");
+let bank = document.querySelector(".bank label");
+let kart__content = document.querySelector(".kart__content");
+let bank__content = document.querySelector(".bank__content");
+if(kart && bank) {
+   kart.addEventListener("click", () => {
+      bank__content.style.display = "none";
+      kart__content.style.display = "block";
+   })
+
+   bank.addEventListener("click", () => {
+      kart__content.style.display = "none";
+      bank__content.style.display = "block";
+   })
+}

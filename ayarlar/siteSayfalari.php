@@ -67,4 +67,5 @@
    $sayfa[57] = "sepetSil.php";
    $sayfa[58] = "artdirAzalt.php";
    $sayfa[59] = "adresKargo.php";
+   $sayfa[61] = "odemeSecimi.php";
 ?>
