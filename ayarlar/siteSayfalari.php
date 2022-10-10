@@ -68,4 +68,9 @@
    $sayfa[58] = "artdirAzalt.php";
    $sayfa[59] = "adresKargo.php";
    $sayfa[61] = "odemeSecimi.php";
+   $sayfa[62] = "odemeSonuc.php";
+   $sayfa[63] = "odemeKartSonuc.php";
+   $sayfa[64] = "odemeKartFinal.php";
+   $sayfa[65] = "alisveristamam.php";
+   $sayfa[66] = "alisverissepetibankahavalesiileodemetamam.php";
 ?>

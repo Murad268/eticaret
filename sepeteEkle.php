@@ -45,6 +45,8 @@
       } else {
          $addCart = $db->prepare("INSERT INTO sepet (sepetNumarasi, uyeId, urunId, variantId, urunAdedi) values (?, ?, ?, ?, ?)");
          $addCart->execute([$unix, $id, $urunId, $urunVariant, $urunSayi]);
+         $sepetNum = $db->prepare("UPDATE sepet SET sepetNumarasi=? WHERE uyeId =?");
+         $sepetNum->execute([$unix, $id]);
          $addCartCount = $addCart->rowCount();
          if($addCartCount>0) {
             $_SESSION["message"] = "Məhsul səbətə əlavə edildi.";

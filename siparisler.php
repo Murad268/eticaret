@@ -3,7 +3,7 @@
       header("Location: index.php");
    }
    $sayfalamaIcinButonSayisi = 2;
-   $sayfaBasinaGosterilecek = 1;
+   $sayfaBasinaGosterilecek = 10;
    $toplamKayitSayisiSorgusu = $db->prepare("SELECT DISTINCT sifarisNumarasi FROM siparisler WHERE uyeİd = ? ORDER BY sifarisNumarasi DESC");
    $toplamKayitSayisiSorgusu->execute([$id]);
    $toplamKayitSayisi = $toplamKayitSayisiSorgusu->rowCount();
