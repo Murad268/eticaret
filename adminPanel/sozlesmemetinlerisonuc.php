@@ -1,4 +1,10 @@
 <?php
+
+   if(!isset($_SESSION["admin"])) {
+    header("Location: index.php?sayfaKoduDis=1");
+    exit();
+   }
+
    if(isset($_POST["hakkimizdaMetni"])) {
       $hakkimizdaMetni = $_POST["hakkimizdaMetni"];
    } else {

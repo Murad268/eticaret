@@ -58,6 +58,9 @@
    }
 
 
+  
+
+
    if(isset($_SESSION["userName"])) {
       $usersFetch = $db->prepare("SELECT * FROM users WHERE email = ?");
       $usersFetch->execute([$_SESSION["email"]]);

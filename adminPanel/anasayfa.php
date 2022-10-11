@@ -18,10 +18,11 @@
                   <li><a href="">MENÜLER</a></li>
                   <li><a href="index.php?sayfaKoduDis=0&sayfaKoduIc=5">BANKA HESAP AYARLARI</a></li>
                   <li><a href="index.php?sayfaKoduDis=0&sayfaKoduIc=3">SÖZLEŞMELER VE METİNLER</a></li>
-                  <li><a href="">KARGO AYARLARI</a></li>
+                  <li><a href="index.php?sayfaKoduDis=0&sayfaKoduIc=11">KARGO AYARLARI</a></li>
                   <li><a href="">BANNER AYARLARI</a></li>
                   <li><a href="">DESTEK İÇERİKLERİ</a></li>
-                  <li><a href="">Yöneticiler</a></li>
+                  <li><a href="">YÖNETİCİLİER</a></li>
+                  <li><a href="index.php?sayfaKoduDis=3&sayfaKoduIc=0">ÇIKIŞ</a></li>
                </ul>
             </div>
             <div class="panelWrapper__content">

@@ -1,3 +1,9 @@
+<?php
+   if(!isset($_SESSION["admin"])) {
+   header("Location: index.php?sayfaKoduDis=1");
+   exit();
+   }
+?>
 <div class="panel__header">
    SÖZLEŞMELER VE METİNLER
 </div>

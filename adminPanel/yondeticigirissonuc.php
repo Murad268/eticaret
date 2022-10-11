@@ -1,4 +1,5 @@
 <?php
+
    if(isset($_SESSION["admin"])) {
       header("Location: index.php?disSayfaKodu=0");
    } else {

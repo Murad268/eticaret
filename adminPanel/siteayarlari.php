@@ -1,3 +1,9 @@
+<?php
+     if(!isset($_SESSION["admin"])) {
+      header("Location: index.php?sayfaKoduDis=1");
+      exit();
+     }
+?>
 <div class="siteayarlari">
    <div class="panel__header">
       SİTE AYARLARI
