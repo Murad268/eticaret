@@ -25,6 +25,12 @@
       $dolarKuru = $ayarlar["DolarKuru"];
       $euroKuru = $ayarlar["EuroKuru"];
       $kargoBaraji = $ayarlar["kargoBaraji"];
+      $SosyalLinkFacebook = $ayarlar["SosyalLinkFacebook"];
+      $SosyalLinkTwitter = $ayarlar["SosyalLinkTwitter"];
+      $SosyalLinkInstagram = $ayarlar["SosyalLinkInstagram"];
+      $SosyalLinkLinkedin = $ayarlar["SosyalLinkLinkedin"];
+      $SosyalLinkYoutube = $ayarlar["SosyalLinkYoutube"];
+      $SosyalLinkPrinterest = $ayarlar["SosyalLinkPrinterest"];
    } else {
       echo "site ayar sorgusu hatali";
       die();
@@ -46,12 +52,6 @@
       $gizlilikSozlezlesmesiMetni = $metinler["gizlilikSozlezlesmesiMetni"];
       $teslimatMetni = $metinler["teslimatMetni"];
       $iptalIadeDeyisimMetni = $metinler["iptalIadeDeyisimMetni"];
-      $SosyalLinkFacebook = $metinler["SosyalLinkFacebook"];
-      $SosyalLinkTwitter = $metinler["SosyalLinkTwitter"];
-      $SosyalLinkInstagram = $metinler["SosyalLinkInstagram"];
-      $SosyalLinkLinkedin = $metinler["SosyalLinkLinkedin"];
-      $SosyalLinkYoutube = $metinler["SosyalLinkYoutube"];
-      $SosyalLinkPrinterest = $metinler["SosyalLinkPrinterest"];
    } else {
       echo "site ayar sorgusu hatali";
       die();
@@ -75,7 +75,23 @@
       $registrationDate = $users["regDate"];
       $code = $users["activationCode"];
      }
+   }
 
 
+   if(isset($_SESSION["admin"])) {
+      $adminsetch = $db->prepare("SELECT * FROM admindadas WHERE 	adminAdi = ?");
+      $adminsetch->execute([$_SESSION["admin"]]);
+      $adminsCount = $adminsetch->rowCount();
+      $admins = $adminsetch->fetch(PDO::FETCH_ASSOC);
+   
+     if($adminsCount > 0) {
+      $admin_id = $admins["id"];
+      $adminAdi = $admins["adminAdi"];
+      $adminSifresi = $admins["adminSifresi"];
+      $adminEmaili = $admins["adminEmaili"];
+      $adminAdSoyad = $admins["adminAdSoyad"];
+      $dminTelefon = $admins["dminTelefon"];
+ 
+     } 
    }
 ?>

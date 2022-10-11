@@ -9,6 +9,8 @@
       <td>&nbsp;</td>
    </tr>
    <tr>
-      <td align="left"><?=donusumleriGeriDondur($hakkimizdaMetni)?></td>
+      <td align="left">
+         <?=donusumleriGeriDondur($hakkimizdaMetni)?>
+      </td>
    </tr>
 </table>

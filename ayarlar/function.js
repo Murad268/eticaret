@@ -342,3 +342,14 @@ if(kart && bank) {
     
    }
    
+
+   const form = document.querySelector(".textingForm");
+   const inputs = document.querySelectorAll(".sozlesmeMetinleriElement__desc");
+   form.addEventListener("submit", () => {
+    inputs.forEach(input => {
+      input.value = input.value.replace(/\r?\n/g, '<br />');
+    })
+
+   })
+  
+

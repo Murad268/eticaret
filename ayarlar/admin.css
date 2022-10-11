@@ -1,0 +1,213 @@
+html, body {
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, "sans-serif";
+   color: #646464;
+   background: white;
+   line-height: 1.5;
+   font-style: normal;
+   font-variant: normal;
+   font-weight: normal;
+   text-decoration: none;
+   border: 0;
+   outline: 0;
+   font-size: 14px;
+}
+
+.adminMain {
+   width: 100%;
+ 
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.adminEnter {
+   width:450px;
+   border: 1px solid black;
+   padding: 30px 30px 40px 30px;
+   margin: 0 auto;
+   margin-top: 220px;
+}
+.adminEnter div {
+   margin-top: 20px;
+}
+.adminEnter input {
+   width: 250px;
+   float: right;
+   outline: none;
+   height: 35px;
+}
+.adminEnter button {
+   display: block;
+   margin: 0 auto;
+   background: green;
+   padding: 5px;
+   width: 120px;
+   height: 30px;
+   border: none;
+   color: white;
+   font-weight: 900;
+   border-radius: 10px;
+   margin-top: 30px;
+}
+
+.panelWrapper {
+   width: 100%;
+   display: grid;
+   grid-template-columns: 30% 70%;
+   height: max-content;
+}
+.panelWrapper__menu {
+   background: #001A38;
+   
+   width: 100%;
+   border-right: 5px solid red;
+}
+
+.panelWrapper__menu__logo {
+   width: 100%;
+   height: 90px;
+   border-bottom: 2px solid red;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.panelWrapper__menu__logo a {
+   width: 60%;
+   height: 60%;
+ 
+}
+.panelWrapper__menu__logo img {
+   width: 100%;
+   height: 100%;
+   object-fit: fill;
+   display: block;
+   margin: 0 auto;
+}
+
+.menu__items {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+.menu__items li {
+   border-bottom: 1px dashed #00c8ff;
+   padding: 10px 0 10px 5px;
+}
+.menu__items a {
+   color: white;
+   text-decoration: none;
+   font-size: 24px;
+}
+
+.panel__header {
+   background: orange;
+   color: white;
+   font-weight: bold;
+   font-size: 18px;
+   padding: 10px 0 10px 5px;
+}
+
+.siteayarlari__ayarlar {
+   display: grid;
+   grid-template-columns: 2fr 5fr;
+   align-items: center;
+   padding-left: 10px;
+}
+.siteayarlari__ayarlar input {
+   width: 100%;
+   height: 40px;
+   border: 1px solid gray;
+   padding-left: 5px;
+   color: black;
+   font-weight: 900;
+}
+.siteayarlari__ayarlar div {
+   margin-top: 15px;
+}
+.photo {
+   padding-top: 15px;
+}
+.photo input{
+   border: none !important;
+   padding: 0 !important;
+}
+.sozlesmeMetinleri {
+   padding: 10px 0 0 20px;
+}
+.siteayarlari button {
+   display: block;
+   margin: 20px auto;
+}
+.sozlesmeMetinleriElement {
+   width: 100%;
+   display: grid;
+   grid-template-columns: 30% 70%;
+   margin-top: 20px;
+}
+
+.sozlesmeMetinleriElement__desc {
+   width: 100%;
+   height: 220px;
+   border: 1px solid gray
+}
+
+.sozclass {
+   outline: none;
+   border: none;
+   border-radius: 10px;
+   display: block;
+   margin: 20px auto;
+}
+
+.left__image {
+   width: 140px;
+   height: 40px;
+}
+.left__image img {
+   width: 100%;
+   height: 100%;
+}
+.bankahesaplari__item__left__controlls {
+   margin-top: 20px;
+}
+.bankahesaplari__item__left__controlls span:first-child {
+   margin-right: 20px;
+}
+.bankahesaplari__item__left__controlls a {
+   text-decoration: none;
+   color: black
+}
+.bankahesaplari__item__left__controlls span img {
+   margin-right: 3px;
+   margin-bottom: 3px;
+}
+.bankahesaplari {
+   padding-left: 5px;
+}
+.bankahesaplari__item {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 20px;
+}
+
+.bankahesaplari__item__right__top {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.bankahesaplari__item__right {
+   width: 65%;
+}
+.bankahesaplari__item__right__top span:first-child, .bankahesaplari__item__right__bottom span:first-child, .bankahesaplari__item__right__footer span:first-child {
+   font-weight: bold;
+   color: black;
+   margin-right: 20px;
+}
+.bankahesaplari__item__right__bottom {
+   margin: 10px 0 10px 0;
+}

@@ -9,6 +9,6 @@
       <td>&nbsp;</td>
    </tr>
    <tr>
-      <td align="left"><?=donusumleriGeriDondur($UyelikSozlezmesiMetni)?></td>
+      <td class="eee" align="left"><?=$UyelikSozlezmesiMetni?></td>
    </tr>
 </table>
