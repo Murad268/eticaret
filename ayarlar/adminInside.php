@@ -12,4 +12,9 @@
    $inside[10] = "yenibankasonuc.php";
    $inside[11] = "kargolar.php";
    $inside[12] = "kargolarSil.php";
+   $inside[13] = "kargolarGuncelle.php";
+   $inside[14] = "kargolarGuncelleSonuc.php";
+   $inside[15] = "yeniKargo.php";
+   $inside[16] = "yeniKargoSonuc.php";
+   $inside[17] = "bannerler.php";
 ?>

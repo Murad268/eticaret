@@ -10,7 +10,7 @@
          KARGO AYARLARI
       </div>
       <div class="addBank">
-         <a href="i">yeni kargo elave ele</a>
+         <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=15">yeni kargo elave ele</a>
       </div>
       <?php
           if(isset($_SESSION["bankDel"])) {
@@ -41,7 +41,7 @@
                            </a>
                         </span>
                         <span>
-                           <a href="">
+                           <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=13&id=<?=$kargo["id"]?>">
                               <img style="margin-right: 10px;" src="../assets/images/Guncelleme20x20.png" alt="">
                               <span>Yenilə</span>
                            </a>
