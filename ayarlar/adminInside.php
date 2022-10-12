@@ -29,5 +29,9 @@
    $inside[27] = "destekYeni.php";
    $inside[28] = "destekYeniSonuc.php";
    $inside[29] = "menuler.php";
-   $inside[30] = "menulersil.php"
+   $inside[30] = "menulersil.php";
+   $inside[31] = "menulerguncelle.php";
+   $inside[32] = "menulerguncellesonuc.php";
+   $inside[33] = "menuekle.php";
+   $inside[34] = "menueklesonuc.php";
 ?>

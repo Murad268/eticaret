@@ -10,7 +10,7 @@
          MENÜ AYARLARI
       </div>
       <div class="addBank">
-         <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=15">yeni menü elave ele</a>
+         <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=33">yeni menü elave ele</a>
       </div>
       <?php
           if(isset($_SESSION["bankDel"])) {
@@ -23,21 +23,21 @@
     <div class="kargolar__wrapper">
   
        <?php
-         $menulariSorgula = $db->prepare("SELECT * FROM menuler");
+         $menulariSorgula = $db->prepare("SELECT * FROM menuler ORDER BY urunTuru");
          $menulariSorgula->execute();
          $menulariSorgulaCount = $menulariSorgula->rowCount();
          $menular = $menulariSorgula->fetchAll(PDO::FETCH_ASSOC);
          if($menulariSorgulaCount>0) {
             foreach($menular as $menu) {?>
                        <div class="menu__item">
-                        <div class="menu__item__header"> erkek ayakkabilari</div>
+                        <div class="menu__item__header"> <?=strtoupper(substr($menu["urunTuru"], 0, 1)).substr($menu["urunTuru"], 1)?> Ayakkabilari</div>
                         <div class="menu__item__footer">
                            <div class="menu__item__footer__left">
                               <?=$menu["menuAdi"]?>  (<?=$menu["urunSayisi"]?>)
                            </div>
                            <div class="menu__item__footer__right">
                               <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=30&id=<?=$menu["id"]?>"><span><img src="../assets/images/Sil20x20.png" alt="">Sil</span></a>
-                              <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=25&id="><span><img src="../assets/images/Guncelleme20x20.png" alt="">Yenilə</span></a>
+                              <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=31&id=<?=$menu["id"]?>"><span><img src="../assets/images/Guncelleme20x20.png" alt="">Yenilə</span></a>
                            </div>
                         </div>
                      </div>
