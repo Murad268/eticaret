@@ -93,7 +93,7 @@
       $adminSifresi = $admins["adminSifresi"];
       $adminEmaili = $admins["adminEmaili"];
       $adminAdSoyad = $admins["adminAdSoyad"];
-      $dminTelefon = $admins["dminTelefon"];
+      $dminTelefon = $admins["adminTelefon"];
  
      } 
    }

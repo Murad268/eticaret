@@ -21,7 +21,7 @@
                   <li><a href="index.php?sayfaKoduDis=0&sayfaKoduIc=11">KARGO AYARLARI</a></li>
                   <li><a href="index.php?sayfaKoduDis=0&sayfaKoduIc=17">BANNER AYARLARI</a></li>
                   <li><a href="index.php?sayfaKoduDis=0&sayfaKoduIc=23"">DESTEK İÇERİKLERİ</a></li>
-                  <li><a href="">YÖNETİCİLİER</a></li>
+                  <li><a href="index.php?sayfaKoduDis=0&sayfaKoduIc=35">YÖNETİCİLİER</a></li>
                   <li><a href="index.php?sayfaKoduDis=3&sayfaKoduIc=0">ÇIKIŞ</a></li>
                </ul>
             </div>

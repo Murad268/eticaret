@@ -34,4 +34,10 @@
    $inside[32] = "menulerguncellesonuc.php";
    $inside[33] = "menuekle.php";
    $inside[34] = "menueklesonuc.php";
+   $inside[35] = "admins.php";
+   $inside[36] = "adminssil.php";
+   $inside[37] = "adminguncelle.php";
+   $inside[38] = "adminguncellesonuc.php";
+   $inside[39] = "yeniadmin.php";
+   $inside[40] = "yeniadminsonuc.php";
 ?>

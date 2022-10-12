@@ -359,3 +359,25 @@ html, body {
 .menu__item__footer img {
    margin: 0 5px 0 5px;
 }
+
+.admin__item {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   margin-top: 20px;
+   column-gap: 5px;
+}
+.admin__item__controlls{
+   width: max-content;
+}
+.admin__item__controlls a {
+   text-decoration: none;
+   color: black;
+   margin-right: 5px;
+}
+.admin__item__controlls a img {
+   margin-right: 5px;
+   margin-bottom: 3px;
+}
+.adminsil {
+   margin-right: 14px;
+}
