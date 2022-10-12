@@ -17,4 +17,9 @@
    $inside[15] = "yeniKargo.php";
    $inside[16] = "yeniKargoSonuc.php";
    $inside[17] = "bannerler.php";
+   $inside[18] = "bannerlerSil.php";
+   $inside[19] = "bannerlerGuncelle.php";
+   $inside[20] = "bannerlerGuncelleSonuc.php";
+   $inside[21] = "bannerleryeni.php";
+   $inside[22] = "bannerleryenisonuc.php";
 ?>

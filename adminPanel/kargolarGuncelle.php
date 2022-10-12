@@ -38,7 +38,7 @@
          $kargoSayisi = $kargoSorgusu->rowCount();
          $kargolar = $kargoSorgusu->fetchAll(PDO::FETCH_ASSOC);
       
-         if($metinlerSayisi > 0) {
+         if($kargoSayisi > 0) {
             foreach($kargolar as $kargo) {?>
                   <div class="siteayarlari__ayarlar">
                      <div>Kargo Logosu:</div>

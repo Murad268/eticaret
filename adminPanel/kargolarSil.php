@@ -14,5 +14,6 @@
       exit();
    } else {
       $_SESSION["bankDel"] = "Silinmə zamanı xəta baş verdi.";
+      header("Location: index.php?sayfaKoduDis=0&sayfaKoduIc=11");
    }
 ?>

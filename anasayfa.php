@@ -2,7 +2,7 @@
    <div class="mainMenu__wrapper">
       <div class="mainMenu__banner">
          <?php
-            $bannerSorgusu = $db->prepare("SELECT * FROM bannerler WHERE bannerAlani = 'anasahifa' ORDER BY gosterimSayisi ASC ");
+            $bannerSorgusu = $db->prepare("SELECT * FROM bannerler WHERE bannerAlani = 'anasayfa' ORDER BY gosterimSayisi ASC ");
             $bannerSorgusu->execute();
             $bannerSorgusuCount = $bannerSorgusu->rowCount();
             $banner = $bannerSorgusu->fetch(PDO::FETCH_ASSOC);

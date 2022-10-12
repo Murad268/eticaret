@@ -37,7 +37,7 @@
    $kargoablariniSorgulaSayi = $kargoablariniSorgula->rowCount();
    if($kargoablariniSorgulaSayi>0) {
       unset($_SESSION["adminmess"]);
-      header("Location: index.php?sayfaKoduDis=0&sayfaKoduIc=12");
+      header("Location: index.php?sayfaKoduDis=0&sayfaKoduIc=11");
       exit();
    } else {
       $_SESSION["adminmess"] = "Məlumatların yazılması zamanı xəta.";
