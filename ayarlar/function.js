@@ -345,11 +345,27 @@ if(kart && bank) {
 
    const form = document.querySelector(".textingForm");
    const inputs = document.querySelectorAll(".sozlesmeMetinleriElement__desc");
-   form.addEventListener("submit", () => {
-    inputs.forEach(input => {
-      input.value = input.value.replace(/\r?\n/g, '<br />');
-    })
-
-   })
+   if(form && inputs) {
+    form.addEventListener("submit", () => {
+      inputs.forEach(input => {
+        input.value = input.value.replace(/\r?\n/g, '<br />');
+      })
+  
+     })
+   }
   
 
+
+   const form2= document.querySelector(".destekform");
+   const inputs2 = document.querySelectorAll(".destekwrapper__item__desc textarea");
+   if(form2 && inputs2) {
+    form2.addEventListener("submit", () => {
+      inputs2.forEach(input => {
+        input.value = input.value.replace(/\r?\n/g, '<br />');
+      })
+     })
+   }
+
+
+
+   

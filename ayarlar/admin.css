@@ -290,3 +290,72 @@ html, body {
    width: 100%;
    height: 50px;
 }
+.destekwrapper, .destekupdatewrapper__item{
+   padding-left: 5px;
+}
+.destekwrapper__item {
+   margin-top: 40px;
+}
+.destekwrapper__item__title {
+   color: black;
+   font-weight: 900;
+}
+.destekwrapper__item__controlls {
+   margin-top: 20px;
+   float: right;
+}
+.destekwrapper__item__controlls a {
+   text-decoration: none;
+   color: black;
+}
+.destekwrapper__item__controlls a:first-child {
+   margin-right: 20px;
+}
+.destekwrapper__item__controlls a img{
+   margin-bottom: 3px;
+   margin-right: 10px;
+}
+.destekupdatewrapper__item {
+   padding-top: 20px;
+   width: 400px;
+   margin: 0 auto;
+}
+.destekwrapper__item__title {
+   height: 50px;
+}
+.destekupdatewrapper__item .destekwrapper__item__title, .destekwrapper__item__desc {
+   width: 100%;
+}
+.destekwrapper__item__title input {
+   width: 100%;
+   height: 100%;
+   padding: 0 0 0 10px;
+}
+.destekupdatewrapper__item .destekwrapper__item__desc {
+   margin-top: 30px;
+}
+.destekwrapper__item__desc textarea {
+   width: 100%;
+   padding: 10px 0 0 10px;
+}
+.menu__item__footer__right a {
+   text-decoration: none;
+   color: black;
+}
+.menu__item__header {
+   font-size: 16px;
+   color: black;
+   font-weight: 900;
+}
+.menu__item__footer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.menu__item {
+   margin-top: 20px;
+}
+.menu__item__footer img {
+   margin: 0 5px 0 5px;
+}

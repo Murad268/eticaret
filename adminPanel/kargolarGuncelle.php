@@ -10,7 +10,7 @@
      }
      if($gelenId == "") {
        
-         header("Location: index.php?sayfaKoduDis=0&sayfaKoduIc=12");
+         header("Location: index.php?sayfaKoduDis=0&sayfaKoduIc=11");
      }
 
 ?>

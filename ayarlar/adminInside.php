@@ -22,4 +22,12 @@
    $inside[20] = "bannerlerGuncelleSonuc.php";
    $inside[21] = "bannerleryeni.php";
    $inside[22] = "bannerleryenisonuc.php";
+   $inside[23] = "destek.php";
+   $inside[24] = "destekSil.php";
+   $inside[25] = "destekguncelle.php";
+   $inside[26] = "destekguncellesonuc.php";
+   $inside[27] = "destekYeni.php";
+   $inside[28] = "destekYeniSonuc.php";
+   $inside[29] = "menuler.php";
+   $inside[30] = "menulersil.php"
 ?>
