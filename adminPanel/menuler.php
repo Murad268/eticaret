@@ -28,12 +28,17 @@
          $menulariSorgulaCount = $menulariSorgula->rowCount();
          $menular = $menulariSorgula->fetchAll(PDO::FETCH_ASSOC);
          if($menulariSorgulaCount>0) {
-            foreach($menular as $menu) {?>
+            foreach($menular as $menu) {
+               $toMenuFetch = $db->prepare("SELECT COUNT(*) AS urunSayi FROM goods WHERE menuId = ? AND durumu = 1");
+               $toMenuFetch->execute([$menu["id"]]);
+               $toMenu = $toMenuFetch->fetch(PDO::FETCH_ASSOC);
+               $urunSayinizDeyis=$db->prepare("UPDATE menuler SET urunSayisi = ? WHERE id=?");
+               $urunSayinizDeyis->execute([$toMenu["urunSayi"], $menu["id"]])?>
                        <div class="menu__item">
                         <div class="menu__item__header"> <?=strtoupper(substr($menu["urunTuru"], 0, 1)).substr($menu["urunTuru"], 1)?> Ayakkabilari</div>
                         <div class="menu__item__footer">
                            <div class="menu__item__footer__left">
-                              <?=$menu["menuAdi"]?>  (<?=$menu["urunSayisi"]?>)
+                              <?=$menu["menuAdi"]?>  (<?=$toMenu["urunSayi"]?>)
                            </div>
                            <div class="menu__item__footer__right">
                               <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=30&id=<?=$menu["id"]?>"><span><img src="../assets/images/Sil20x20.png" alt="">Sil</span></a>

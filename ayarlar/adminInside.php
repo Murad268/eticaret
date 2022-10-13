@@ -46,4 +46,6 @@
    $inside[44] = "uyegeridondur.php";
    $inside[45] = "yorumlar.php";
    $inside[46] = "yorumlarsil.php";
+   $inside[47] = "urunler.php";
+   $inside[48] = "urunlersil.php";
 ?>

@@ -48,7 +48,7 @@
             $manGoods = $manFetch->fetchAll(PDO::FETCH_ASSOC);
             if($manFetchCount > 0) {
                foreach($manGoods as $man) {
-                  $toMenuFetch = $db->prepare("SELECT COUNT(*) AS urunSayi FROM goods WHERE menuId = ?");
+                  $toMenuFetch = $db->prepare("SELECT COUNT(*) AS urunSayi FROM goods WHERE menuId = ? AND durumu = 1");
                   $toMenuFetch->execute([$man["id"]]);
                   $toMenu = $toMenuFetch->fetch(PDO::FETCH_ASSOC);
                   $urunSayinizDeyis=$db->prepare("UPDATE menuler SET urunSayisi = ? WHERE id=?");

@@ -420,3 +420,30 @@ html, body {
    justify-content: space-between;
    align-items: center;
 }
+
+.urun {
+   display: grid;
+   grid-template-columns: 1fr 6fr 3fr;
+   align-items: center;
+   column-gap: 20px
+}
+
+.urun__img img {
+   width: 100%;
+}
+
+.urun__controlls{
+   text-align: right;
+   display: flex;
+   flex-direction: column;
+   height: 66px;
+   justify-content: flex-end
+}
+.urun__controlls a {
+   text-decoration: none;
+   color: black
+}
+.urun__controlls a img {
+   margin-right: 5px;
+   margin-bottom: 3px;
+}
