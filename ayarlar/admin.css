@@ -406,3 +406,17 @@ html, body {
 .kargolar__wrapper .manWrapper__items__search {
    margin-top: 20px;
 }
+.comment__item{
+   margin-top: 20px;
+}
+.comment__item__bottom {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 10px;
+}
+.comment__item__top {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}

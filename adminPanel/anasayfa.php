@@ -13,7 +13,7 @@
                   <li><a href="">HEVALE BİLDİRİMLERİ (x/x)</a></li>
                   <li><a href="">ÜRÜNLER</a></li>
                   <li><a href="index.php?sayfaKoduDis=0&sayfaKoduIc=41">ÜYELER</a></li>
-                  <li><a href="">YORUMLAR</a></li>
+                  <li><a href="index.php?sayfaKoduDis=0&sayfaKoduIc=45">YORUMLAR</a></li>
                   <li><a href="index.php?sayfaKoduDis=0&sayfaKoduIc=1">SİTE AYARLARI</a></li>
                   <li><a href="index.php?sayfaKoduDis=0&sayfaKoduIc=29">MENÜLER</a></li>
                   <li><a href="index.php?sayfaKoduDis=0&sayfaKoduIc=5">BANKA HESAP AYARLARI</a></li>

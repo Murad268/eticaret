@@ -5,16 +5,22 @@
       $odemeSecimi = "";
    }
 
+ 
+
+
    if($odemeSecimi!="") {
       if($odemeSecimi == "bankahevalesi") {
          
          $sepetiSorgula = $db->prepare("SELECT * FROM sepet WHERE uyeId = $id");
          $sepetiSorgula->execute();
          $sepetiSorgulaCount=$sepetiSorgula->rowCount();
-         $sepet = $sepetiSorgula->fetchAll(PDO::FETCH_ASSOC);
+        
+     
          if($sepetiSorgulaCount>0) {
             $toplamMalKargosu = 0;
-            foreach($sepet as $mallar) {
+            while($mallar = $sepetiSorgula->fetch(PDO::FETCH_ASSOC)) {
+      
+               
                $odemeSecimiElaveEt = $db->prepare("UPDATE sepet SET odemeSecimi=? WHERE uyeId=?");
                $odemeSecimiElaveEt->execute([$odemeSecimi, $id]);
                $urunleriSorgula = $db->prepare("SELECT * FROM goods WHERE id=?");
@@ -60,17 +66,16 @@
                $siparislereElaveEt = $db->prepare("INSERT INTO siparisler (sifarisNumarasi, urunİd, urunAdi, urunFiyati, paraBirimi, urunResmiBir, variantBasligi, variantSecimi, kargoUcreti, kdvOrani, kargoFirmasiSecimi, adresAdiSoyadi, adresDetay, adresTelefon, odemeSecimi, siparishTarihi, siparisİp, uyeİd, toplamUrunAdedi, toplamUrunFiyati, urunTuru) VALUES(?, ?, ?, ?, ?, ?, ?, ? , ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
                $siparislereElaveEt->execute([$sifarisNumarasi, $urunİd, $urunAdi, $urunFiyati, $paraBirimi, $urunResmiBir, $variantBasligi, $variantSecimi, $kargoUcreti, $kdvOrani, $kargoFirmasiSecimi, $adresAdiSoyadi, $adresDetay, $adresTelefon, $odemeSecimi, $siparishTarihi, $siparisİp, $uyeİd, $toplamUrunAdedi, $toplamUrunFiyati, $urunTuru]);
                $siparislereElaveEtSay = $siparislereElaveEt->rowCount();
+          
                if($siparislereElaveEtSay>0) {
                   $sepetiBosalt = $db->prepare("DELETE FROM sepet WHERE uyeId=? AND sepetNumarasi=?");
                   $sepetiBosalt->execute([$id, $sifarisNumarasi]);
                   $sepetBolsaltCount = $sepetiBosalt->rowCount();
-                  if($sepetBolsaltCount>0) {
-                     header("Location: index.php?sayfaKodu=66");
-                     exit();
-                  }
+                
                }
             }
-     
+            header("Location: index.php?sayfaKodu=66");
+            exit();
          } else {
             header("Location: index.php");
             exit();
@@ -93,6 +98,7 @@
          if($sepetiSorgulaCount>0) {
             $toplamMalKargosu = 0;
             foreach($sepet as $mallar) {
+           
                $odemeSecimiElaveEt = $db->prepare("UPDATE sepet SET odemeSecimi=? WHERE uyeId=?");
                $odemeSecimiElaveEt->execute([$odemeSecimi, $id]);
                $urunleriSorgula = $db->prepare("SELECT * FROM goods WHERE id=?");
@@ -140,12 +146,11 @@
                $siparislereElaveEtSay = $siparislereElaveEt->rowCount();
                if($siparislereElaveEtSay>0) {
             
-                  if($siparislereElaveEtSay>0) {
-                     header("Location: index.php?sayfaKodu=63");
-                     exit();
-                  }
+               
                }
             }
+            header("Location: index.php?sayfaKodu=63");
+            exit();
          }
       }
    } else {

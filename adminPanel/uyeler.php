@@ -11,6 +11,13 @@
          $query = "";
          $searchingUser = "";
       }
+      $sayfalamaIcinButonSayisi = 2;
+      $sayfaBasinaGosterilecek = 10;
+      $toplamKayitSayisiSorgusu = $db->prepare("SELECT * FROM users WHERE silinmeDurumu = 0 $searchingUser ORDER BY id DESC");
+      $toplamKayitSayisiSorgusu->execute();
+      $toplamKayitSayisi = $toplamKayitSayisiSorgusu->rowCount();
+      $sayfalamayBaslayacaqKayotSayisi = ($sayfalama*$sayfaBasinaGosterilecek) - $sayfaBasinaGosterilecek;
+      $bulunanSafyaSayisi = ceil($toplamKayitSayisi/$sayfaBasinaGosterilecek);
    ?>
       <div class="panel__header">
          İstifadəçi Paramertrləri
@@ -38,7 +45,7 @@
          </div>
       </div>
       <?php
-         $usersFetch = $db->prepare("SELECT * FROM users WHERE silinmeDurumu = 0 $searchingUser");
+         $usersFetch = $db->prepare("SELECT * FROM users WHERE silinmeDurumu = 0 $searchingUser ORDER BY id DESC LIMIT $sayfalamayBaslayacaqKayotSayisi, $sayfaBasinaGosterilecek");
          $usersFetch->execute();
          $usersFetchCount = $usersFetch->rowCount();
          $users = $usersFetch->fetchAll(PDO::FETCH_ASSOC);
@@ -62,7 +69,32 @@
          }
       ?>
     
-
+            <?php
+                  if($bulunanSafyaSayisi>1) {?>
+                     <div style="margin: 30px 320px" class="paginationWrapper">
+                        <nav aria-label="Page navigation example ">
+                           <ul class="pagination">
+                           <li class="page-item"><a class="page-link" href="index.php?sayfaKoduDis=0&sayfaKoduIc=41&sayfalama=1<?$sayfalamaKosulu?>">&laquo;</a></li>
+                           <?php
+                              for($i = $sayfalama-$sayfalamaIcinButonSayisi; $i <= $sayfalama+$sayfalamaIcinButonSayisi; $i++) {
+                                 if(($i > 0) and ($i <= $bulunanSafyaSayisi)) {
+                                    $curr = $i;
+                                 if($sayfalama == $i) {
+                                    echo "<li style=\"cursor: pointer\" class=\"page-item\"><div style=\"background: red; color: white\" class=\"page-link\">$curr</div></li>";
+                                 } else {
+                                    echo "<li class=\"page-item\"><a class=\"page-link\" href=\"index.php?sayfaKoduDis=0&sayfaKoduIc=41&sayfalama=$curr\">$curr</a></li>";
+                                 }
+                              }
+                           }
+                           ?>
+                              
+                              <li class="page-item"><a class="page-link"  href="index.php?sayfaKoduDis=0&sayfaKoduIc=41&sayfalama=<?=$bulunanSafyaSayisi?>&<?$sayfalamaKosulu?>">&raquo;</a></li>
+                           </ul>
+                        </nav>
+                     </div>
+                  <?php
+                  }
+               ?>
  
     
     </div>
