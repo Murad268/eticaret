@@ -3,6 +3,9 @@
    require_once("ayarlar/ayar.php");
    require_once("ayarlar/functions.php");
    require_once("ayarlar/siteSayfalari.php");
+
+
+  
    if(isset($_REQUEST["sayfaKodu"])) {
       $sayfaKodu = sayiliIcerikleriFiltrele($_REQUEST["sayfaKodu"]);
    } else {

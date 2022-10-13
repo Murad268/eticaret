@@ -47,8 +47,13 @@
             $manFetchCount = $manFetch->rowCount();
             $manGoods = $manFetch->fetchAll(PDO::FETCH_ASSOC);
             if($manFetchCount > 0) {
-               foreach($manGoods as $man) {?>
-                    <div class="manWrapper__menu__item"><a style="color: <?=$menuId==$man["id"]?"orange":"black"?>" href="index.php?sayfaKodu=51&menuId=<?=$man["id"]?>"><?=$man["menuAdi"]?>  (<?=$man["urunSayisi"]?>)</a></div>
+               foreach($manGoods as $man) {
+                  $toMenuFetch = $db->prepare("SELECT COUNT(*) AS urunSayi FROM goods WHERE menuId = ?");
+                  $toMenuFetch->execute([$man["id"]]);
+                  $toMenu = $toMenuFetch->fetch(PDO::FETCH_ASSOC);
+                  $urunSayinizDeyis=$db->prepare("UPDATE menuler SET urunSayisi = ? WHERE id=?");
+                  $urunSayinizDeyis->execute([$toMenu["urunSayi"], $man["id"]])?>
+                    <div class="manWrapper__menu__item"><a style="color: <?=$menuId==$man["id"]?"orange":"black"?>" href="index.php?sayfaKodu=51&menuId=<?=$man["id"]?>"><?=$man["menuAdi"]?>  (<?=$toMenu["urunSayi"]?>)</a></div>
               <?php
                }
         
