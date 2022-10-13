@@ -1,4 +1,8 @@
-
+<?php
+   if(!isset($_SESSION["userName"])) {
+      header("Location: index.php?sayfaKodu=25");
+   }
+?>
 <div class="cartWrapper">
    <div class="cartWrapper__details">
       <h5 class="cartWrapper__title">Alışveriş Sepeti</h5>

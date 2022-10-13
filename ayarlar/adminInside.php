@@ -40,4 +40,8 @@
    $inside[38] = "adminguncellesonuc.php";
    $inside[39] = "yeniadmin.php";
    $inside[40] = "yeniadminsonuc.php";
+   $inside[41] = "uyeler.php";
+   $inside[42] = "uyelerSil.php";
+   $inside[43] = "silinenUyeler.php";
+   $inside[44] = "uyegeridondur.php";
 ?>

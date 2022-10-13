@@ -581,7 +581,7 @@ div.stars {
  .goodWrapper__details__btn {
    width: max-content;
  }
- .goodWrapper__details__btn button {
+ .goodWrapper__details__btn button, .goodWrapper__details__button button {
    width: 580px;
    height: 30px;
    font-weight: 900;
@@ -1276,4 +1276,9 @@ div.stars {
   font-weight: 900;
   color: black;
   margin-top: 10px;
+ }
+ .stars img {
+  width: 140px;
+  height: 30px;
+  margin: 10px 0 20px 0;
  }

@@ -24,6 +24,9 @@
             unset($_SESSION["admmess"]);
             $_SESSION["admin"] = $adminLogin;
             header("Location: index.php?sayfaKoduDis=0&sayfaKoduIc=0");
+         } else {
+            $_SESSION["admmess"] = "belə bir admin mövcud deyil";
+            header("Location: index.php?disSayfaKodu=1");
          }
       } else {
          $_SESSION["admmess"] = "boş dəyərlər daxil edilmişdir";

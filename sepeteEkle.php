@@ -1,4 +1,6 @@
 <?php
+
+
    if(isset($_GET["id"])) {
       $urunId = $_GET["id"];
    } else {
@@ -17,8 +19,7 @@
       echo "a";
    }
 
-   
-
+  
 
 
    if(($urunId !== "") or ($urunVariant !== "") or ($urunSayi !== "")) {

@@ -12,7 +12,7 @@
 
 
    if($phoneOrEmail !== "") {
-      $fetchNull = $db->prepare("SELECT * FROM users WHERE email = ? OR phone = ?");
+      $fetchNull = $db->prepare("SELECT * FROM users WHERE (email = ? OR phone = ?) AND SilinmeDurumu = 0");
       $fetchNull->execute([$phoneOrEmail, $phoneOrEmail]);
       $fetchNullRow = $fetchNull->rowCount();
       $users = $fetchNull->fetch(PDO::FETCH_ASSOC);

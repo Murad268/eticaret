@@ -381,3 +381,28 @@ html, body {
 .adminsil {
    margin-right: 14px;
 }
+
+.users__item {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   align-items: center;
+   margin-top: 20px;
+   column-gap: 10px
+}
+.users__item div {
+   text-align: left;
+   /* border: 1px solid red; */
+   width: max-content;
+   text-align: right !important;
+}
+.users__item span {
+   color: black;
+   font-weight: bold;
+   text-align: left !important;
+}
+.users__item__title__name {
+   text-align: left;
+}
+.kargolar__wrapper .manWrapper__items__search {
+   margin-top: 20px;
+}

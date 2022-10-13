@@ -18,7 +18,7 @@
 
 
    if(($email !== "") or ($password !== "")) {
-      $enterFetch = $db->prepare("SELECT * FROM users WHERE email = ? AND sifre = ?");
+      $enterFetch = $db->prepare("SELECT * FROM users WHERE email = ? AND sifre = ? AND SilinmeDurumu = 0");
       $hash = md5($password);
       
       $enterFetch->execute([$email, $hash]);

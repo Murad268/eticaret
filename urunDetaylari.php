@@ -120,10 +120,21 @@
                }
             
             ?>
-         
-            <div class="goodWrapper__details__btn">
-               <button disabled class="btn btn-primary text-white">Xahiş edirik bir ayaqqabı ölçüsü seçin</button>
-            </div>
+            <?php
+               if(!isset($_SESSION["userName"])) {?>
+                  <div class="goodWrapper__details__button">
+                     <button disabled class="btn btn-primary text-white">Xahiş edirik əvvəlcə bir hesaba daxil olun.</button>
+                  </div>
+               <?php
+               } else {?>
+                  
+                  <div class="goodWrapper__details__btn">
+                     <button disabled class="btn btn-primary text-white">Xahiş edirik bir ayaqqabı ölçüsü seçin</button>
+                  </div>
+            <?php
+            }
+            ?>
+            
          </div>
          <div class="goodWrapper__details__order">
             <div class="goodWrapper__details__order__select">
@@ -181,7 +192,7 @@
       <div class="goodWrapper__details__comments">
         
          <?php
-            $fetchComments = $db->prepare("SELECT * FROM yorumlar WHERE urunId = ?");
+            $fetchComments = $db->prepare("SELECT * FROM yorumlar WHERE urunId = ? AND uyeDurumu = 0");
             $fetchComments->execute([$gelenId]);
             $fetchCommentsCount = $fetchComments->rowCount();
             $comments = $fetchComments->fetchAll(PDO::FETCH_ASSOC);
@@ -225,6 +236,8 @@
                   <hr>
                <?php
                }
+            } else {
+               echo "Şərh yoxdur";
             }
          ?>
     
