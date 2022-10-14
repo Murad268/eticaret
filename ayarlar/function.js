@@ -429,3 +429,17 @@ if(kart && bank) {
    
 
    
+
+   const phototrigger = document.querySelectorAll(".phototrigger");
+   const photoTitle = document.querySelectorAll(".photoTitle");
+   const photoOwn = document.querySelectorAll(".photoOwn");
+   const photoHiddenInput =  document.querySelectorAll(".photoHiddenInput");
+
+   phototrigger.forEach((item, i) => {
+    item.addEventListener("click", () => {
+      item.style.display = "none";
+      photoHiddenInput[i].style.display = "none";
+      photoTitle[i].style.display = "block";
+      photoOwn[i].style.display = "block";
+    })
+   })

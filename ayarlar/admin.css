@@ -473,3 +473,7 @@ html, body {
    cursor: pointer;
    margin-left: 9px;
 }
+
+.photoTitle, .photoOwn {
+   display: none;
+}
