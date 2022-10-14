@@ -3,8 +3,14 @@
       header("Location: index.php?sayfaKoduDis=1");
       exit();
      }
-
-
+     if(isset($_GET["id"])) {
+      $gelenId = $_GET["id"];
+     } else {
+      $gelenId = "";
+     }
+     if($gelenId == "") {
+      header("Location: index.php?sayfaKoduDis=0&sayfaKoduIc=47");
+     }
 ?>
 <div class="siteayarlari">
    <div class="panel__header">
@@ -18,7 +24,10 @@
                $mess
             </div>";
          }
-         ?>
+         $urunuSorgula = $db->prepare("SELECT * FROM goods WHERE id = ?");
+         $urunuSorgula->execute([$gelenId]);
+         $urun = $urunuSorgula->fetch(PDO::FETCH_ASSOC);
+      ?>
            <div class="siteayarlari__ayarlar urun__ayarlari">
          <div>Məhsul Menyusu:</div>
          <div>
@@ -31,7 +40,7 @@
                      $menuler = $menulerSorgusu->fetchAll(PDO::FETCH_ASSOC);
                      if($menulerSayi>0) {
                         foreach($menuler as $menu) {?>
-                           <option value="<?=$menu["id"]?>/<?=$menu["urunTuru"]?>"><?=$menu["menuAdi"]?>(<?=$menu["urunSayisi"]?>)</option>
+                           <option <?=$urun["menuId"] == $menu["id"]?"selected":null?> value="<?=$menu["id"]?>/<?=$menu["urunTuru"]?>"><?=$menu["menuAdi"]?>(<?=$menu["urunSayisi"]?>)</option>
                         <?php
                         }
                      }
@@ -45,7 +54,7 @@
                      $menuler = $menulerSorgusu->fetchAll(PDO::FETCH_ASSOC);
                      if($menulerSayi>0) {
                         foreach($menuler as $menu) {?>
-                           <option value="<?=$menu["id"]?>/<?=$menu["urunTuru"]?>"><?=$menu["menuAdi"]?>(<?=$menu["urunSayisi"]?>)</option>
+                           <option <?=$urun["menuId"] == $menu["id"]?"selected":null?> value="<?=$menu["id"]?>/<?=$menu["urunTuru"]?>"><?=$menu["menuAdi"]?>(<?=$menu["urunSayisi"]?>)</option>
                         <?php
                         }
                      }
@@ -59,7 +68,7 @@
                      $menuler = $menulerSorgusu->fetchAll(PDO::FETCH_ASSOC);
                      if($menulerSayi>0) {
                         foreach($menuler as $menu) {?>
-                           <option value="<?=$menu["id"]?>/<?=$menu["urunTuru"]?>"><?=$menu["menuAdi"]?>(<?=$menu["urunSayisi"]?>)</option>
+                           <option <?=$urun["menuId"] == $menu["id"]?"selected":null?> value="<?=$menu["id"]?>/<?=$menu["urunTuru"]?>"><?=$menu["menuAdi"]?>(<?=$menu["urunSayisi"]?>)</option>
                         <?php
                         }
                      }
@@ -68,17 +77,17 @@
             </select>
          </div>
          <div>Məhsul Adı:</div>
-         <div><input name="goodname" type="text"></div>
+         <div><input name="goodname" value="<?=$urun["urun_adi"]?>" type="text"></div>
          <div>Məhsul Qiyməti:</div>
-         <div><input name="goodprice" type="text"></div>
+         <div><input value="<?=$urun["urun_fiyati"]?>" name="goodprice" type="text"></div>
          <div>Məhsul Valyutası:</div>
-         <div><input name="goodcurrency" type="text"></div>
+         <div><input value="<?=$urun["para_birimi"]?>" name="goodcurrency" type="text"></div>
          <div>KDV Həcmi:</div>
-         <div><input name="kdv" type="text"></div>
+         <div><input value="<?=$urun["KDVOrani"]?>" name="kdv" type="text"></div>
          <div>Kargo Qiyməti:</div>
-         <div><input name="kargo" type="text"></div>
+         <div><input  value="<?=$urun["kargoUcreti"]?>" name="kargo" type="text"></div>
          <div>Məhsul Açığlaması:</div>
-         <div><textarea class="good__desc" name="gooddesc"></textarea></div>
+         <div><textarea  class="good__desc" name="gooddesc"><?=$urun["urun_aciklamasi"]?></textarea></div>
          <div>Məhsul Rəsmi 1:</div>
          <div class="photo"><input name="goodphoto1" type="file"></div> 
         
@@ -99,6 +108,6 @@
       <div class="add__good__variant">
                +
          </div>
-      <button class="btn btn-success">Yeni məhsul əlavə elə</button>
+      <button class="btn btn-success">Məhsulu Yenilə</button>
    </form>
 </div>

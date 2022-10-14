@@ -96,7 +96,7 @@
    
 
 
-   if(($goodname == "") or ($menu == "") or ($goodprice == "") or ($goodcurrency == "") or ($kdv == "") or ($kargo == "") or ($gooddesc == "") or ($goodphoto1 == null) or ($variantArray == "")) {
+   if(($goodname == "") or ($menu == "") or ($goodprice == "") or ($goodcurrency == "") or ($kdv == "") or ($kargo == "") or ($gooddesc == "") or ($goodphoto1 == null) or ($variantArray == "") or ($stok == "")) {
       $_SESSION["adminmess"] = "Hər hansısa məlumat və ya hamısı boş göndərilib";
       header("Location: index.php?sayfaKoduDis=0&sayfaKoduIc=49");
       exit();

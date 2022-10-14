@@ -57,7 +57,7 @@
                      <div><?=$urun["urun_fiyati"]?> <?=$urun["para_birimi"]?></div>
                      <div class="urun__controlls__btns">
                         <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=48&id=<?=$urun["id"]?>"><span><img src="../assets/images/Sil20x20.png" alt="">Sil</span></a>
-                        <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=31&id=<?=$menu["id"]?>"><span><img src="../assets/images/Guncelleme20x20.png" alt="">Yenilə</span></a>
+                        <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=51&id=<?=$urun["id"]?>"><span><img src="../assets/images/Guncelleme20x20.png" alt="">Yenilə</span></a>
                      </div>
                   </div>
                </div>

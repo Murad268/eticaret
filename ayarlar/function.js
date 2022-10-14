@@ -372,58 +372,60 @@ if(kart && bank) {
    const imgWrapper = document.querySelector(".urun__ayarlari");
    const plusVariant = document.querySelector(".add__good__variant");
    const variantWrapper = document.querySelector(".variants");
-
-   const add = (mainWrapper, tag) => {
-    mainWrapper.innerHTML+=tag;
+   if(plusImg && imgWrapper && plusVariant && variantWrapper) {
+    const add = (mainWrapper, tag) => {
+      mainWrapper.innerHTML+=tag;
+     }
+     plusImg.addEventListener("click", (e) => {
+      if(Count == 3) {
+        e.target.style.display = "none";
+      }
+      Count++;
+      const tag = `<div>Məhsul Rəsmi ${Count}:</div><div class="photo"><input name="goodphoto${Count}" type="file"></div>`;
+      add(imgWrapper, tag);
+     })
+  
+     plusVariant.addEventListener("click", (e) => {
+      if(Count2 == 8) {
+        e.target.style.display = "none";
+      }
+      Count2++;
+      let ex
+      switch(Count2) {
+        case 2:
+           ex = "ci";
+           break;
+        case 3:
+           ex = "cü";
+           break;
+        case 4:
+          ex = "cü";
+          break;
+        case 5:
+          ex = "ci";
+          break;
+        case 6:
+          ex = "cı";
+          break;
+        case 7:
+          ex = "ci";
+          break;
+        case 8:
+          ex = "ci";
+          break;
+        case 9:
+          ex = "cu";
+          break;
+      }
+      const tag = `<div class="variant__wrapper">
+                      <div>${Count2}-${ex} ayaqqabı ölçüsü: </div>
+                      <div><input name="variant[]" type="text"></div>
+                      <div>${Count2}-${ex} ölçü üçün stok ədədi: </div>
+                      <div><input name="stok[]" type="text"></div>
+                  </div>`;
+      add(variantWrapper, tag);
+     })
    }
-   plusImg.addEventListener("click", (e) => {
-    if(Count == 3) {
-      e.target.style.display = "none";
-    }
-    Count++;
-    const tag = `<div>Məhsul Rəsmi ${Count}:</div><div class="photo"><input name="goodphoto${Count}" type="file"></div>`;
-    add(imgWrapper, tag);
-   })
-
-   plusVariant.addEventListener("click", (e) => {
-    if(Count2 == 8) {
-      e.target.style.display = "none";
-    }
-    Count2++;
-    let ex
-    switch(Count2) {
-      case 2:
-         ex = "ci";
-         break;
-      case 3:
-         ex = "cü";
-         break;
-      case 4:
-        ex = "cü";
-        break;
-      case 5:
-        ex = "ci";
-        break;
-      case 6:
-        ex = "cı";
-        break;
-      case 7:
-        ex = "ci";
-        break;
-      case 8:
-        ex = "ci";
-        break;
-      case 9:
-        ex = "cu";
-        break;
-    }
-    const tag = `<div class="variant__wrapper">
-                    <div>${Count2}-${ex} ayaqqabı ölçüsü: </div>
-                    <div><input name="variant[]" type="text"></div>
-                    <div>${Count2}-${ex} ölçü üçün stok ədədi: </div>
-                    <div><input name="stok[]" type="text"></div>
-                </div>`;
-    add(variantWrapper, tag);
-   })
+   
 
    
