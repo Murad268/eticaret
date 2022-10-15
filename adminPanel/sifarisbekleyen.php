@@ -42,9 +42,7 @@
                   $siparisSorgusuKayitari = $siparisSorgusu->fetchAll(PDO::FETCH_ASSOC);
                   $mebleg = 0;
                   foreach($siparisSorgusuKayitari as $siparisSatirlar) {
-                     // echo "<pre>";
-                     //    print_r($siparisSatirlar);
-                     // echo "<pre>";
+                 
                      $tarix = $siparisSatirlar["siparishTarihi"];
                      $mebleg += ($siparisSatirlar["toplamUrunFiyati"]);
                   
@@ -56,7 +54,7 @@
                               <div><b>Sifariş Məbləği</b></div>
                               <div>: &nbsp;&nbsp;<?=fiyatBitimlerndir($mebleg)?></div>
                               <div>
-                                 <a href="">
+                                 <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=55&sepet=<?=$siparisSatirlar["sifarisNumarasi"]?>">
                                     <img src="../assets/images/DokumanKirmiziKalemli20x20.png" alt="">
                                     Detay
                                  </a>

@@ -490,3 +490,21 @@ html, body {
    text-decoration: none;
    color: black;
 }
+
+.urunMainWrapper {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   align-items: center;
+}
+.urunMainWrapper__img {
+   width: 100%;
+}
+.urunMainWrapper__img img {
+   width: 70%;
+}
+.urunMainWrapper__desc {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   align-items: center;
+   row-gap: 10px;
+}
