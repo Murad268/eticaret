@@ -54,9 +54,13 @@
                               <div><b>Sifariş Məbləği</b></div>
                               <div>: &nbsp;&nbsp;<?=fiyatBitimlerndir($mebleg)?></div>
                               <div>
-                                 <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=54&sepet=<?=$siparisSatirlar["sifarisNumarasi"]?>">
+                                 <a style="text-decoration: none; color: black; margin-right :5px" href="index.php?sayfaKoduDis=0&sayfaKoduIc=54&sepet=<?=$siparisSatirlar["sifarisNumarasi"]?>">
                                     <img src="../assets/images/DokumanKirmiziKalemli20x20.png" alt="">
                                     Detay
+                                 </a>
+                                 <a style="text-decoration: none; color: black; margin-left :5px" href="index.php?sayfaKoduDis=0&sayfaKoduIc=59&sepet=<?=$siparisSatirlar["sifarisNumarasi"]?>">
+                                    <img src="../assets/images/Sil20x20.png" alt="">
+                                    Sil
                                  </a>
                               </div>
                          </div>

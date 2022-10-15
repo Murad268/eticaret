@@ -58,4 +58,5 @@
    $inside[56] = "bekleyenkargoislemi.php";
    $inside[57] = "sifaristamamlanan.php";
    $inside[58] = "siparisSil.php";
+   $inside[59] = "siparisTamamSil.php";
 ?>
