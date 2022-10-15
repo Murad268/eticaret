@@ -170,5 +170,7 @@ if(($goodname == "") or ($menu == "") or ($goodprice == "") or ($goodcurrency ==
          $menuFetchCount = $menuFetch->rowCount();
       }
    }
+   header("Location: index.php?sayfaKoduDis=0&sayfaKoduIc=47");
+   exit();
 }   
 ?>

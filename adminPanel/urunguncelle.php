@@ -84,7 +84,13 @@
          <div>Məhsul Qiyməti:</div>
          <div><input value="<?=$urun["urun_fiyati"]?>" name="goodprice" type="text"></div>
          <div>Məhsul Valyutası:</div>
-         <div><input value="<?=$urun["para_birimi"]?>" name="goodcurrency" type="text"></div>
+         <div>
+            <select name="goodcurrency" id="">
+               <option value="TRY">Türk Lirəsi</option>
+               <option value="USD">Amerikan Dolları</option>
+               <option value="EUR">Euro</option>
+            </select>
+         </div>
          <div>KDV Həcmi:</div>
          <div><input value="<?=$urun["KDVOrani"]?>" name="kdv" type="text"></div>
          <div>Kargo Qiyməti:</div>
@@ -95,7 +101,7 @@
          <?php
             if($urun["urun_resmi_bir"] !== null) {?>
                  <div><div class="btn btn-success phototrigger" style="text-align: left" class="btn btn-success">1-ci şəkli dəyiş</div></div>
-                 <div><input class="photoHiddenInput" disabled value="33" type="text"></div>
+                 <div><input class="photoHiddenInput" disabled value="<?=$urun["urun_resmi_bir"]?>" type="text"></div>
                  <div class="photoTitle">Məhsul Rəsmi 1:</div>
                  <div class="photo photoOwn"><input name="goodphotoFirst" type="file"></div> 
             <?php
@@ -108,7 +114,7 @@
        <?php
             if($urun["urun_resmi_iki"] !== null) {?>
                  <div><div  class="btn btn-success phototrigger">2-ci şəkli dəyiş</div></div>
-                 <div><input class="photoHiddenInput" disabled value="33" type="text"></div>
+                 <div><input class="photoHiddenInput" disabled value="<?=$urun["urun_resmi_iki"]?>" type="text"></div>
                  <div class="photoTitle">Məhsul Rəsmi 2:</div>
                  <div class="photo photoOwn"><input name="goodphotoSecond" type="file"></div>
             <?php
@@ -121,7 +127,7 @@
       <?php
             if($urun["urun_resmi_uc"] !== null) {?>
                  <div><div  class="btn btn-success phototrigger">3-cü şəkli dəyiş</div></div>
-                 <div><input class="photoHiddenInput" disabled value="33" type="text"></div>
+                 <div><input class="photoHiddenInput" disabled value="<?=$urun["urun_resmi_uc"]?>" type="text"></div>
                  <div class="photoTitle">Məhsul Rəsmi 3:</div>
                  <div class="photo photoOwn"><input name="goodphotoThird" type="file"></div>   
             <?php
@@ -134,7 +140,7 @@
       <?php
             if($urun["urun_resmi_dord"] !== null) {?>
                  <div><div class="btn btn-success phototrigger">4-cü şəkli dəyiş</div></div>
-                 <div><input class="photoHiddenInput" disabled  value="33" type="text"></div>
+                 <div><input class="photoHiddenInput" disabled  value="<?=$urun["urun_resmi_dord"]?>" type="text"></div>
                  <div class="photoTitle">Məhsul Rəsmi 4:</div>
                  <div class="photo photoOwn"><input name="goodphotoFourth" type="file"></div> 
             <?php

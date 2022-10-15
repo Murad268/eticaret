@@ -72,7 +72,13 @@
          <div>Məhsul Qiyməti:</div>
          <div><input name="goodprice" type="text"></div>
          <div>Məhsul Valyutası:</div>
-         <div><input name="goodcurrency" type="text"></div>
+         <div>
+            <select name="goodcurrency" id="">
+               <option value="TRY">Türk Lirəsi</option>
+               <option value="USD">Amerikan Dolları</option>
+               <option value="EUR">Euro</option>
+            </select>
+         </div> 
          <div>KDV Həcmi:</div>
          <div><input name="kdv" type="text"></div>
          <div>Kargo Qiyməti:</div>
