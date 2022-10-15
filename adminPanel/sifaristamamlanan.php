@@ -7,7 +7,7 @@
       $sayfalamaIcinButonSayisi = 2;
       $sayfaBasinaGosterilecek = 10;
       $toplamKayitSayisiSorgusu = $db->prepare("SELECT DISTINCT sifarisNumarasi FROM siparisler WHERE onayDurumu = ? AND kargoDurumu = ?  ORDER BY sifarisNumarasi DESC");
-      $toplamKayitSayisiSorgusu->execute([0, 0]);
+      $toplamKayitSayisiSorgusu->execute([1, 1]);
       $toplamKayitSayisi = $toplamKayitSayisiSorgusu->rowCount();
       $sayfalamayBaslayacaqKayotSayisi = ($sayfalama*$sayfaBasinaGosterilecek) - $sayfaBasinaGosterilecek;
       $bulunanSafyaSayisi = ceil($toplamKayitSayisi/$sayfaBasinaGosterilecek);
@@ -16,7 +16,7 @@
          ŞİFARİŞ PARAMETRLƏRİ
       </div>
       <div class="addBank">
-         <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=57">Tamamlanmış Sifarişlər</a>
+         <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=53">Gözləyən Sifarişlər</a>
       </div>
       <?php
           if(isset($_SESSION["bankDel"])) {
@@ -28,8 +28,8 @@
       ?>
     <div class="kargolar__wrapper">
           <?php
-            $siparisNumralariSorgusu = $db->prepare("SELECT DISTINCT sifarisNumarasi FROM siparisler WHERE kargoDurumu = 0 AND onayDurumu = 0 ORDER BY sifarisNumarasi DESC LIMIT $sayfalamayBaslayacaqKayotSayisi, $sayfaBasinaGosterilecek");
-            $siparisNumralariSorgusu->execute([]);
+            $siparisNumralariSorgusu = $db->prepare("SELECT DISTINCT sifarisNumarasi FROM siparisler WHERE kargoDurumu = 1 AND onayDurumu = 1 ORDER BY sifarisNumarasi DESC LIMIT $sayfalamayBaslayacaqKayotSayisi, $sayfaBasinaGosterilecek");
+            $siparisNumralariSorgusu->execute();
             $siparisNumralariSayisi = $siparisNumralariSorgusu->rowCount();
             $siparisNumralariKayitlari = $siparisNumralariSorgusu->fetchAll(PDO::FETCH_ASSOC);
           
@@ -37,7 +37,7 @@
                foreach($siparisNumralariKayitlari as $siparisNumralariSatirlar) {
                   
                   $siparisNo = DonusumleriGeriDondur($siparisNumralariSatirlar["sifarisNumarasi"]);
-                  $siparisSorgusu = $db->prepare("SELECT * FROM siparisler WHERE onayDurumu = 0 AND kargoDurumu = 0 AND  sifarisNumarasi = ?  ORDER BY id ASC");
+                  $siparisSorgusu = $db->prepare("SELECT * FROM siparisler WHERE onayDurumu = 1 AND kargoDurumu = 1 AND  sifarisNumarasi = ?  ORDER BY id ASC");
                   $siparisSorgusu->execute([$siparisNumralariSatirlar["sifarisNumarasi"]]);
                   $siparisSorgusuKayitari = $siparisSorgusu->fetchAll(PDO::FETCH_ASSOC);
                   $mebleg = 0;
@@ -54,13 +54,9 @@
                               <div><b>Sifariş Məbləği</b></div>
                               <div>: &nbsp;&nbsp;<?=fiyatBitimlerndir($mebleg)?></div>
                               <div>
-                                 <a style="text-decoration: none; color: black; margin-right :5px" href="index.php?sayfaKoduDis=0&sayfaKoduIc=55&sepet=<?=$siparisSatirlar["sifarisNumarasi"]?>">
+                                 <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=54&sepet=<?=$siparisSatirlar["sifarisNumarasi"]?>">
                                     <img src="../assets/images/DokumanKirmiziKalemli20x20.png" alt="">
                                     Detay
-                                 </a>
-                                 <a style="text-decoration: none; color: black; margin-left :5px" href="index.php?sayfaKoduDis=0&sayfaKoduIc=58&sepet=<?=$siparisSatirlar["sifarisNumarasi"]?>">
-                                    <img src="../assets/images/Sil20x20.png" alt="">
-                                    Sil
                                  </a>
                               </div>
                          </div>

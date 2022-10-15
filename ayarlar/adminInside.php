@@ -53,6 +53,9 @@
    $inside[51] = "urunguncelle.php";
    $inside[52] = "urunguncellesonuc.php";
    $inside[53] = "sifarisbekleyen.php";
-   $inside[54] = "sifaristamamlanan.php";
-   $inside[55] = "bekleyendetay.php"
+   $inside[54] = "tamamlanandetay.php";
+   $inside[55] = "bekleyendetay.php";
+   $inside[56] = "bekleyenkargoislemi.php";
+   $inside[57] = "sifaristamamlanan.php";
+   $inside[58] = "siparisSil.php";
 ?>

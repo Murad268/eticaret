@@ -495,16 +495,37 @@ html, body {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    align-items: center;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; 
+   height: 400px;
+   margin-top: 20px;
 }
 .urunMainWrapper__img {
    width: 100%;
+   height: 300px;
 }
 .urunMainWrapper__img img {
    width: 70%;
+   height: 100%;
 }
 .urunMainWrapper__desc {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    align-items: center;
    row-gap: 10px;
+}
+.main__detay {
+   margin-top: 20px;
+}
+.main__detay div{
+   width: 800px;
+   display: flex;
+   text-align: left;
+}
+.gonder__form {
+   width: 100%;
+}
+.gonder__form input {
+   width: 100%;
+   margin-top: 5px;
+   height: 40px;
 }

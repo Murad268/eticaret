@@ -11,6 +11,7 @@
       }
       if($gelenId == ""){
          header("Location: index.php?sayfaKoduDis=0&sayfaKoduIc=53");
+         exit();
       }
    ?>
       <div class="panel__header">
@@ -33,8 +34,32 @@
          $siparisleriSorgula->execute([$gelenId]);
          $siparisSayi = $siparisleriSorgula->rowCount();
          $siparisler = $siparisleriSorgula->fetchAll(PDO::FETCH_ASSOC);
-     
+         if($siparisSayi < 0) {
+            header("Location: index.php?sayfaKoduDis=0&sayfaKoduIc=53");
+            exit();
+         }
+         $count = 0;
          foreach($siparisler as $siparis) {
+            switch($siparis["urunTuru"]) {
+               case "erkek":
+                  $klasor = "Erkek";
+                  break;
+               case "kadin":
+                  $klasor = "Kadin";
+                  break;
+               default:
+                  $klasor = "Cocuk";
+                  break;
+            }
+            if($count == 0) {?>
+            <div class="main__detay">
+               <div><span><b style="color: black">Ad Soyadı:&nbsp;&nbsp;&nbsp;&nbsp;</b></span><span class="sss"><?=DonusumleriGeriDondur($siparis["adresAdiSoyadi"])?></span></div>
+               <div><span><b style="color: black">Telefon:&nbsp;&nbsp;&nbsp;&nbsp;</b></span><span><?=DonusumleriGeriDondur($siparis["adresTelefon"])?></span></div>
+               <div><span><b style="color: black">Adres:&nbsp;&nbsp;&nbsp;&nbsp;</b></span><span><?=DonusumleriGeriDondur($siparis["adresDetay"])?></span></div>
+            </div>
+         <?php
+           $count++;
+            }
             switch($siparis["paraBirimi"]) {
                case "USD":
                   $fiyat = ($siparis["urunFiyati"] * $dolarKuru) + (($siparis["urunFiyati"] * $dolarKuru) * $siparis["kdvOrani"] / 100);
@@ -48,7 +73,7 @@
             }?>
               <div class="urunMainWrapper">
                <div class="urunMainWrapper__img">
-                  <img src="../assets/images/UrunResimleri/Erkek/1-1.jpg" alt="">
+                  <img src="../assets/images/UrunResimleri/<?=$klasor?>/<?=$siparis["urunResmiBir"]?>" alt="">
                </div>
                <div class="urunMainWrapper__desc">
                   <div class="urunMainWrapper__desc__title">Ad:</div>
@@ -57,6 +82,8 @@
                   <div class="urunMainWrapper__desc__body"><?=donusumleriGeriDondur(fiyatBitimlerndir($siparis["urunFiyati"]))?> TL</div>
                   <div class="urunMainWrapper__desc__title">Ödəmə:</div>
                   <div class="urunMainWrapper__desc__body"><?=$siparis["odemeSecimi"]?></div>
+                  <div class="urunMainWrapper__desc__title">Taksit:</div>
+                  <div class="urunMainWrapper__desc__body"><?=isset($siparis["taksit"])?$siparis["taksit"]:"0"?></div>
                   <div class="urunMainWrapper__desc__title">Ədəd:</div>
                   <div class="urunMainWrapper__desc__body"><?=$siparis["toplamUrunAdedi"]?> ədəd</div>
                   <div class="urunMainWrapper__desc__title">Tam qiymət:</div>
@@ -73,7 +100,12 @@
          }
       ?>
         
-      
+      <div class="gonder__form">
+         <form action="index.php?sayfaKoduDis=0&sayfaKoduIc=56&sepet=<?=$gelenId?>" method="post">
+            Kargo Göndərmə Kodu: <input name="kod" type="text">
+            <button class="mt-3 btn btn-success mb-4">Göndərim Kodunu İşləmə al və Sifarişi Tamamla</button>
+         </form>
+      </div>
     
     </div>
 </div>
