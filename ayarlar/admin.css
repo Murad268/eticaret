@@ -463,7 +463,7 @@ html, body {
    height: 80px;
 }
 
-.add__good__img, .add__good__variant {
+.add__good__img, .add__good__variant, .add__good__variants {
    width: 20px;
    height: 20px;
    display: flex;

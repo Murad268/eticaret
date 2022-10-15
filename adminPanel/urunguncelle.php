@@ -16,7 +16,7 @@
    <div class="panel__header">
       MƏHSUL PARAMETRLƏRİ
    </div>
-   <form action="index.php?sayfaKoduDis=0&sayfaKoduIc=50" method="post" enctype="multipart/form-data">
+   <form action="index.php?sayfaKoduDis=0&sayfaKoduIc=52&id=<?=$gelenId?>" method="post" enctype="multipart/form-data">
       <?php
          if(isset($_SESSION["adminmess"])) {
             $mess = $_SESSION["adminmess"];
@@ -97,11 +97,11 @@
                  <div><div class="btn btn-success phototrigger" style="text-align: left" class="btn btn-success">1-ci şəkli dəyiş</div></div>
                  <div><input class="photoHiddenInput" disabled value="33" type="text"></div>
                  <div class="photoTitle">Məhsul Rəsmi 1:</div>
-                 <div class="photo photoOwn"><input name="goodphoto1" type="file"></div> 
+                 <div class="photo photoOwn"><input name="goodphotoFirst" type="file"></div> 
             <?php
             } else {?>
              <div>Məhsul Rəsmi 1:</div>
-             <div class="photo"><input name="goodphoto1" type="file"></div> 
+             <div class="photo"><input name="goodphotoFirst" type="file"></div> 
             <?php
             }
          ?>
@@ -110,11 +110,11 @@
                  <div><div  class="btn btn-success phototrigger">2-ci şəkli dəyiş</div></div>
                  <div><input class="photoHiddenInput" disabled value="33" type="text"></div>
                  <div class="photoTitle">Məhsul Rəsmi 2:</div>
-                 <div class="photo photoOwn"><input name="goodphoto2" type="file"></div>
+                 <div class="photo photoOwn"><input name="goodphotoSecond" type="file"></div>
             <?php
             } else {?>
               <div>Məhsul Rəsmi 2:</div>
-              <div class="photo"><input name="goodphoto1" type="file"></div>
+              <div class="photo"><input name="goodphotoSecond" type="file"></div>
             <?php
             }
          ?>
@@ -123,11 +123,11 @@
                  <div><div  class="btn btn-success phototrigger">3-cü şəkli dəyiş</div></div>
                  <div><input class="photoHiddenInput" disabled value="33" type="text"></div>
                  <div class="photoTitle">Məhsul Rəsmi 3:</div>
-                 <div class="photo photoOwn"><input name="goodphoto3" type="file"></div>   
+                 <div class="photo photoOwn"><input name="goodphotoThird" type="file"></div>   
             <?php
             } else {?>
                 <div>Məhsul Rəsmi 3:</div>
-                <div class="photo"><input name="goodphoto1" type="file"></div>   
+                <div class="photo"><input name="goodphotoThird" type="file"></div>   
             <?php
             }
          ?>
@@ -136,11 +136,11 @@
                  <div><div class="btn btn-success phototrigger">4-cü şəkli dəyiş</div></div>
                  <div><input class="photoHiddenInput" disabled  value="33" type="text"></div>
                  <div class="photoTitle">Məhsul Rəsmi 4:</div>
-                 <div class="photo photoOwn"><input name="goodphoto4" type="file"></div> 
+                 <div class="photo photoOwn"><input name="goodphotoFourth" type="file"></div> 
             <?php
             } else {?>
              <div>Məhsul Rəsmi 4:</div>
-             <div class="photo"><input name="goodphoto1"  type="file"></div> 
+             <div class="photo"><input name="goodphotoFourth"  type="file"></div> 
             <?php
             }
          ?>
@@ -152,62 +152,43 @@
         
       </div>
   
-      <div class="variants">
-       
-      <div class="variant__wrapper">
-            <div>1-ci ayaqqabı ölçüsü: </div>
-            <div><input value="<?=$variantlar[0]["variantAdi"]?>" name="variant[]" type="text"></div>
-            <div>1-ci ölçü üçün stok ədədi: </div>
-            <div><input value="<?=isset($variantlar[0])?$variantlar[0]["stokAdedi"]:null?>" name="stok[]" type="text"></div>
+      <div class="variants guncelleVariant">
+            <?php
+               foreach($variantlar as $key => $variant) {
+                  
+                  if($key + 1 == 1) {
+                     $extend = "ci";
+                  } else if($key + 1 == 2) {
+                     $extend = "ci";
+                  } else if($key + 1 == 3) {
+                     $extend = "cü";
+                  } else if($key + 1 == 4) {
+                     $extend = "cü";
+                  } else if($key + 1 == 5) {
+                     $extend = "ci";
+                  } else if($key + 1 == 6) {
+                     $extend = "cı";
+                  } else if($key + 1 == 7) {
+                     $extend = "ci";
+                  } else if($key + 1 == 8) {
+                     $extend = "ci";
+                  } else if($key + 1 == 9) {
+                     $extend = "cu";
+                  }
+                  ?>
+                  <div class="variant__wrapper">
+                        <div><?=$key+1?>-<?=$extend?> ayaqqabı ölçüsü: </div>
+                        <div><input value="<?=$variant["variantAdi"]?>" name="variant[]" type="text"></div>
+                        <div>1-ci ölçü üçün stok ədədi: </div>
+                        <div><input value="<?=$variant["stokAdedi"]?>" name="stok[]" type="text"></div>
+                  </div>
+                  <?php
+               };
+            ?>
+    
       </div>
-      <div class="variant__wrapper">
-            <div>2-ci ayaqqabı ölçüsü: </div>
-            <div><input value="<?=isset($variantlar[1])?$variantlar[1]["variantAdi"]:null?>" name="variant[]" type="text"></div>
-            <div>2-ci ölçü üçün stok ədədi: </div>
-            <div><input value="<?=isset($variantlar[1])?$variantlar[1]["stokAdedi"]:null?>" name="stok[]" type="text"></div>
-      </div>
-      <div class="variant__wrapper">
-            <div>3-cü ayaqqabı ölçüsü: </div>
-            <div><input value="<?=isset($variantlar[2])?$variantlar[1]["variantAdi"]:null?>" name="variant[]" type="text"></div>
-            <div>3-cü ölçü üçün stok ədədi: </div>
-            <div><input value="<?=isset($variantlar[2])?$variantlar[2]["stokAdedi"]:null?>" name="stok[]" type="text"></div>
-      </div>
-      <div class="variant__wrapper">
-            <div>4-cü ayaqqabı ölçüsü: </div>
-            <div><input value="<?=isset($variantlar[3])?$variantlar[1]["variantAdi"]:null?>" name="variant[]" type="text"></div>
-            <div>4-cü ölçü üçün stok ədədi: </div>
-            <div><input value="<?=isset($variantlar[3])?$variantlar[3]["stokAdedi"]:null?>" name="stok[]" type="text"></div>
-      </div>
-      <div class="variant__wrapper">
-            <div>5-ci ayaqqabı ölçüsü: </div>
-            <div><input value="<?=isset($variantlar[4])?$variantlar[1]["variantAdi"]:null?>" name="variant[]" type="text"></div>
-            <div>5-ci ölçü üçün stok ədədi: </div>
-            <div><input value="<?=isset($variantlar[4])?$variantlar[4]["stokAdedi"]:null?>" name="stok[]" type="text"></div>
-      </div>
-      <div class="variant__wrapper">
-            <div>6-cı ayaqqabı ölçüsü: </div>
-            <div><input value="<?=isset($variantlar[5])?$variantlar[1]["variantAdi"]:null?>" name="variant[]" type="text"></div>
-            <div>6-cı ölçü üçün stok ədədi: </div>
-            <div><input value="<?=isset($variantlar[5])?$variantlar[5]["stokAdedi"]:null?>" name="stok[]" type="text"></div>
-      </div>
-      <div class="variant__wrapper">
-            <div>7-ci ayaqqabı ölçüsü: </div>
-            <div><input value="<?=isset($variantlar[6])?$variantlar[1]["variantAdi"]:null?>" name="variant[]" type="text"></div>
-            <div>7-ci ölçü üçün stok ədədi: </div>
-            <div><input value="<?=isset($variantlar[6])?$variantlar[6]["stokAdedi"]:null?>" name="stok[]" type="text"></div>
-      </div>
-      <div class="variant__wrapper">
-            <div>8-ci ayaqqabı ölçüsü: </div>
-            <div><input value="<?=isset($variantlar[7])?$variantlar[1]["variantAdi"]:null?>" name="variant[]" type="text"></div>
-            <div>8-ci ölçü üçün stok ədədi: </div>
-            <div><input value="<?=isset($variantlar[7])?$variantlar[7]["stokAdedi"]:null?>" name="stok[]" type="text"></div>
-      </div>
-      <div class="variant__wrapper">
-            <div>9-cu ayaqqabı ölçüsü: </div>
-            <div><input value="<?=isset($variantlar[8])?$variantlar[1]["variantAdi"]:null?>" name="variant[]" type="text"></div>
-            <div>9-cu ölçü üçün stok ədədi: </div>
-            <div><input value="<?=isset($variantlar[8])?$variantlar[8]["stokAdedi"]:null?>" name="stok[]" type="text"></div>
-      </div>
+      <div class="add__good__variants">
+               +
       </div>
       <button class="btn btn-success">Məhsulu Yenilə</button>
    </form>

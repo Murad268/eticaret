@@ -98,7 +98,7 @@
       </div>
       <div class="add__good__variant">
                +
-         </div>
+      </div>
       <button class="btn btn-success">Yeni məhsul əlavə elə</button>
    </form>
 </div>

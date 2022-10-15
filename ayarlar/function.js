@@ -366,16 +366,29 @@ if(kart && bank) {
      })
    }
 
+
+
+
+
+
+
+
+
+
+
    let Count = 1;
    let Count2 = 1;
+   const add = (mainWrapper, tag) => {
+    mainWrapper.innerHTML+=tag;
+   }
    const plusImg = document.querySelector(".add__good__img");
    const imgWrapper = document.querySelector(".urun__ayarlari");
    const plusVariant = document.querySelector(".add__good__variant");
    const variantWrapper = document.querySelector(".variants");
-   if(plusImg && imgWrapper && plusVariant && variantWrapper) {
-    const add = (mainWrapper, tag) => {
-      mainWrapper.innerHTML+=tag;
-     }
+   const updateWrapper = document.querySelector(".guncelleVariant");
+   const updadeAddTrigger = document.querySelector('.add__good__variants');
+   if(plusImg && imgWrapper && plusVariant && variantWrapper ) {
+  
      plusImg.addEventListener("click", (e) => {
       if(Count == 3) {
         e.target.style.display = "none";
@@ -425,8 +438,11 @@ if(kart && bank) {
                   </div>`;
       add(variantWrapper, tag);
      })
+
+     
    }
    
+ 
 
    
 
@@ -443,3 +459,48 @@ if(kart && bank) {
       photoOwn[i].style.display = "block";
     })
    })
+
+   if(updadeAddTrigger && updateWrapper) {
+    let count = +document.querySelectorAll(".variant__wrapper input").length/2
+
+    updadeAddTrigger.addEventListener("click", (e) => {
+      count++;
+      if(count > 9) {
+        e.target.style.display = "none";
+      }
+      switch(count) {
+        case 2:
+           ex = "ci";
+           break;
+        case 3:
+           ex = "cü";
+           break;
+        case 4:
+          ex = "cü";
+          break;
+        case 5:
+          ex = "ci";
+          break;
+        case 6:
+          ex = "cı";
+          break;
+        case 7:
+          ex = "ci";
+          break;
+        case 8:
+          ex = "ci";
+          break;
+        case 9:
+          ex = "cu";
+          break;
+      }
+     
+      const tag = `<div class="variant__wrapper">
+                        <div>${count}-${ex} ayaqqabı ölçüsü: </div>
+                        <div><input name="newvariant[]" type="text"></div>
+                        <div>1c-1c ölçü üçün stok ədədi: </div>
+                        <div><input name="newstok[]" type="text"></div>
+                    </div>`;
+        add(updateWrapper, tag);
+     })
+   }
