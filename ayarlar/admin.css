@@ -477,3 +477,16 @@ html, body {
 .photoTitle, .photoOwn {
    display: none;
 }
+.sifariswrapper {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 15px;
+   column-gap: 10px;
+   text-align: left;
+}
+.sifariswrapper a:last-child {
+   text-decoration: none;
+   color: black;
+}

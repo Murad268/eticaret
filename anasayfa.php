@@ -55,16 +55,16 @@
                   }
                   switch($mal["para_birimi"]) {
                      case "USD":
-                        $fiyat = $mal["urun_fiyati"] * $dolarKuru;
+                        $fiyat = ($mal["urun_fiyati"] * $dolarKuru) + (($mal["urun_fiyati"] * $dolarKuru) * $mal["KDVOrani"] / 100);
                         break;
                      case "EUR":
-                        $fiyat = $mal["urun_fiyati"] * $euroKuru;
+                        $fiyat = ($mal["urun_fiyati"] * $euroKuru) + (($mal["urun_fiyati"] * $euroKuru) * $mal["KDVOrani"] / 100);
                         break;
                      default:
-                        $fiyat = $mal["urun_fiyati"];
+                        $fiyat = ($mal["urun_fiyati"]) + ($mal["urun_fiyati"] * $mal["KDVOrani"] / 100);
                         break;
                   }
-                  
+            
                   ?>
 
                   <div class="mainMenu__goods__wrapper__item">
@@ -125,13 +125,13 @@
                   }
                   switch($mal["para_birimi"]) {
                      case "USD":
-                        $fiyat = $mal["urun_fiyati"] * $dolarKuru;
+                        $fiyat = ($mal["urun_fiyati"] * $dolarKuru) + (($mal["urun_fiyati"] * $dolarKuru) * $mal["KDVOrani"] / 100);
                         break;
                      case "EUR":
-                        $fiyat = $mal["urun_fiyati"] * $euroKuru;
+                        $fiyat = ($mal["urun_fiyati"] * $euroKuru) + (($mal["urun_fiyati"] * $euroKuru) * $mal["KDVOrani"] / 100);
                         break;
                      default:
-                        $fiyat = $mal["urun_fiyati"];
+                        $fiyat = ($mal["urun_fiyati"]) + ($mal["urun_fiyati"] * $mal["KDVOrani"] / 100);
                         break;
                   }
                   
@@ -196,13 +196,13 @@
                   }
                   switch($mal["para_birimi"]) {
                      case "USD":
-                        $fiyat = $mal["urun_fiyati"] * $dolarKuru;
+                        $fiyat = ($mal["urun_fiyati"] * $dolarKuru) + (($mal["urun_fiyati"] * $dolarKuru) * $mal["KDVOrani"] / 100);
                         break;
                      case "EUR":
-                        $fiyat = $mal["urun_fiyati"] * $euroKuru;
+                        $fiyat = ($mal["urun_fiyati"] * $euroKuru) + (($mal["urun_fiyati"] * $euroKuru) * $mal["KDVOrani"] / 100);
                         break;
                      default:
-                        $fiyat = $mal["urun_fiyati"];
+                        $fiyat = ($mal["urun_fiyati"]) + ($mal["urun_fiyati"] * $mal["KDVOrani"] / 100);
                         break;
                   }
                   

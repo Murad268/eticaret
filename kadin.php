@@ -105,12 +105,16 @@
                   foreach($goods as $good) {
                      $UrunuFiyati = donusumleriGeriDondur($good["urun_fiyati"]);
                      $UrunParaBirimi = donusumleriGeriDondur($good["para_birimi"]);
-                     if($UrunParaBirimi == "USD") {
-                        $urunFiyatiHesabla  = $UrunuFiyati * $dolarKuru;
-                     }elseif($UrunParaBirimi = "EUR"){
-                        $urunFiyatiHesabla  = $UrunuFiyati * $euroKuru;
-                     }else {
-                        $urunFiyatiHesabla = $UrunuFiyati;
+                     switch($good["para_birimi"]) {
+                        case "USD":
+                           $fiyat = ($good["urun_fiyati"] * $dolarKuru) + (($good["urun_fiyati"] * $dolarKuru) * $good["KDVOrani"] / 100);
+                           break;
+                        case "EUR":
+                           $fiyat = ($good["urun_fiyati"] * $euroKuru) + (($good["urun_fiyati"] * $euroKuru) * $good["KDVOrani"] / 100);
+                           break;
+                        default:
+                           $fiyat = ($good["urun_fiyati"]) + ($good["urun_fiyati"] * $good["KDVOrani"] / 100);
+                           break;
                      }
                      if($good["yorumSayisi"]>0) {
                         $puan = number_format(($good["toplamYorumPuani"]/$good["yorumSayisi"]), 2, ".", "");
@@ -142,7 +146,7 @@
                            <div class="manWrapper__item__desc__name__star">
                               <img src="<?=$img?>" alt="">
                            </div>
-                           <div class="manWrapper__item__desc__name__price"><?=fiyatBitimlerndir($urunFiyatiHesabla)?> TL</div>
+                           <div class="manWrapper__item__desc__name__price"><?=fiyatBitimlerndir($fiyat)?> TL</div>
                         </div>
                      </div>
           <?php

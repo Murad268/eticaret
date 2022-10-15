@@ -52,4 +52,6 @@
    $inside[50] = "uruneklesonuc.php";
    $inside[51] = "urunguncelle.php";
    $inside[52] = "urunguncellesonuc.php";
+   $inside[53] = "sifarisbekleyen.php";
+   $inside[54] = "sifaristamamlanan.php";
 ?>
