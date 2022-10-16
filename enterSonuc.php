@@ -62,11 +62,11 @@
                $MailGonder->MsgHTML($MailIcerigiHazirla);
                $MailGonder->send();
                $_SESSION["message"] = "Hesab aktivləşdirilməyib. Sizə aktivasiya kodu yeniden göndərildi.";
-               header("Location: index.php?sayfaKodu=25");
+               header("Location: user-enter");
             }catch(Exception $e){
                $_SESSION["message"] = "Qeydiyyat zamanı müəyyən problemlər baş verdi. Xahiş edirik bir az sonra cəhd edəsiniz";
    
-               header("Location:index.php?sayfaKodu=25");
+               header("Location: user-enter");
                exit();
             }
     
@@ -82,10 +82,10 @@
       } else {
          $_SESSION["message"] = "Belə bir hesab mövcud deyil.";
     
-         header("Location:index.php?sayfaKodu=25");
+         header("Location: user-enter");
       }
    } else {
       $_SESSION["message"] = "Daxil edilən məlumatlar tam deyil. Xahiş edirik həm poçt unvanını, həm də parolu daxil edin";
-      header("Location: index.php?sayfaKodu=25");
+      header("Location: user-enter");
    }
 ?>

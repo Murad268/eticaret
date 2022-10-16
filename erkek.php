@@ -140,7 +140,7 @@
                      ?>
                      <div class="manWrapper__item">
                         <div class="manWrapper__item__img">
-                          <a href="index.php?sayfaKodu=52&id=<?=donusumleriGeriDondur($good["id"])?>"><img src="assets/images/UrunResimleri/Erkek/<?=donusumleriGeriDondur($good["urun_resmi_bir"])?>" alt=""></a>
+                          <a href="erkek-ayakkabisi/<?=donusumleriGeriDondur($good["urun_adi"])?>/<?=donusumleriGeriDondur($good["id"]);?>"><img src="assets/images/UrunResimleri/Erkek/<?=donusumleriGeriDondur($good["urun_resmi_bir"])?>" alt=""></a>
                         </div>
                         <div class="manWrapper__item__desc">
                            <div style="color: orange; font-weight: bold" class="manWrapper__item__desc__title">Erkek Ayakkabısı</div>

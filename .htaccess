@@ -1,0 +1,5 @@
+RewriteEngine	On
+RewriteBase	/eticaret
+RewriteRule	^user-enter$	/eticaret/index.php?sayfaKodu=25 [L,NC]
+RewriteRule	^erkek-ayakkabisi$  /eticaret/index.php?sayfaKodu=49 [L,NC]
+RewriteRule	^erkek-ayakkabisi/(.*)/(.*)$   /eticaret/index.php?sayfaKodu=52&id=$2 [L,NC]

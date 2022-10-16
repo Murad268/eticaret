@@ -1,6 +1,6 @@
 <?php
    if(!isset($id)) {
-      header("Location: index.php?sayfaKodu=25");
+      header("Location: user-enter");
       $_SESSION["message"] = "Əvvəlcə daxil olmalısınız";
    }
 ?>

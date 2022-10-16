@@ -1,6 +1,6 @@
 <?php
    if(!isset($_SESSION["userName"])) {
-      header("Location: index.php?sayfaKodu=25");
+      header("Location: user-enter");
    }
 ?>
 <div class="cartWrapper">

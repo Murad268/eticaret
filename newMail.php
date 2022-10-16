@@ -25,7 +25,7 @@
          unset($_SESSION["email"]);
          unset($_SESSION["phone"]);
          $_SESSION["message"] = "Məlumatlar güncəlləndilər";    
-         header("Location: index.php?sayfaKodu=25");   
+         header("Location: user-enter");   
       }
    }
 

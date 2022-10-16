@@ -50,11 +50,11 @@
             $MailGonder->send();
             $_SESSION["message"] = "Şifreni deyişmek linki poçt ünvanınıza gönderildi.";
 
-            header("Location:index.php?sayfaKodu=25");
+            header("Location: user-enter");
          }catch(Exception $e){
             $_SESSION["message"] = "Parol sıfırlaması müəyyən problemlər baş verdi. Xahiş edirik bir az sonra cəhd edəsiniz";
 
-            header("Location:index.php?sayfaKodu=25");
+            header("Location: user-enter");
             exit();
          }
       } else {

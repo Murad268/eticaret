@@ -8,7 +8,7 @@
    if($gelenId != "") {
       if(!isset($_SESSION["userName"])) {
          $_SESSION["message"] = "Əvvəlcə giriş etməlisiniz.";
-         header("Location: index.php?sayfaKodu=25");
+         header("Location: user-enter");
       } else {
          $addFavoriteFetch = $db->prepare("INSERT INTO favoriler (urunId, uyeId ) values ($gelenId, $id)");
          $addFavoriteFetch->execute();

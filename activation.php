@@ -9,7 +9,7 @@
    $userAffect = $activateUser->rowCount();
 
    if($userAffect>0) {
-      header("Location: index.php?sayfaKodu=25");
+      header("Location: user-enter");
       // unset( $_SESSION["message"]);
       $_SESSION["message"] = "Profiliniz aktivləşdirildi";
    }  else {

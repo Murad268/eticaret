@@ -29,6 +29,7 @@
    <meta name="revisit-after" content="7 Days">
    <meta name="description" content="<?=DonusumleriGeriDondur($desc)?>">
    <meta name="keywords" content="<?=DonusumleriGeriDondur($keywords)?>">
+   <base href="/eticaret/">
    <link rel="shortcut icon" href="assets/images/Favicon.png" type="image/x-icon">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -57,7 +58,7 @@
                         <td class="maviAlanMenusu" width="85"><a href="index.php?sayfaKodu=32">Çıkış Yap</a></td>  
                   <?php } else {?>
                      <td width="20"><img src="assets/images/KullaniciBeyaz16x16.png" alt=""></td>  
-                     <td class="maviAlanMenusu" width="70"><a  href="index.php?sayfaKodu=25">Giriş Yap</a></td>       
+                     <td class="maviAlanMenusu" width="70"><a  href="user-enter">Giriş Yap</a></td>       
                      <td width="20"><img  src="assets/images/KullaniciEkleBeyaz16x16.png" alt=""></td>             
                      <td class="maviAlanMenusu" width="85"><a href="index.php?sayfaKodu=22">Yeni üye ol</a></td>  
                      <?php }
@@ -131,7 +132,7 @@
                      if(isset($_SESSION["userName"])) {?>
                         <td class="footer"><a href="index.php?sayfaKodu=27">Hesabım</a></td> 
                      <?php  } else {   ?> 
-                        <td class="footer"><a href="index.php?sayfaKodu=25">Giriş Yap</a></td> 
+                        <td class="footer"><a href="user-enter">Giriş Yap</a></td> 
                   <?php }
                   ?> 
                   

@@ -43,6 +43,6 @@
                   }
                ?>
             </form>
-            <div class="or">Əgər hesabınız varsa, <a href="index.php?sayfaKodu=25">buradan</a>  daxil olun</div>
+            <div class="or">Əgər hesabınız varsa, <a href="user-enter">buradan</a>  daxil olun</div>
       
          </div>

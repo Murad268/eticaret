@@ -26,7 +26,7 @@
          echo $activationCode;
          if($kayit>0) {
             $_SESSION["message"] = "Şifre deyişildi.";
-            header("Location: index.php?sayfaKodu=25");
+            header("Location: user-enter");
          }
       } else {
          $_SESSION["message"] = "Şifrələr üst-üstə düşmürlər";
