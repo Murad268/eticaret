@@ -59,4 +59,6 @@
    $inside[57] = "sifaristamamlanan.php";
    $inside[58] = "siparisSil.php";
    $inside[59] = "siparisTamamSil.php";
+   $inside[60] = "hevale.php";
+   $inside[61] = "hevaleSil.php";
 ?>

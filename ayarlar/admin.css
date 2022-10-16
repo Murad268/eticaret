@@ -529,3 +529,17 @@ html, body {
    margin-top: 5px;
    height: 40px;
 }
+.hevale__item__wrapper {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+}
+.hevale__item_title {
+   color: black;
+   font-weight: bold;
+   margin: 5px 0 10px 0;
+}
+.hevale__item {
+   margin-top: 20px;
+   padding: 10px;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
