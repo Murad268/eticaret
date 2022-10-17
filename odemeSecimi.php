@@ -1,4 +1,7 @@
 <?php
+   if(!isset($_SESSION["userName"])) {
+      header("Location: index.php");
+   }
    if(isset($_POST["odenecektutar"])) {
       $odenecektutar = $_POST["odenecektutar"];
    } else {

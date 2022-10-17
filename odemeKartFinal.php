@@ -1,4 +1,7 @@
 <?php
+   if(!isset($_SESSION["userName"])) {
+      header("Location: index.php");
+   }
    $siparisleriSorgula = $db->prepare("SELECT * FROM sepet WHERE uyeId = $id");
    $siparisleriSorgula->execute();
    $siparisleriSorgulaCount = $siparisleriSorgula->rowCount();

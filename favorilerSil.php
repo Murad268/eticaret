@@ -6,7 +6,7 @@
    }
 
    if($gelenId !== "") {
-      unset($_SESSION["message"]);
+      unset($_SESSION["favorite"]);
       $deleteFavori = $db->prepare("DELETE FROM favoriler WHERE id = ? AND uyeId = ?");
       $deleteFavori->execute([$gelenId, $id]);
       $deletedCount = $deleteFavori->rowCount();
@@ -15,7 +15,7 @@
          header("Location: index.php?sayfaKodu=37");
       }
    } else {
-      $_SESSION["message"] = "Error. Boş id.";
+      $_SESSION["favorite"] = "Error. Boş id.";
       header("Location: index.php?sayfaKodu=37");
    }
 ?>

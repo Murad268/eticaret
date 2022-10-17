@@ -35,8 +35,8 @@
               </div>
                <button type="submit" class="btn btn-primary">Qeydiyyatdan keç</button>
                <?php
-                  if(isset($_SESSION["message"])) {
-                     $mess = $_SESSION["message"];
+                  if(isset($_SESSION["regMessage"])) {
+                     $mess = $_SESSION["regMessage"];
                      echo "<div class='alert alert-danger' role='alert'>
                         $mess
                      </div>";

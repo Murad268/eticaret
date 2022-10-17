@@ -7,14 +7,15 @@
   
    if($gelenId != "") {
       if(!isset($_SESSION["userName"])) {
-         $_SESSION["message"] = "Əvvəlcə giriş etməlisiniz.";
+         $_SESSION["enterMess"] = "Əvvəlcə giriş etməlisiniz.";
          header("Location: user-enter");
       } else {
          $addFavoriteFetch = $db->prepare("DELETE FROM favoriler WHERE uyeId = $id AND urunId = $gelenId");
          $addFavoriteFetch->execute();
          $addFavoriteFetchCount = $addFavoriteFetch->rowCount();
          if($addFavoriteFetchCount>0) {
-            $_SESSION["message"] = "Məhsul favorilerden silindi";
+            $_SESSION["addFav"] = "Məhsul favorilerden silindi";
+            unset($_SESSION["goodDetailsMess"]);
             header("Location: index.php?sayfaKodu=52&id=".$gelenId);
          } else {
             echo "error";

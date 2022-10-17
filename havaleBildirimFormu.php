@@ -20,7 +20,7 @@
                <label for="Select" required class="form-label">Ödeme Yapılan Banka (*)</label>
                <select name="bank" id="Select" class="form-select">
                   <?php
-                     $fethHavale = $db->prepare("SELECT * FROM bankahesablarımız");
+                     $fethHavale = $db->prepare("SELECT * FROM bankahesablarimiz");
                      $fethHavale->execute();
                      $bankHevaleCount = $fethHavale->rowCount();
                      $hevaleBanks = $fethHavale->fetchAll(PDO::FETCH_ASSOC);
@@ -41,6 +41,8 @@
       </form>
    </div>
    <div class="havaleWrapper__desc">
+      <?php
+      echo "l"?>
       <h4 class="havaleWrapper__form__title">İşleyiş</h4>
       <div class="havaleWrapper__form__subtitle">Havale / EFT İşlemlerinin Kontrölü</div>
       <div class="havaleWrapper__desc__item">

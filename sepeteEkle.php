@@ -29,7 +29,7 @@
       $slot=$slotYoxla->fetch(PDO::FETCH_ASSOC);
       
       if($urunSayi>$slot["stokAdedi"]) {
-         $_SESSION["message"] = "Hazırda stokda bu məhsuldan istədiyiniz sayda yoxdur";
+         $_SESSION["goodDetailsMess"] = "Hazırda stokda bu məhsuldan istədiyiniz sayda yoxdur";
          header("Location: index.php?sayfaKodu=52&id=".$urunId);
       }
 
@@ -40,7 +40,8 @@
       if($checkCartCount>0) {
          $addSay = $db->prepare("UPDATE sepet SET urunAdedi=urunAdedi+? WHERE uyeId=? AND urunId=? AND variantId=?");
          $addSay->execute([$urunSayi, $id, $urunId, $urunVariant]);
-         $_SESSION["message"] = "Səbətdə bu məhsulun sayı artırıldı.";
+         unset($_SESSION["addFav"]);
+         $_SESSION["goodDetailsMess"] = "Səbətdə bu məhsulun sayı artırıldı.";
          header("Location: index.php?sayfaKodu=52&id=".$urunId);
          exit();
       } else {
@@ -50,7 +51,8 @@
          $sepetNum->execute([$unix, $id]);
          $addCartCount = $addCart->rowCount();
          if($addCartCount>0) {
-            $_SESSION["message"] = "Məhsul səbətə əlavə edildi.";
+            $_SESSION["goodDetailsMess"] = "Məhsul səbətə əlavə edildi.";
+            unset($_SESSION["addFav"]);
             header("Location: index.php?sayfaKodu=52&id=".$urunId);
             exit();
          }

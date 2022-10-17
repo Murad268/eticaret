@@ -77,7 +77,7 @@
          } else {
             $_SESSION["logomess"] = "Şəklin Yüklənməyində xəta baş verdi";
          }
-      $bankhesablariniSorgula = $db->prepare("INSERT INTO bankahesablarımız (bankaAdı, KonumŞehir, konumÜlke, ŞubeAdı, ŞubeKodu, paraBirimi, hesabSahibi, hesabNumarası, ibanNumarası, bankLogo) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+      $bankhesablariniSorgula = $db->prepare("INSERT INTO bankahesablarimiz (bankaAdı, KonumŞehir, konumÜlke, ŞubeAdı, ŞubeKodu, paraBirimi, hesabSahibi, hesabNumarası, ibanNumarası, bankLogo) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
       $bankhesablariniSorgula->execute([$bankname, $bankcity, $bankcountry, $bankseccname, $bankseccode, $bankcurrency, $bankuser, $bankacccode, $bankiban, $allName]);
    }
    $bankhesablariniSorgulaSayi = $bankhesablariniSorgula->rowCount();

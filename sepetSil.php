@@ -12,12 +12,12 @@
       if($deleteCartFetchCount>0) {     
          header("Location: index.php?sayfaKodu=56");
       } else {
-         $_SESSION["message"] = "Sepetden ürün silme zamanı hata oluştu. Bir az sonra yeniden deneyin";
+         $_SESSION["cartDell"] = "Sepetden ürün silme zamanı hata oluştu. Bir az sonra yeniden deneyin";
          header("Location: index.php?sayfaKodu=56");
       }
    } else {
       header("Location: index.php");
       exit();
    }
-   unset($_SESSION["message"]);
+   unset($_SESSION["cartDell"]);
 ?>

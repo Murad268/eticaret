@@ -1,3 +1,8 @@
+<?php
+  if(!isset($_SESSION["userName"])) {
+    header("Location: index.php");
+  }
+?>
 <div class="payment">
 <form method="post" action="index.php?sayfaKodu=64">
   <div class="payment-title">

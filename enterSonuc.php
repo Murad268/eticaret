@@ -61,10 +61,10 @@
                $MailGonder->Subject = DonusumleriGeriDondur($ad) . ' Aktivasiyon linki';
                $MailGonder->MsgHTML($MailIcerigiHazirla);
                $MailGonder->send();
-               $_SESSION["message"] = "Hesab aktivləşdirilməyib. Sizə aktivasiya kodu yeniden göndərildi.";
+               $_SESSION["enterMess"] = "Hesab aktivləşdirilməyib. Sizə aktivasiya kodu yeniden göndərildi.";
                header("Location: user-enter");
             }catch(Exception $e){
-               $_SESSION["message"] = "Qeydiyyat zamanı müəyyən problemlər baş verdi. Xahiş edirik bir az sonra cəhd edəsiniz";
+               $_SESSION["enterMess"] = "Qeydiyyat zamanı müəyyən problemlər baş verdi. Xahiş edirik bir az sonra cəhd edəsiniz";
    
                header("Location: user-enter");
                exit();
@@ -73,19 +73,19 @@
    
    
          } else {
-            unset($_SESSION["message"]);
+            unset($_SESSION["enterMess"]);
             $_SESSION["userName"] = $users["full_name"];
             $_SESSION["email"] = $users["email"];
             $_SESSION["phone"] = $users["phone"];
             header("Location: index.php?sayfaKodu=27");
          }
       } else {
-         $_SESSION["message"] = "Belə bir hesab mövcud deyil.";
+         $_SESSION["enterMess"] = "Belə bir hesab mövcud deyil.";
     
          header("Location: user-enter");
       }
    } else {
-      $_SESSION["message"] = "Daxil edilən məlumatlar tam deyil. Xahiş edirik həm poçt unvanını, həm də parolu daxil edin";
+      $_SESSION["enterMess"] = "Daxil edilən məlumatlar tam deyil. Xahiş edirik həm poçt unvanını, həm də parolu daxil edin";
       header("Location: user-enter");
    }
 ?>

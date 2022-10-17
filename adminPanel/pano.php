@@ -19,7 +19,7 @@
                $hevaleSorgusu = $db->prepare("SELECT COUNT(*) AS hevalelerSayisi FROM havalebildirimleri");
                $hevaleSorgusu->execute();
                $hevaleler = $hevaleSorgusu->fetch(PDO::FETCH_ASSOC);
-               $bankaSorgusu = $db->prepare("SELECT COUNT(*) AS bankalar FROM bankahesablarımız");
+               $bankaSorgusu = $db->prepare("SELECT COUNT(*) AS bankalar FROM bankahesablarimiz");
                $bankaSorgusu->execute();
                $bankalar = $bankaSorgusu->fetch(PDO::FETCH_ASSOC);
                $menyuSorgusu = $db->prepare("SELECT COUNT(*) AS menuler FROM menuler");

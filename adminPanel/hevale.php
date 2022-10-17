@@ -28,7 +28,7 @@
           
             if($hevalelerSayisi > 0) {
                foreach($hevaleler as $hevale) {
-                  $bankalariAra = $db->prepare("SELECT * FROM bankahesablarımız WHERE id = ?");
+                  $bankalariAra = $db->prepare("SELECT * FROM bankahesablarimiz WHERE id = ?");
                   $bankalariAra->execute([$hevale["bankaİd"]]);
                   $banka = $bankalariAra->fetch(PDO::FETCH_ASSOC);?>
                   <div class="hevale__item">
@@ -43,7 +43,7 @@
                         <div><b style="color:black">E-Mail</b></div>
                         <div><?=DonusumleriGeriDondur($hevale["emailAdresi"])?></div>
                         <div style="margin-top: 30px"><b style="color:black">Açıqlama Notu</b></div>
-                        <div  style="margin-top: 30px">><?=DonusumleriGeriDondur($hevale["acıklama"])?></div>
+                        <div style="margin-top: 30px"><?=DonusumleriGeriDondur($hevale["acıklama"])?></div>
                      </div>
                      <div class="hevale__item_delete">
                         <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=61&id=<?=$hevale["id"]?>"><img src="../assets/images/Sil20x20.png" alt=""></a>

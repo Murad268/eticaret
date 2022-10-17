@@ -10,9 +10,9 @@ if(isset($_GET["id"])) {
    $gelenUrunId = "";
 }
 if($gelenUrunId == "") {
-   $_SESSION["message"] = "Error. Məhsulun idsinin yüklənməsində səhvlik baş verdi;";
+   $_SESSION["comment"] = "Error. Məhsulun idsinin yüklənməsində səhvlik baş verdi;";
 } else {
-   unset($_SESSION["message"]);
+   unset($_SESSION["comment"]);
 }
 ?>
 <div class="havaleWrapper">
@@ -21,8 +21,8 @@ if($gelenUrunId == "") {
       <div class="havaleWrapper__form__subtitle">Sipariş etdiyiniz ürün hakkında aşağıda yorum yapa bilrsiniz</div>
       <form action="index.php?sayfaKodu=46&gelenUrunId=<?=$gelenUrunId?>" method="post">
                 <?php
-                  if(isset($_SESSION["message"])) {
-                     $mess = $_SESSION["message"];
+                  if(isset($_SESSION["comment"])) {
+                     $mess = $_SESSION["comment"];
                      echo "<div class='alert alert-danger' role='alert'>
                         $mess
                      </div>";

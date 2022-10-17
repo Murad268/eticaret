@@ -18,8 +18,8 @@
               
                <button type="submit" class="btn btn-primary">Daxil ol</button>
                <?php
-                  if(isset($_SESSION["message"])) {
-                     $mess = $_SESSION["message"];
+                  if(isset($_SESSION["enterMess"])) {
+                     $mess = $_SESSION["enterMess"];
                      echo "<div class='alert alert-danger' role='alert'>
                         $mess
                      </div>";

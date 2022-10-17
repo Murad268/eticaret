@@ -46,7 +46,7 @@
          $check = $checkEmailOrPassword->rowCount();
          if($check>0) {
             echo $check;
-            $_SESSION["message"] = "bu email və ya telefon nömrəsi ilə artıq istifadəçi artıq mövcuddur";
+            $_SESSION["regMessage"] = "bu email və ya telefon nömrəsi ilə artıq istifadəçi artıq mövcuddur";
             header("Location: index.php?sayfaKodu=22");
            } else {
             $pass = md5($password);
@@ -54,10 +54,9 @@
             $addUser->execute();
             $kayit = $addUser->rowCount();
             if($kayit>0) {
-               // unset($_SESSION["message"]);
                header("Location: index.php?sayfaKodu=22");
                $link = $siteAdresi."activation.php?email=".$email."&activationCode=".$activation;
-               $_SESSION["message"] = "Qeydiyyat uğurla bitmişdir";
+               $_SESSION["regMessage"] = "Qeydiyyat uğurla bitmişdir";
                $MailIcerigiHazirla = "Xoş günlər cənab ".$full_name.  "</br>".
                "saytımıza maraq göstərdiyiniz üçün sizə təşəkkür edirik". "</br>".
                "öz profilinizi aktivləşdirmək üçün <a href=\"$link\">tıklayın</a>";
@@ -88,11 +87,11 @@
                   $MailGonder->Subject = DonusumleriGeriDondur($ad) . ' Aktivasiyon linki';
                   $MailGonder->MsgHTML($MailIcerigiHazirla);
                   $MailGonder->send();
-                  $_SESSION["message"] = "Aktivasiya linki daxil etdiyiniz poçt adresinə göndərilmişdir.";
+                  $_SESSION["regMessage"] = "Aktivasiya linki daxil etdiyiniz poçt adresinə göndərilmişdir.";
                   header("Location:index.php?sayfaKodu=22");
                   exit();
                }catch(Exception $e){
-                  $_SESSION["message"] = "Qeydiyyat zamanı müəyyən problemlər baş verdi. Xahiş edirik bir az sonra cəhd edəsiniz";
+                  $_SESSION["regMessage"] = "Qeydiyyat zamanı müəyyən problemlər baş verdi. Xahiş edirik bir az sonra cəhd edəsiniz";
 
                   header("Location:index.php?sayfaKodu=22");
                   exit();
@@ -100,15 +99,15 @@
 
 
             } else {
-               $_SESSION["message"] = "Qeydiyyat zamanı müəyyən problemlər baş verdi. Xahiş edirik bir az sonra cəhd edəsiniz";
+               $_SESSION["regMessage"] = "Qeydiyyat zamanı müəyyən problemlər baş verdi. Xahiş edirik bir az sonra cəhd edəsiniz";
             }
          }
       } else {
-         $_SESSION["message"] = "Əgər üyəlik sözləşmesini oxumamısızsa oxuyun və razısınızsa təstiq edin. Təstiq etmədiyiniz halda davam etmək mümkün olmayacaqdır.";
+         $_SESSION["regMessage"] = "Əgər üyəlik sözləşmesini oxumamısızsa oxuyun və razısınızsa təstiq edin. Təstiq etmədiyiniz halda davam etmək mümkün olmayacaqdır.";
          header("Location: index.php?sayfaKodu=22");
       }
    } else {
-      $_SESSION["message"] = "Məlumatların daxil edilməsində natamamlıq. Xahiş edirik, bütün məlumatları daxile dəsiniz!";
+      $_SESSION["regMessage"] = "Məlumatların daxil edilməsində natamamlıq. Xahiş edirik, bütün məlumatları daxile dəsiniz!";
       header("Location: index.php?sayfaKodu=22");
    }
 

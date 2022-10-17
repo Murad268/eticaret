@@ -9,7 +9,7 @@
    } else {
       $gelenId = $_GET["id"];
    }
-   $bankaSilSorgusu = $db->prepare("DELETE FROM bankahesablarımız WHERE id = $gelenId");
+   $bankaSilSorgusu = $db->prepare("DELETE FROM bankahesablarimiz WHERE id = $gelenId");
    $bankaSilSorgusu->execute();
    $bankaSilSorgusuCount = $bankaSilSorgusu->rowCount();
    if($bankaSilSorgusuCount > 0) {

@@ -2,7 +2,7 @@
 
 <div class="banks__wrapper">
    <?php
-      $fetchBanks = $db->prepare("SELECT * FROM bankahesablarımız");
+      $fetchBanks = $db->prepare("SELECT * FROM bankahesablarimiz");
       $fetchBanks->execute();
       $banksCount = $fetchBanks->rowCount();
       $bankalar = $fetchBanks->fetchAll(PDO::FETCH_ASSOC);

@@ -4,6 +4,14 @@
    }
 ?>
 <div class="cartWrapper">
+      <?php
+         if(isset($_SESSION["cartDell"])) {
+            $mess = $_SESSION["cartDell"];
+            echo "<div class='alert alert-danger' role='alert'>
+               $mess
+            </div>";
+         }
+      ?>
    <div class="cartWrapper__details">
       <h5 class="cartWrapper__title">Alışveriş Sepeti</h5>
       <div class="cartWrapper__subtitle">Alışveriş Sepetine Eklemiş Olduğunuz Ürünler Aşağıdadır</div>

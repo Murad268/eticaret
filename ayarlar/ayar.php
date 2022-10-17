@@ -1,7 +1,7 @@
 <?php
 
    try{
-      $db = new PDO("mysql:host=localhost; dbname=extraegitim; charset=utf8", "root", "");
+      $db = new PDO("mysql:host=localhost; dbname=megashoes; charset=utf8", "root", "");
    }catch(PDOException $error) {
       echo "baglanti hatasi";
       echo $error->getMessage();

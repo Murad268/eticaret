@@ -33,7 +33,7 @@
             </div>";
          }
 
-         $bankaSorgusu = $db->prepare("SELECT * FROM bankahesablarımız  WHERE id = $gelenId");
+         $bankaSorgusu = $db->prepare("SELECT * FROM bankahesablarimiz  WHERE id = $gelenId");
          $bankaSorgusu->execute();
          $bankalarSayisi = $bankaSorgusu->rowCount();
          $bankalar = $bankaSorgusu->fetchAll(PDO::FETCH_ASSOC);

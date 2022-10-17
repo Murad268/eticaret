@@ -80,12 +80,12 @@
       header("Location: index.php?sayfaKoduDis=0&sayfaKoduIc=7&id=$gelenId");
       exit();
    } else {
-      $bankhesablariniSorgula = $db->prepare("UPDATE bankahesablarımız SET bankaAdı = ?, KonumŞehir = ?, konumÜlke  = ?, ŞubeAdı = ?, ŞubeKodu = ?, paraBirimi = ?, hesabSahibi = ?, hesabNumarası = ?, ibanNumarası = ? WHERE id = $gelenId");
+      $bankhesablariniSorgula = $db->prepare("UPDATE bankahesablarimiz SET bankaAdı = ?, KonumŞehir = ?, konumÜlke  = ?, ŞubeAdı = ?, ŞubeKodu = ?, paraBirimi = ?, hesabSahibi = ?, hesabNumarası = ?, ibanNumarası = ? WHERE id = $gelenId");
       $bankhesablariniSorgula->execute([$bankname, $bankcity, $bankcountry, $bankseccname, $bankseccode, $bankcurrency, $bankuser, $bankacccode, $bankiban]);
       if(!empty($_FILES["banklogo"]["error"] !== 4)) {
          if(($_FILES["banklogo"]["tmp_name"]) and ($_FILES["banklogo"]["name"]) and ($_FILES["banklogo"]["type"]) and ($_FILES["banklogo"]["error"] == 0) and ($_FILES["banklogo"]["size"] > 0)) {
             move_uploaded_file($_FILES["banklogo"]["tmp_name"], "../assets/images/".$allName);
-            $bankaLogoSorgula = $db->prepare("UPDATE bankahesablarımız SET bankLogo=? WHERE id = ?");
+            $bankaLogoSorgula = $db->prepare("UPDATE bankahesablarimiz SET bankLogo=? WHERE id = ?");
             $bankaLogoSorgula->execute([$allName, $gelenId]);
             $_SESSION["logomess"] = "Yalnızca şəkil yeniləndi";
          } else {

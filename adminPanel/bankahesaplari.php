@@ -20,7 +20,7 @@
          }
    ?>
    <?php
-      $banklariSorgula = $db->prepare("SELECT * FROM bankahesablarımız");
+      $banklariSorgula = $db->prepare("SELECT * FROM bankahesablarimiz");
       $banklariSorgula->execute();
       $banklariSorgulaCount = $banklariSorgula->rowCount();
       $bankalar = $banklariSorgula->fetchAll(PDO::FETCH_ASSOC);

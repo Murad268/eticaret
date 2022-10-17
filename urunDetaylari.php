@@ -80,8 +80,14 @@
    </div>
    <div class="goodWrapper__details">
             <?php
-               if(isset($_SESSION["message"])) {
-                  $mess = $_SESSION["message"];
+               if(isset($_SESSION["goodDetailsMess"])) {
+                  $mess = $_SESSION["goodDetailsMess"];
+                  echo "<div class='alert alert-danger' role='alert'>
+                     $mess
+                  </div>";
+               }
+               if(isset($_SESSION["addFav"])) {
+                  $mess = $_SESSION["addFav"];
                   echo "<div class='alert alert-danger' role='alert'>
                      $mess
                   </div>";
