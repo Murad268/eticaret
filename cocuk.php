@@ -40,7 +40,7 @@
    <div class="manWrapper__menu">
       <h5 class="manWrapper__menu_title">MENÜLER</h5>
       <div class="manWrapper__menu__items">
-         <div class="manWrapper__menu__item"><a style="color: <?=$menuId==""?"orange":"black"?>" href="index.php?sayfaKodu=51">Tüm Ürünler (<?=$menuCount["menununToplamUrunu"]?>)</a></div>
+         <div class="manWrapper__menu__item"><a style="color: <?=$menuId==""?"orange":"black"?>" href="ushaq-ayakkabisi">Tüm Ürünler (<?=$menuCount["menununToplamUrunu"]?>)</a></div>
          <?php
             $manFetch = $db->prepare("SELECT * FROM menuler WHERE urunTuru = 'cocuk'");
             $manFetch->execute();
@@ -138,10 +138,10 @@
                      ?>
                      <div class="manWrapper__item">
                         <div class="manWrapper__item__img">
-                          <a href="index.php?sayfaKodu=52&id=<?=donusumleriGeriDondur($good["id"])?>"><img src="assets/images/UrunResimleri/Cocuk/<?=donusumleriGeriDondur($good["urun_resmi_bir"])?>" alt=""></a>
+                          <a href="ushaq-ayakkabisi/<?=donusumleriGeriDondur($good["urun_adi"])?>/<?=donusumleriGeriDondur($good["id"])?>"><img src="assets/images/UrunResimleri/Cocuk/<?=donusumleriGeriDondur($good["urun_resmi_bir"])?>" alt=""></a>
                         </div>
                         <div class="manWrapper__item__desc">
-                           <div style="color: orange; font-weight: bold" class="manWrapper__item__desc__title">Kadın Ayakkabısı</div>
+                           <div style="color: orange; font-weight: bold" class="manWrapper__item__desc__title">Uşaq Ayakkabısı</div>
                            <div class="manWrapper__item__desc__name"><?=donusumleriGeriDondur($good["urun_adi"])?></div>
                            <div class="manWrapper__item__desc__name__star">
                               <img src="<?=$img?>" alt="">

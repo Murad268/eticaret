@@ -2,7 +2,7 @@
 
 <?php
    if(isset($_GET["id"])) {
-      $gelenId = $_GET["id"];
+      $gelenId = (int)$_GET["id"];
    } else {
       $gelenId = "";
    }

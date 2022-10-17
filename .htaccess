@@ -1,5 +1,22 @@
 RewriteEngine	On
+
 RewriteBase	/eticaret
 RewriteRule	^user-enter$	/eticaret/index.php?sayfaKodu=25 [L,NC]
-RewriteRule	^erkek-ayakkabisi$  /eticaret/index.php?sayfaKodu=49 [L,NC]
-RewriteRule	^erkek-ayakkabisi/(.*)/(.*)$   /eticaret/index.php?sayfaKodu=52&id=$2 [L,NC]
+RewriteRule	^kishi-ayakkabisi$  /eticaret/index.php?sayfaKodu=49 [L,NC]
+RewriteRule	^user-bilgileri$  /eticaret/index.php?sayfaKodu=27 [L,NC]
+RewriteRule	^adresler$  /eticaret/index.php?sayfaKodu=36 [L,NC]
+RewriteRule	^sevimliler$  /eticaret/index.php?sayfaKodu=37 [L,NC]
+RewriteRule	^sherhler$  /eticaret/index.php?sayfaKodu=38 [L,NC]
+RewriteRule	^sifarishler$  /eticaret/index.php?sayfaKodu=39 [L,NC]
+RewriteRule	^adesQeydiyyati$  /eticaret/index.php?sayfaKodu=42" [L,NC]
+RewriteRule	^odemeSechimi$  /eticaret/index.php?sayfaKodu=61" [L,NC]
+RewriteRule	^yeniAdres$  /eticaret/index.php?sayfaKodu=41" [L,NC]
+RewriteRule	^sepet$  /eticaret/index.php?sayfaKodu=56" [L,NC]
+RewriteRule	^ushaq-ayakkabisi$  /eticaret/index.php?sayfaKodu=51" [L,NC]
+RewriteRule	^ushaq-ayakkabisi(.*)/(.*)$  /eticaret/index.php?sayfaKodu=52&id=$2" [L,NC]
+# index.php?sayfaKodu=51&menuId=<?=$man["id"]?>"><?=$man["menuAdi"]
+
+RewriteRule	^adresiYenile/(.*)$  /eticaret/index.php?sayfaKodu=43&id=$1" [L,NC]
+RewriteRule	^adresiSil/(.*)$  /eticaret/index.php?sayfaKodu=40&id=$1" [L,NC]
+RewriteRule	^adesYenile/(.*)$  /eticaret/index.php?sayfaKodu=44&id=$1" [L,NC]
+RewriteRule	^kishi-ayakkabisi/(.*)/(.*)$   /eticaret/index.php?sayfaKodu=52&id=$2 [L,NC]

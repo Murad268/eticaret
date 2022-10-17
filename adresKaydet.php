@@ -36,10 +36,10 @@
       $addCount = $addFetch->rowCount();
       if($addCount>0) {
          $_SESSION["alert"] = "Yeni adres əlavə edildi.";
-         header("Location: index.php?sayfaKodu=36");
+         header("Location: ./adresler");
       }
    } else {
       $_SESSION["alert"] = "Məlumatlardan biri və ya hamısı boş göndərildiyi üçün, yeni adres əlavə olunmadı";
-      header("Location: index.php?sayfaKodu=36");
+      header("Location: ./adresler");
    }
 ?>

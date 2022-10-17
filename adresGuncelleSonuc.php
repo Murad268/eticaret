@@ -40,16 +40,16 @@
       $select = $selectFetch->fetch(PDO::FETCH_ASSOC);
       if(($gelenAdSoyad == $select["adSoyad"]) and ($gelenAdres == $select["adres"]) and ($gelenIlce == $select["ilce"]) and ($gelenCity == $select["sehir"]) and ($gelenPhone == $select["telefonNumarasi"])){
          $_SESSION["alert"] = "Heç bir məlumat dəyişdirilmədi.";
-         header("Location: index.php?sayfaKodu=36");
+         header("Location: ../adresler");
        
       
       } else {
          $addFetch = $db->prepare("UPDATE adresler SET adSoyad=?, adres=?, ilce=?, sehir=?, telefonNumarasi=? WHERE id = ?");
-         $addFetch->execute([$gelenAdSoyad, $gelenAdres, $gelenIlce, $gelenCity, $gelenPhone, $_GET["id"]]);
+         $addFetch->execute([$gelenAdSoyad, $gelenAdres, $gelenIlce, $gelenCity, $gelenPhone, (int)$_GET["id"]]);
          $addCount = $addFetch->rowCount();
          if($addCount>0) {
             $_SESSION["alert"] = "Adres yenilendi.";
-            header("Location: index.php?sayfaKodu=36");
+            header("Location: ../adresler");
          }
         
       }
@@ -58,6 +58,6 @@
      
    } else {
       $_SESSION["alert"] = "Məlumatlardan biri və ya hamısı boş göndərildiyi üçün, adres yenilenmedi";
-      header("Location: index.php?sayfaKodu=36");
+      header("Location: ../adresler");
    }
 ?>

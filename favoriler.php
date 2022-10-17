@@ -31,18 +31,22 @@
         
          
       ?>
-      <div class="comments__header">
-         <div class="comments__header__item mainCommentItem">Resim</div>
-         <div class="comments__header__item mainCommentItem">Sil</div>
-         <div class="comments__header__item mainCommentItem">Adı</div>
-         <div class="comments__header__item mainCommentItem">Fiyatı</div>
+
+         
          <?php
             $favoritesFetch = $db->prepare("SELECT * FROM favoriler WHERE uyeId = ? ORDER BY id DESC LIMIT $sayfalamayBaslayacaqKayotSayisi, $sayfaBasinaGosterilecek");
             $favoritesFetch->execute([$id]);
             $favoritesFetchCount = $favoritesFetch->rowCount();
             $favorites = $favoritesFetch->fetchAll(PDO::FETCH_ASSOC);
           
-            if($favoritesFetchCount > 0) {
+            if($favoritesFetchCount > 0) {?>
+            <div class="comments__header">
+            <div class="comments__header__item mainCommentItem">Resim</div>
+            <div class="comments__header__item mainCommentItem">Sil</div>
+            <div class="comments__header__item mainCommentItem">Adı</div>
+            <div class="comments__header__item mainCommentItem">Fiyatı</div>
+            <?php
+            
                foreach($favorites as $favorite) {
                 
                   $favoritesGoodFetch = $db->prepare("SELECT * FROM goods WHERE id = ? LIMIT 1");
@@ -73,34 +77,39 @@
                  echo "<hr>";
                  echo "<hr>";
                }
+            } else {
+               echo "Sevimliləriniz boşdur";
             }
          ?>
       </div>
       
    </div>
-            <div class="paginationWrapper">
-               <nav aria-label="Page navigation example ">
-                  <ul class="pagination">
-                  <li class="page-item"><a class="page-link" href="index.php?sayfaKodu=37&sayfalama=1">&laquo;</a></li>
-                  <?php
-                     for($i = $sayfalama-$sayfalamaIcinButonSayisi; $i <= $sayfalama+$sayfalamaIcinButonSayisi; $i++) {
-                        if(($i > 0) and ($i <= $bulunanSafyaSayisi)) {
-                           $curr = $i;
-                        if($sayfalama == $i) {
-                           echo "<li style=\"cursor: pointer\" class=\"page-item\"><div style=\"background: red; color: white\" class=\"page-link\">$curr</div></li>";
-                        } else {
-                           echo "<li class=\"page-item\"><a class=\"page-link\" href=\"index.php?sayfaKodu=37&sayfalama=$curr\">$curr</a></li>";
-                        }
+         
+ <?php
+   if($bulunanSafyaSayisi > 0) {?>
+      <div class="paginationWrapper">
+            <nav aria-label="Page navigation example ">
+               <ul class="pagination">
+               <li class="page-item"><a class="page-link" href="index.php?sayfaKodu=37&sayfalama=1">&laquo;</a></li>
+               <?php
+                  for($i = $sayfalama-$sayfalamaIcinButonSayisi; $i <= $sayfalama+$sayfalamaIcinButonSayisi; $i++) {
+                     if(($i > 0) and ($i <= $bulunanSafyaSayisi)) {
+                        $curr = $i;
+                     if($sayfalama == $i) {
+                        echo "<li style=\"cursor: pointer\" class=\"page-item\"><div style=\"background: red; color: white\" class=\"page-link\">$curr</div></li>";
+                     } else {
+                        echo "<li class=\"page-item\"><a class=\"page-link\" href=\"index.php?sayfaKodu=37&sayfalama=$curr\">$curr</a></li>";
                      }
                   }
-                  ?>
-                     
-                     <li class="page-item"><a class="page-link"  href="index.php?sayfaKodu=37&sayfalama=<?=$bulunanSafyaSayisi?>">&raquo;</a></li>
-                  </ul>
-               </nav>
-            </div>
- <?php
-   
+               }
+               ?>
+                  
+                  <li class="page-item"><a class="page-link"  href="index.php?sayfaKodu=37&sayfalama=<?=$bulunanSafyaSayisi?>">&raquo;</a></li>
+               </ul>
+            </nav>
+         </div>
+   <?php
+   }
       
  ?>
      

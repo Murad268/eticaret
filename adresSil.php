@@ -10,19 +10,19 @@
    }
 
    $deleteAdresFetch = $db->prepare("DELETE FROM adresler WHERE id = ?");
-   $deleteAdresFetch->execute([$gelenId]);
+   $deleteAdresFetch->execute([(int)$gelenId]);
    $deletedCount = $deleteAdresFetch->rowCount();
    if($gelenId !== "") {
       if($deletedCount>0) {
          $_SESSION["alert"] = "Adres silindi";
-         header("Location: index.php?sayfaKodu=36");
+         header("Location: ../adresler");
       } else {
          session_destroy();
          $_SESSION["alert"] = "Gözlənilməz bir xəta baş verdi. Xahiş edirik bir az sonra cəhd edəsiniz";
-         header("Location: index.php?sayfaKodu=36");
+         header("Location: ../adresler");
       }
    } else {
       $_SESSION["alert"] = "Gözlənilməz bir xəta baş verdi. Xahiş edirik bir az sonra cəhd edəsiniz";
-      header("Location: index.php?sayfaKodu=36");
+      header("Location: ../adresler");
    }
 ?>

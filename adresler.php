@@ -5,11 +5,11 @@
 ?>
   <hr>
       <div class="user__navbar">
-         <div class="user__navbar__link"><a href="index.php?sayfaKodu=27">Üyelik Bilgileri</a></div>
-         <div class="user__navbar__link"><a href="index.php?sayfaKodu=36">Adresler</a></div>
-         <div class="user__navbar__link"><a href="index.php?sayfaKodu=37">Favoriler</a></div>
-         <div class="user__navbar__link"><a href="index.php?sayfaKodu=38">Yorumlar</a></div>
-         <div class="user__navbar__link"><a href="index.php?sayfaKodu=39">Siparişler</a></div>
+         <div class="user__navbar__link"><a href="user-bilgileri">Üyelik Bilgileri</a></div>
+         <div class="user__navbar__link"><a href="adresler">Adresler</a></div>
+         <div class="user__navbar__link"><a href="sevimliler">Favoriler</a></div>
+         <div class="user__navbar__link"><a href="sherhler">Yorumlar</a></div>
+         <div class="user__navbar__link"><a href="sifarishler">Siparişler</a></div>
       </div>
    <hr>
 <div class="adresMainWrapper"> 
@@ -27,7 +27,7 @@
       <div class="havaleWrapper__form__subtitle">Tüm adreslerinizi göruntülüye və ya güncelliye bilirsiniz.</div>
       <div class="adresMainWrapper__header">
          <div class="adresMainWrapper__header__text">Adresler</div>
-         <div class="adresMainWrapper__header__add"><a href="index.php?sayfaKodu=41">Yeni adres ekle</a></div>
+         <div class="adresMainWrapper__header__add"><a href="yeniAdres">Yeni adres ekle</a></div>
       </div>
       <div class="aresWrapper">
          <?php
@@ -53,13 +53,13 @@
                         <div class="update">
                            <img src="assets/images/Guncelleme20x20.png" alt="">
                            <span class="updateDiv">Güncelle</span>
-                           <a hidden class="updateLink" href="index.php?sayfaKodu=43&id=<?=$adress["id"]?>">Güncelle</a>
+                           <a hidden class="updateLink" href="adresiYenile/<?=$adress["id"]?>">Güncelle</a>
                         </div>
                        
                         <div class="delete">
                            <img src="assets/images/Sil20x20.png" alt="">
                            <span class="deleteDiv">sil</span>
-                           <a hidden class="deleteLink" href="index.php?sayfaKodu=40&id=<?=$adress["id"]?>">Sil</a>
+                           <a hidden class="deleteLink" href="adresiSil/<?=$adress["id"]?>">Sil</a>
                         </div>
                      </div>
                   </div>

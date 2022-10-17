@@ -7,7 +7,7 @@
       $addCount->execute();
       $addCountCount = $addCount->rowCount();
       if($addCountCount>0) {
-         header("Location: index.php?sayfaKodu=56"); 
+         header("Location: sepet"); 
       } 
    }
    if($_GET["islem"] == "azalt") {
@@ -16,7 +16,7 @@
       $addCount->execute();
       $addCountCount = $addCount->rowCount();
       if($addCountCount>0) {
-         header("Location: index.php?sayfaKodu=56"); 
+         header("Location: sepet"); 
       } 
    }
 ?>
