@@ -23,7 +23,7 @@
             $sepetiBosalt->execute([$id, $siparis["sepetNumarasi"]]);
             $sepetBolsaltCount = $sepetiBosalt->rowCount();
             if($sepetBolsaltCount>0) {
-               header("Location: index.php?sayfaKodu=65");
+               header("Location: alisveristamam");
                exit();
             }
 

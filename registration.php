@@ -30,7 +30,7 @@
                   <input type="radio" name="sex" value="kadın" id="sex2">
                   <label for="sex2">kadın</label>
                   <div class="rules">
-                     <input type="checkbox" name="yes" id=""> Bütün qaydalarla razıyam. Qaydalarla tanış olmaq üçün <a target="_blank" href="index.php?sayfaKodu=2">Üyelik Sözleşmesi</a> mətnini oxuyun
+                     <input type="checkbox" name="yes" id=""> Bütün qaydalarla razıyam. Qaydalarla tanış olmaq üçün <a target="_blank" href="uyelikSozlezmesi">Üyelik Sözleşmesi</a> mətnini oxuyun
                   </div>
               </div>
                <button type="submit" class="btn btn-primary">Qeydiyyatdan keç</button>

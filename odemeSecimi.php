@@ -22,6 +22,8 @@
    } else {
       header("Location: index.php");
    }
+   echo $_POST["adres"];
+   echo $_POST["kargoId"];
    if(isset($_POST["adres"]) && isset($_POST["kargoId"])) {
       $adres = $_POST["adres"];
       $kargoId = $_POST["kargoId"];
@@ -30,6 +32,7 @@
       $fetch->execute([$kargoId, $adres]);
     
    } else {
+      exit();
       header("Location: index.php");
    }
 ?>

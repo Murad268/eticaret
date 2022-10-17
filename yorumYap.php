@@ -14,7 +14,9 @@ if($gelenUrunId == "") {
 } else {
    unset($_SESSION["comment"]);
 }
+
 ?>
+
 <div class="havaleWrapper">
    <div class="havaleWrapper__form">
       <h4 class="havaleWrapper__form__title">Yorum</h4>

@@ -7,7 +7,7 @@
    $urunuSorgula = $db->prepare("SELECT * FROM goods WHERE id = $gelenId LIMIT 1");
    $urunuSorgula->execute();
    $urun = $urunuSorgula->fetch(PDO::FETCH_ASSOC);
-   print_r($urun);
+
    $urunAdi = $urun["urun_adi"];
    if($urun["urunTuru"] == "erkek") {
       $backLink = "kishi-ayakkabisi";

@@ -77,7 +77,7 @@
                 
                }
             }
-            header("Location: index.php?sayfaKodu=66");
+            header("Location: alisverissepetibankahavalesiileodemetamam");
             exit();
          } else {
             header("Location: index.php");

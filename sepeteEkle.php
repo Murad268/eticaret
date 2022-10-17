@@ -20,7 +20,18 @@
    }
 
   
+   $urunuSorgula = $db->prepare("SELECT * FROM goods WHERE id = $urunId LIMIT 1");
+   $urunuSorgula->execute();
+   $urun = $urunuSorgula->fetch(PDO::FETCH_ASSOC);
 
+   $urunAdi = $urun["urun_adi"];
+   if($urun["urunTuru"] == "erkek") {
+      $backLink = "kishi-ayakkabisi";
+   } else if($urun["urunTuru"] == "kadin") {
+      $backLink = "qadin-ayakkabisi";
+   } if($urun["urunTuru"] == "cocuk") {
+      $backLink = "ushaq-ayakkabisi";
+   }
 
    if(($urunId !== "") or ($urunVariant !== "") or ($urunSayi !== "")) {
       $slotYoxla = $db->prepare("SELECT * FROM urunvariantlari WHERE id = ?");
@@ -30,7 +41,8 @@
       
       if($urunSayi>$slot["stokAdedi"]) {
          $_SESSION["goodDetailsMess"] = "Hazırda stokda bu məhsuldan istədiyiniz sayda yoxdur";
-         header("Location: index.php?sayfaKodu=52&id=".$urunId);
+         header("Location: $backLink/$urunAdi/$urunId");
+
       }
 
       
@@ -42,7 +54,7 @@
          $addSay->execute([$urunSayi, $id, $urunId, $urunVariant]);
          unset($_SESSION["addFav"]);
          $_SESSION["goodDetailsMess"] = "Səbətdə bu məhsulun sayı artırıldı.";
-         header("Location: index.php?sayfaKodu=52&id=".$urunId);
+         header("Location: $backLink/$urunAdi/$urunId");
          exit();
       } else {
          $addCart = $db->prepare("INSERT INTO sepet (sepetNumarasi, uyeId, urunId, variantId, urunAdedi) values (?, ?, ?, ?, ?)");
@@ -53,7 +65,7 @@
          if($addCartCount>0) {
             $_SESSION["goodDetailsMess"] = "Məhsul səbətə əlavə edildi.";
             unset($_SESSION["addFav"]);
-            header("Location: index.php?sayfaKodu=52&id=".$urunId);
+            header("Location: $backLink/$urunAdi/$urunId");
             exit();
          }
       }

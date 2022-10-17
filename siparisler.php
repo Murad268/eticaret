@@ -12,11 +12,11 @@
 ?>
   <hr>
       <div class="user__navbar">
-         <div class="user__navbar__link"><a href="index.php?sayfaKodu=27">Üyelik Bilgileri</a></div>
-         <div class="user__navbar__link"><a href="index.php?sayfaKodu=36">Adresler</a></div>
-         <div class="user__navbar__link"><a href="index.php?sayfaKodu=37">Favoriler</a></div>
-         <div class="user__navbar__link"><a href="index.php?sayfaKodu=38">Yorumlar</a></div>
-         <div class="user__navbar__link"><a href="index.php?sayfaKodu=39">Siparişler</a></div>
+         <div class="user__navbar__link"><a href="user-bilgileri">Üyelik Bilgileri</a></div>
+         <div class="user__navbar__link"><a href="adresler">Adresler</a></div>
+         <div class="user__navbar__link"><a href="sevimliler">Favoriler</a></div>
+         <div class="user__navbar__link"><a href="sherhler">Yorumlar</a></div>
+         <div class="user__navbar__link"><a href="sifarishler">Siparişler</a></div>
       </div>
    <hr>
 <div class="adresMainWrapper"> 
@@ -85,13 +85,13 @@
 
                ?>  
                       <div class="ordersMainWrapper__header__add__item">
-                        # <?=$siparisSatirlar["sifarisNumarasi"]?>
+                       <?=$siparisSatirlar["sifarisNumarasi"]?>
                      </div>
                      <div class="ordersMainWrapper__header__add__item">
                         <img src="assets/images/UrunResimleri/<?=$klasor."/".$siparisSatirlar["urunResmiBir"]?>" alt="">
                      </div>
                      <div class="ordersMainWrapper__header__add__item">
-                        <a href="index.php?sayfaKodu=45&id=<?=$siparisSatirlar["urunİd"]?>"><img src="assets/images/DokumanKirmiziKalemli20x20.png" alt=""></a>
+                        <a href="yorumYap/<?=$siparisSatirlar["urunİd"]?>"><img src="assets/images/DokumanKirmiziKalemli20x20.png" alt=""></a>
                      </div>
                      <div class="ordersMainWrapper__header__add__item">
                         <?=$siparisSatirlar["urunAdi"]?>

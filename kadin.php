@@ -40,7 +40,7 @@
    <div class="manWrapper__menu">
       <h5 class="manWrapper__menu_title">MENÜLER</h5>
       <div class="manWrapper__menu__items">
-         <div class="manWrapper__menu__item"><a style="color: <?=$menuId==""?"orange":"black"?>" href="index.php?sayfaKodu=50">Tüm Ürünler (<?=$menuCount["menununToplamUrunu"]?>)</a></div>
+         <div class="manWrapper__menu__item"><a style="color: <?=$menuId==""?"orange":"black"?>" href="qadin-ayakkabilari">Tüm Ürünler (<?=$menuCount["menununToplamUrunu"]?>)</a></div>
          <?php
             $manFetch = $db->prepare("SELECT * FROM menuler WHERE urunTuru = 'kadin'");
             $manFetch->execute();
@@ -53,7 +53,7 @@
                   $toMenu = $toMenuFetch->fetch(PDO::FETCH_ASSOC);
                   $urunSayinizDeyis=$db->prepare("UPDATE menuler SET urunSayisi = ? WHERE id=?");
                   $urunSayinizDeyis->execute([$toMenu["urunSayi"], $man["id"]])?>
-                    <div class="manWrapper__menu__item"><a style="color: <?=$menuId==$man["id"]?"orange":"black"?>" href="index.php?sayfaKodu=50&menuId=<?=$man["id"]?>"><?=$man["menuAdi"]?>  (<?=$toMenu["urunSayi"]?>)</a></div>
+                    <div class="manWrapper__menu__item"><a style="color: <?=$menuId==$man["id"]?"orange":"black"?>" href="qadin-ayakkabilari/<?=$man["id"]?>"><?=$man["menuAdi"]?>  (<?=$toMenu["urunSayi"]?>)</a></div>
               <?php
                }
         
@@ -80,7 +80,7 @@
    <div class="manWrapper__items">
       <div class="manWrapper__items__search">
          <div class="row height d-flex justify-content-center align-items-center">
-            <form action="index.php?sayfaKodu=50" method="post" class="">
+            <form action="qadin-ayakkabilari" method="post" class="">
                <?php
                   if($menuId !== "") {?>
                         <input type="hidden" name="menuId" value="<?=$menuId?>">
@@ -138,8 +138,9 @@
                      ?>
                      <div class="manWrapper__item">
                         <div class="manWrapper__item__img">
-                          <a href="index.php?sayfaKodu=52&id=<?=donusumleriGeriDondur($good["id"])?>"><img src="assets/images/UrunResimleri/Kadin/<?=donusumleriGeriDondur($good["urun_resmi_bir"])?>" alt=""></a>
+                          <a href="qadin-ayakkabisi/<?=donusumleriGeriDondur($good["urun_adi"])?>/<?=donusumleriGeriDondur($good["id"])?>"><img src="assets/images/UrunResimleri/Kadin/<?=donusumleriGeriDondur($good["urun_resmi_bir"])?>" alt=""></a>
                         </div>
+                  
                         <div class="manWrapper__item__desc">
                            <div style="color: orange; font-weight: bold" class="manWrapper__item__desc__title">Kadın Ayakkabısı</div>
                            <div class="manWrapper__item__desc__name"><?=donusumleriGeriDondur($good["urun_adi"])?></div>

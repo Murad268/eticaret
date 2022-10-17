@@ -60,15 +60,15 @@ if(($GelenIsimSoyisim!="") and ($GelenEmailAdresi!="") and ($GelenTelefonNumaras
 		$MailGonder->MsgHTML($MailIcerigiHazirla);
 		$MailGonder->send();
 		
-		header("Location:index.php?sayfaKodu=18");
+		header("Location: mailtamam");
 		exit();
 	}catch(Exception $e){
 		echo $e->getMessage();
-		header("Location:index.php?sayfaKodu=19");
+		header("Location: mailhata");
 		exit();
 	}
 }else{
-	header("Location:index.php?sayfaKodu=20");
+	header("Location: maileksik");
 	exit();
 }
 ?>

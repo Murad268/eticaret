@@ -10,10 +10,10 @@
       $deleteCartFetch->execute();
       $deleteCartFetchCount = $deleteCartFetch->rowCount();
       if($deleteCartFetchCount>0) {     
-         header("Location: index.php?sayfaKodu=56");
+         header("Location: sepet");
       } else {
          $_SESSION["cartDell"] = "Sepetden ürün silme zamanı hata oluştu. Bir az sonra yeniden deneyin";
-         header("Location: index.php?sayfaKodu=56");
+         header("Location: sepet");
       }
    } else {
       header("Location: index.php");
