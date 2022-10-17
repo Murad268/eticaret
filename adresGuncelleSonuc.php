@@ -48,7 +48,7 @@
          $addFetch->execute([$gelenAdSoyad, $gelenAdres, $gelenIlce, $gelenCity, $gelenPhone, (int)$_GET["id"]]);
          $addCount = $addFetch->rowCount();
          if($addCount>0) {
-            $_SESSION["alert"] = "Adres yenilendi.";
+            $_SESSION["alert"] = "Adres yeniləndi.";
             header("Location: ../adresler");
          }
         
@@ -57,7 +57,7 @@
 
      
    } else {
-      $_SESSION["alert"] = "Məlumatlardan biri və ya hamısı boş göndərildiyi üçün, adres yenilenmedi";
+      $_SESSION["alert"] = "Məlumatlardan biri və ya hamısı boş göndərildiyi üçün, adres yenilənmədi";
       header("Location: ../adresler");
    }
 ?>

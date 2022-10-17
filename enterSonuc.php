@@ -80,12 +80,12 @@
             header("Location: user-bilgileri");
          }
       } else {
-         $_SESSION["enterMess"] = "Belə bir hesab mövcud deyil.";
+         $_SESSION["enterMess"] = "Nömrə, E-mail və ya şifrə yanlışdır.";
     
          header("Location: user-enter");
       }
    } else {
-      $_SESSION["enterMess"] = "Daxil edilən məlumatlar tam deyil. Xahiş edirik həm poçt unvanını, həm də parolu daxil edin";
+      $_SESSION["enterMess"] = "Daxil edilən məlumatlar tam deyil. Xahiş edirik həm poçt unvanını, həm də şifrəni daxil edin";
       header("Location: user-enter");
    }
 ?>

@@ -46,7 +46,7 @@
          $check = $checkEmailOrPassword->rowCount();
          if($check>0) {
             echo $check;
-            $_SESSION["regMessage"] = "bu email və ya telefon nömrəsi ilə artıq istifadəçi artıq mövcuddur";
+            $_SESSION["regMessage"] = "bu email və ya telefon nömrəsi ilə istifadəçi artıq mövcuddur";
             header("Location: index.php?sayfaKodu=22");
            } else {
             $pass = md5($password);
@@ -103,11 +103,11 @@
             }
          }
       } else {
-         $_SESSION["regMessage"] = "Əgər üyəlik sözləşmesini oxumamısızsa oxuyun və razısınızsa təstiq edin. Təstiq etmədiyiniz halda davam etmək mümkün olmayacaqdır.";
+         $_SESSION["regMessage"] = "Əgər istifadəçi sözləşmesini oxumamısınızsa oxuyun və razısınızsa təstiq edin. Təstiq etmədiyiniz halda davam etmək mümkün olmayacaqdır.";
          header("Location: index.php?sayfaKodu=22");
       }
    } else {
-      $_SESSION["regMessage"] = "Məlumatların daxil edilməsində natamamlıq. Xahiş edirik, bütün məlumatları daxile dəsiniz!";
+      $_SESSION["regMessage"] = "Məlumatların daxil edilməsində natamamlıq. Xahiş edirik, bütün məlumatları daxil edəsiniz!";
       header("Location: index.php?sayfaKodu=22");
    }
 

@@ -21,7 +21,7 @@
             $updateFetch->execute([$fullName, $id]);
             $affectedUsers = $updateFetch->rowCount();
             if($affectedUsers>0) {
-               $_SESSION["message"] = "Məlumatlar güncəlləndilər";
+               $_SESSION["message"] = "Məlumatlar yeniləndilər";
                header("Location: index.php?sayfaKodu=27");
             } 
         } else {
@@ -93,7 +93,7 @@
                header("Location:index.php?sayfaKodu=27");
                exit();
             }catch(Exception $e){
-               $_SESSION["message"] = "Parol sıfırlaması müəyyən problemlər baş verdi. Xahiş edirik bir az sonra cəhd edəsiniz";
+               $_SESSION["message"] = "Şifrə sıfırlaması müəyyən problemlər baş verdi. Xahiş edirik bir az sonra cəhd edəsiniz";
    
                header("Location:index.php?sayfaKodu=27");
                exit();
@@ -138,7 +138,7 @@
                   $updateFetch->execute([$gelenTelefon, $id]);
                   $affectedUsers = $updateFetch->rowCount();
                   if($affectedUsers>0) {
-                     $_SESSION["message"] = "Məlumatlar güncəlləndilər";
+                     $_SESSION["message"] = "Məlumatlar yeniləndilər";
                      header("Location: index.php?sayfaKodu=27");
                   } 
                } else {

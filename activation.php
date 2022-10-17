@@ -10,9 +10,9 @@
 
    if($userAffect>0) {
       header("Location: user-enter");
-      // unset( $_SESSION["message"]);
+
       $_SESSION["message"] = "Profiliniz aktivləşdirildi";
    }  else {
-      // header("Location: index.php");
+    
    }
 ?>

@@ -10,7 +10,7 @@ if(isset($_GET["id"])) {
    $gelenUrunId = "";
 }
 if($gelenUrunId == "") {
-   $_SESSION["comment"] = "Error. Məhsulun idsinin yüklənməsində səhvlik baş verdi;";
+   $_SESSION["comment"] = "Xəta. Məhsulun idsinin yüklənməsində səhvlik baş verdi;";
 } else {
    unset($_SESSION["comment"]);
 }

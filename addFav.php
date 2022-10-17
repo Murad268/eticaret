@@ -26,7 +26,7 @@
          $addFavoriteFetch->execute();
          $addFavoriteFetchCount = $addFavoriteFetch->rowCount();
          if($addFavoriteFetchCount>0) {
-            $_SESSION["addFav"] = "Məhsul favorilere əlavə edildi";
+            $_SESSION["addFav"] = "Məhsul sevimlilərə əlavə edildi";
             unset($_SESSION["goodDetailsMess"]);
             header("Location: $backLink/$urunAdi/$gelenId");
          }

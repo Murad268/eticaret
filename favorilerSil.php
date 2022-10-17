@@ -15,7 +15,7 @@
          header("Location: ../sevimliler");
       }
    } else {
-      $_SESSION["favorite"] = "Error. Boş id.";
+      $_SESSION["favorite"] = "Error. Boş id";
       header("Location: ../sevimliler");
    }
 ?>

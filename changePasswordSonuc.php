@@ -25,7 +25,7 @@
          echo $email;
          echo $activationCode;
          if($kayit>0) {
-            $_SESSION["message"] = "Şifre deyişildi.";
+            $_SESSION["message"] = "Şifre dəyişdirildi.";
             header("Location: user-enter");
          }
       } else {
@@ -33,7 +33,7 @@
          header("Location: index.php?sayfaKodu=30&email=$email&activationCode=$activationCode");
       }
    } else {
-      $_SESSION["message"] = "Boş alan gönderilib. Xahiş edirik, bütün bölmələri doldurun";
+      $_SESSION["message"] = "Boş bölmə gönderilib. Xahiş edirik, bütün bölmələri doldurun";
       header("Location: index.php?sayfaKodu=30&email=$email&activationCode=$activationCode");
    }
 ?>

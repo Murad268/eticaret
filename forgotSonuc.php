@@ -48,11 +48,11 @@
             $MailGonder->Subject = DonusumleriGeriDondur($ad) . ' Şifre deyişme linki';
             $MailGonder->MsgHTML($MailIcerigiHazirla);
             $MailGonder->send();
-            $_SESSION["enterMess"] = "Şifreni deyişmek linki poçt ünvanınıza gönderildi.";
+            $_SESSION["enterMess"] = "Şifreni deyişmək linki poçt ünvanınıza gönderildi.";
 
             header("Location: user-enter");
          }catch(Exception $e){
-            $_SESSION["message"] = "Parol sıfırlaması müəyyən problemlər baş verdi. Xahiş edirik bir az sonra cəhd edəsiniz";
+            $_SESSION["message"] = "Şifrə sıfırlaması müəyyən problemlər baş verdi. Xahiş edirik bir az sonra cəhd edəsiniz";
 
             header("Location: user-enter");
             exit();
