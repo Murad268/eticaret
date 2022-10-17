@@ -50,35 +50,27 @@ RewriteRule	^adresiSil/(.*)$  /eticaret/index.php?sayfaKodu=40&id=$1" [L,NC]
 RewriteRule	^adesYenile/(.*)$  /eticaret/index.php?sayfaKodu=44&id=$1" [L,NC]
 RewriteRule	^kishi-ayakkabisi/(.*)/(.*)$   /eticaret/index.php?sayfaKodu=52&id=$2 [L,NC]
 RewriteRule	^mail$  /eticaret/index.php?sayfaKodu=16" [L,NC]
-
 RewriteRule	^mailtamam$  /eticaret/index.php?sayfaKodu=18 [L,NC]
 RewriteRule	^mailhata$  /eticaret/index.php?sayfaKodu=19 [L,NC]
 RewriteRule	^maileksik$  /eticaret/index.php?sayfaKodu=20 [L,NC]
-
 RewriteRule	^alisverissepetibankahavalesiileodemetamam$  /eticaret/index.php?sayfaKodu=66 [L,NC]
 RewriteRule	^yorumYap/(.*)$  /eticaret/index.php?sayfaKodu=45&id=$1 [L,NC]
-
 RewriteRule	^cocukayakkabisayfala/(.*)(.*)$  /eticaret/index.php?sayfaKodu=51&sayfalama=$1&$2 [L,NC]
 RewriteRule	^cocukayakkabisayfala/(.*)/(.*)$  /eticaret/index.php?sayfaKodu=51&sayfalama=$1&$2 [L,NC]
 RewriteRule	^cocukayakkabisayfala/(.*)(.*)$  /eticaret/index.php?sayfaKodu=51&sayfalama=$1$2 [L,NC]
-
-
 RewriteRule	^kadinkayakkabisayfala/(.*)(.*)$  /eticaret/index.php?sayfaKodu=50&sayfalama=$1&$2 [L,NC]
 RewriteRule	^kadinkayakkabisayfala/(.*)/(.*)$  /eticaret/index.php?sayfaKodu=50&sayfalama=$1&$2 [L,NC]
 RewriteRule	^kadinkayakkabisayfala/(.*)(.*)$  /eticaret/index.php?sayfaKodu=510&sayfalama=$1$2 [L,NC]
-
-
-
 RewriteRule	^kishiayakkabisayfala/(.*)(.*)$  /eticaret/index.php?sayfaKodu=49&sayfalama=$1&$2 [L,NC]
 RewriteRule	^kishiayakkabisayfala/(.*)/(.*)$  /eticaret/index.php?sayfaKodu=49&sayfalama=$1&$2 [L,NC]
 RewriteRule	^kishiayakkabisayfala/(.*)(.*)$  /eticaret/index.php?sayfaKodu=49&sayfalama=$1$2 [L,NC]
-
-
 RewriteRule	^yorumlariSayfala/(.*)$  /eticaret/index.php?sayfaKodu=38&sayfalama=$1& [L,NC]
 RewriteRule	^yorumlariSayfala/(.*)$  /eticaret/index.php?sayfaKodu=38&sayfalama=$1 [L,NC]
 RewriteRule	^yorumlariSayfala/(.*)$  /eticaret/index.php?sayfaKodu=38&sayfalama=$1 [L,NC]
 RewriteRule	^adresKargo$  /eticaret/index.php?sayfaKodu=59 [L,NC]
 RewriteRule	^odemeSecimi$  /eticaret/index.php?sayfaKodu=61 [L,NC]
 RewriteRule	^odemeKartSonuc$  /eticaret/index.php?sayfaKodu=63 [L,NC]
-
 RewriteRule	^alisveristamam$  /eticaret/index.php?sayfaKodu=65 [L,NC]
+
+
+RewriteRule	^sifarishler$  /eticaret/index.php?sayfaKoduDis=0&sayfaKoduIc=53 [L,NC]

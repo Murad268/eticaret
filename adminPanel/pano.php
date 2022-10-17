@@ -50,79 +50,79 @@
 
        <div class="pano__wrapper">
             <div class="pano__wrapper__item">
-               <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=53">
+               <a href="sifarishler">
                   <div class="pano__wrapper__item__title">Gözləyən Şifarişlər</div>
                   <div class="pano__wrapper__item__count"><?=$bekleyenSifarisler["bekleyenSifarisler"]?></div>
                </a>
             </div>
             <div class="pano__wrapper__item">
-               <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=57">
+               <a href="tamamlanansifarisler">
                   <div class="pano__wrapper__item__title">Tamamlanmış Şifarişlər</div>
                   <div class="pano__wrapper__item__count"><?=$tamamlananSifarisler["tamamlananSifarisler"]?></div>
                </a>
             </div>
             <div class="pano__wrapper__item">
-               <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=53">
+               <a href="sifarishler">
                   <div class="pano__wrapper__item__title">Bütün Şifarişlər</div>
                   <div class="pano__wrapper__item__count"><?=$tamamlananSifarisler["tamamlananSifarisler"]+$bekleyenSifarisler["bekleyenSifarisler"]?></div>
                </a>
             </div>
             <div class="pano__wrapper__item">
-               <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=60">
+               <a href="havalebildirimleri">
                   <div class="pano__wrapper__item__title">Hevale Bildirimleri</div>
                   <div class="pano__wrapper__item__count"><?=$hevaleler["hevalelerSayisi"]?></div>
                </a>
             </div>
             <div class="pano__wrapper__item">
-               <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=5">
+               <a href="bankhesablari">
                   <div class="pano__wrapper__item__title">Bank Hesabları</div>
                   <div class="pano__wrapper__item__count"><?=$bankalar["bankalar"]?></div>
                </a>
             </div>
             <div class="pano__wrapper__item">
-               <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=29">
+               <a href="menyular">
                   <div class="pano__wrapper__item__title">Menyu Sayısı</div>
                   <div class="pano__wrapper__item__count"><?=$menyu["menuler"]?></div>
                </a>
             </div>
             <div class="pano__wrapper__item">
-               <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=47">
+               <a href="mehsullar">
                   <div class="pano__wrapper__item__title">Məhsullar</div>
                   <div class="pano__wrapper__item__count"><?=$urunler["urunler"]?></div>
                </a>
             </div>
             <div class="pano__wrapper__item">
-               <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=41">
+               <a href="users">
                   <div class="pano__wrapper__item__title">Userlər</div>
                   <div class="pano__wrapper__item__count"><?=$users["users"]?></div>
                </a>
             </div>
             <div class="pano__wrapper__item">
                <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=35">
-                  <div class="pano__wrapper__item__title">Adminlər</div>
+                  <div class="adminler">Adminlər</div>
                   <div class="pano__wrapper__item__count"><?=$admins["admins"]?></div>
                </a>
             </div>
             <div class="pano__wrapper__item">
-               <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=11">
+               <a href="kargolar">
                   <div class="pano__wrapper__item__title">Kargolar</div>
                   <div class="pano__wrapper__item__count"><?=$kargolar["kargolar"]?></div>
                </a>
             </div>
             <div class="pano__wrapper__item">
-               <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=17">
+               <a href="bannerler">
                   <div class="pano__wrapper__item__title">Bannerlər</div>
                   <div class="pano__wrapper__item__count"><?=$banner["bannerler"]?></div>
                </a>
             </div>
             <div class="pano__wrapper__item">
-               <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=45">
+               <a href="serhler">
                   <div class="pano__wrapper__item__title">Şərhlər</div>
                   <div class="pano__wrapper__item__count"><?=$comment["comment"]?></div>
                </a>
             </div>
             <div class="pano__wrapper__item">
-               <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=23">
+               <a href="destek">
                   <div class="pano__wrapper__item__title">Dəstək Mətnləri</div>
                   <div class="pano__wrapper__item__count"><?=$faq["faq"]?></div>
                </a>

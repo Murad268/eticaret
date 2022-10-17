@@ -1,0 +1,22 @@
+RewriteEngine	On
+
+RewriteBase	/eticaret/adminPanel
+
+
+
+RewriteRule	^sifarishler$  /eticaret/adminPanel/index.php?sayfaKoduDis=0&sayfaKoduIc=53 [L,NC]
+RewriteRule	^havalebildirimleri$  /eticaret/adminPanel/index.php?sayfaKoduDis=0&sayfaKoduIc=60 [L,NC]
+RewriteRule	^mehsullar$  /eticaret/adminPanel/index.php?sayfaKoduDis=0&sayfaKoduIc=47 [L,NC]
+RewriteRule	^users$  /eticaret/adminPanel/index.php?sayfaKoduDis=0&sayfaKoduIc=41 [L,NC]
+RewriteRule	^serhler$  /eticaret/adminPanel/index.php?sayfaKoduDis=0&sayfaKoduIc=45 [L,NC]
+RewriteRule	^saytparametrleri$  /eticaret/adminPanel/index.php?sayfaKoduDis=0&sayfaKoduIc=1 [L,NC]
+RewriteRule	^menyular$  /eticaret/adminPanel/index.php?sayfaKoduDis=0&sayfaKoduIc=29 [L,NC]
+RewriteRule	^bankhesablari$  /eticaret/adminPanel/index.php?sayfaKoduDis=0&sayfaKoduIc=5 [L,NC]
+RewriteRule	^sozlesmemetunleri$  /eticaret/adminPanel/index.php?sayfaKoduDis=0&sayfaKoduIc=3 [L,NC]
+RewriteRule	^kargolar$  /eticaret/adminPanel/index.php?sayfaKoduDis=0&sayfaKoduIc=11 [L,NC]
+RewriteRule	^bannerler$  /eticaret/adminPanel/index.php?sayfaKoduDis=0&sayfaKoduIc=17 [L,NC]
+RewriteRule	^destek$  /eticaret/adminPanel/index.php?sayfaKoduDis=0&sayfaKoduIc=23 [L,NC]
+RewriteRule	^adminler$  /eticaret/adminPanel/index.php?sayfaKoduDis=0&sayfaKoduIc=35 [L,NC]
+RewriteRule	^chixish$  /eticaret/adminPanel/index.php?sayfaKoduDis=3&sayfaKoduIc=0 [L,NC]
+RewriteRule	^tamamlanansifarisler$  /eticaret/adminPanel/index.php?sayfaKoduDis=0&sayfaKoduIc=57 [L,NC]
+RewriteRule	^admingiris$  /eticaret/adminPanel/index.php?sayfaKoduDis=1 [L,NC]
