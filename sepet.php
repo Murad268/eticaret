@@ -104,7 +104,7 @@
       </div>
    </div>
    <div class="cartWrapper__order">
-     <form action="index.php?sayfaKodu=59" method="post">
+     <form action="adresKargo" method="post">
      <h5 class="cartWrapper__order__title">Sipariş Özeti</h5>
          <div class="cartWrapper__order__subtitle">Toplam <strong style="color: red; font-size: 16px"><?=$toplamUrunAdedi?></strong> Adet Ürün</div>
          <input type="hidden" name="fiyat" value="<?=$toplamKDVLiFiyat?>">

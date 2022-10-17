@@ -23,7 +23,7 @@
 
 
    $sayfalamaIcinButonSayisi = 2;
-   $sayfaBasinaGosterilecek = 1;
+   $sayfaBasinaGosterilecek = 10;
    $toplamKayitSayisiSorgusu = $db->prepare("SELECT * FROM goods WHERE durumu = 1 AND urunTuru = 'erkek'  $menuKosulu $aramaKosulu ORDER BY id DESC");
    $toplamKayitSayisiSorgusu->execute();
    $toplamKayitSayisi = $toplamKayitSayisiSorgusu->rowCount();

@@ -25,7 +25,7 @@
             if($sepetBolsaltCount>0) {
                header("Location: alisveristamam");
                exit();
-            }
+            } 
 
          }
       }

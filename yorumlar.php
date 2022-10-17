@@ -3,7 +3,7 @@
       header("Location: index.php");
    }
    $sayfalamaIcinButonSayisi = 2;
-   $sayfaBasinaGosterilecek = 2;
+   $sayfaBasinaGosterilecek = 1;
    $toplamKayitSayisiSorgusu = $db->prepare("SELECT * FROM yorumlar WHERE uyeId = ? ORDER BY yorumTarihi DESC");
    $toplamKayitSayisiSorgusu->execute([$id]);
    $toplamKayitSayisi = $toplamKayitSayisiSorgusu->rowCount();
@@ -12,11 +12,11 @@
 ?>
   <hr>
       <div class="user__navbar">
-         <div class="user__navbar__link"><a href="index.php?sayfaKodu=27">Üyelik Bilgileri</a></div>
-         <div class="user__navbar__link"><a href="index.php?sayfaKodu=36">Adresler</a></div>
-         <div class="user__navbar__link"><a href="index.php?sayfaKodu=37">Favoriler</a></div>
-         <div class="user__navbar__link"><a href="index.php?sayfaKodu=38">Yorumlar</a></div>
-         <div class="user__navbar__link"><a href="index.php?sayfaKodu=39">Siparişler</a></div>
+         <div class="user__navbar__link"><a href="user-bilgileri">Üyelik Bilgileri</a></div>
+         <div class="user__navbar__link"><a href="adresler">Adresler</a></div>
+         <div class="user__navbar__link"><a href="sevimliler">Favoriler</a></div>
+         <div class="user__navbar__link"><a href="sherhler">Yorumlar</a></div>
+         <div class="user__navbar__link"><a href="sifarishler">Siparişler</a></div>
       </div>
    <hr>
 <div class="adresMainWrapper"> 
@@ -76,22 +76,22 @@
                if($bulunanSafyaSayisi > 1) {?>
                   <div class="paginationWrapper">
                      <nav aria-label="Page navigation example ">
-                        <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="index.php?sayfaKodu=38&sayfalama=1">&laquo;</a></li>
-                        <?php
-                           for($i = $sayfalama-$sayfalamaIcinButonSayisi; $i <= $sayfalama+$sayfalamaIcinButonSayisi; $i++) {
-                              if(($i > 0) and ($i <= $bulunanSafyaSayisi)) {
-                                 $curr = $i;
-                              if($sayfalama == $i) {
-                                 echo "<li style=\"cursor: pointer\" class=\"page-item\"><div style=\"background: red; color: white\" class=\"page-link\">$curr</div></li>";
-                              } else {
-                                 echo "<li class=\"page-item\"><a class=\"page-link\" href=\"index.php?sayfaKodu=38&sayfalama=$curr\">$curr</a></li>";
+                     <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="yorumlariSayfala/1">&laquo;</a></li>
+                           <?php
+                              for($i = $sayfalama-$sayfalamaIcinButonSayisi; $i <= $sayfalama+$sayfalamaIcinButonSayisi; $i++) {
+                                 if(($i > 0) and ($i <= $bulunanSafyaSayisi)) {
+                                    $curr = $i;
+                                 if($sayfalama == $i) {
+                                    echo "<li style=\"cursor: pointer\" class=\"page-item\"><div style=\"background: red; color: white\" class=\"page-link\">$curr</div></li>";
+                                 } else {
+                                    echo "<li class=\"page-item\"><a class=\"page-link\" href=\"yorumlariSayfala/$curr\">$curr</a></li>";
+                                 }
                               }
                            }
-                        }
-                        ?>
+                           ?>
                            
-                           <li class="page-item"><a class="page-link"  href="index.php?sayfaKodu=38&sayfalama=<?=$bulunanSafyaSayisi?>">&raquo;</a></li>
+                           <li class="page-item"><a class="page-link"  href="yorumlariSayfala/<?=$bulunanSafyaSayisi?>">&raquo;</a></li>
                         </ul>
                      </nav>
                   </div>

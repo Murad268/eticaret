@@ -152,7 +152,7 @@
                
                }
             }
-            header("Location: index.php?sayfaKodu=63");
+            header("Location: odemeKartSonuc");
             exit();
          }
       }

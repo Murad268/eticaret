@@ -4,7 +4,7 @@
       $_SESSION["message"] = "Əvvəlcə daxil olmalısınız";
    }
 ?>
-<form action="index.php?sayfaKodu=61" method="post">
+<form action="odemeSecimi" method="post">
    <div class="cartWrapper">
       <div class="cartWrapper__details">
          <h5 class="cartWrapper__title">Alışveriş Sepeti</h5>

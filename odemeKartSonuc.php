@@ -127,6 +127,6 @@
     </div>
 
   </div>
-  <button class="btn btn-primary" type="submit">Öde</button>
+  <button class="btn btn-primary" type="submit">Ödə</button>
 </form>
 </div>
