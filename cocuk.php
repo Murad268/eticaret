@@ -162,9 +162,9 @@
             <div class="paginationWrapper">
                <nav aria-label="Page navigation example ">
                   <ul class="pagination">
-                  <li class="page-item"><a class="page-link" href="index.php?sayfaKodu=51&sayfalama=1&<?$sayfalamaKosulu?>">&laquo;</a></li>
+                  <li class="page-item"><a class="page-link" href="cocukayakkabisayfala/1/<?$sayfalamaKosulu?>">&laquo;</a></li>
                   
-                  
+           
                   <?php
                      for($i = $sayfalama-$sayfalamaIcinButonSayisi; $i <= $sayfalama+$sayfalamaIcinButonSayisi; $i++) {
                         if(($i > 0) and ($i <= $bulunanSafyaSayisi)) {
@@ -172,13 +172,14 @@
                         if($sayfalama == $i) {
                            echo "<li style=\"cursor: pointer\" class=\"page-item\"><div style=\"background: red; color: white\" class=\"page-link\">$curr</div></li>";
                         } else {
-                           echo "<li class=\"page-item\"><a class=\"page-link\" href=\"index.php?sayfaKodu=51&sayfalama=$curr$sayfalamaKosulu\">$curr</a></li>";
+                           echo "<li class=\"page-item\"><a class=\"page-link\" href=\"cocukayakkabisayfala/$curr$sayfalamaKosulu\">$curr</a></li>";
                         }
                      }
                   }
                   ?>
                      
-                     <li class="page-item"><a class="page-link"  href="index.php?sayfaKodu=51&sayfalama=<?=$bulunanSafyaSayisi?>&<?$sayfalamaKosulu?>">&raquo;</a></li>
+                     <li class="page-item"><a class="page-link"  href="cocukayakkabisayfala/<?=$bulunanSafyaSayisi?><?$sayfalamaKosulu?>">&raquo;</a></li>
+                  
                   </ul>
                </nav>
             </div>

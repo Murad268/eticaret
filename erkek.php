@@ -23,7 +23,7 @@
 
 
    $sayfalamaIcinButonSayisi = 2;
-   $sayfaBasinaGosterilecek = 10;
+   $sayfaBasinaGosterilecek = 1;
    $toplamKayitSayisiSorgusu = $db->prepare("SELECT * FROM goods WHERE durumu = 1 AND urunTuru = 'erkek'  $menuKosulu $aramaKosulu ORDER BY id DESC");
    $toplamKayitSayisiSorgusu->execute();
    $toplamKayitSayisi = $toplamKayitSayisiSorgusu->rowCount();
@@ -163,22 +163,22 @@
          if($bulunanSafyaSayisi>1) {?>
             <div class="paginationWrapper">
                <nav aria-label="Page navigation example ">
-                  <ul class="pagination">
-                  <li class="page-item"><a class="page-link" href="index.php?sayfaKodu=49&sayfalama=1&<?$sayfalamaKosulu?>">&laquo;</a></li>
-                  <?php
-                     for($i = $sayfalama-$sayfalamaIcinButonSayisi; $i <= $sayfalama+$sayfalamaIcinButonSayisi; $i++) {
-                        if(($i > 0) and ($i <= $bulunanSafyaSayisi)) {
-                           $curr = $i;
-                        if($sayfalama == $i) {
-                           echo "<li style=\"cursor: pointer\" class=\"page-item\"><div style=\"background: red; color: white\" class=\"page-link\">$curr</div></li>";
-                        } else {
-                           echo "<li class=\"page-item\"><a class=\"page-link\" href=\"index.php?sayfaKodu=49&sayfalama=$curr$sayfalamaKosulu\">$curr</a></li>";
+               <ul class="pagination">
+                  <li class="page-item"><a class="page-link" href="kishiayakkabisayfala/1/<?$sayfalamaKosulu?>">&laquo;</a></li>
+                     <?php
+                        for($i = $sayfalama-$sayfalamaIcinButonSayisi; $i <= $sayfalama+$sayfalamaIcinButonSayisi; $i++) {
+                           if(($i > 0) and ($i <= $bulunanSafyaSayisi)) {
+                              $curr = $i;
+                           if($sayfalama == $i) {
+                              echo "<li style=\"cursor: pointer\" class=\"page-item\"><div style=\"background: red; color: white\" class=\"page-link\">$curr</div></li>";
+                           } else {
+                              echo "<li class=\"page-item\"><a class=\"page-link\" href=\"kishiayakkabisayfala/$curr$sayfalamaKosulu\">$curr</a></li>";
+                           }
                         }
                      }
-                  }
-                  ?>
+                     ?>
                      
-                     <li class="page-item"><a class="page-link"  href="index.php?sayfaKodu=49&sayfalama=<?=$bulunanSafyaSayisi?>&<?$sayfalamaKosulu?>">&raquo;</a></li>
+                     <li class="page-item"><a class="page-link"  href="kishiayakkabisayfala/<?=$bulunanSafyaSayisi?><?$sayfalamaKosulu?>">&raquo;</a></li>
                   </ul>
                </nav>
             </div>
