@@ -19,20 +19,20 @@
                   $hevaleler = $hevaleSorgusu->fetch(PDO::FETCH_ASSOC);
                ?>
                <ul class="menu__items">
-                  <li><a href="sifarishler">SİPARİŞLER (<?=$bekleyenSifarisler["bekleyenSifarisler"]?>/<?=$tamamlananSifarisler["tamamlananSifarisler"]?>)</a></li>
-                  <li><a href="havalebildirimleri">HEVALE BİLDİRİMLERİ (<?=$hevaleler["hevalelerSayisi"]?>)</a></li>
-                  <li><a href="mehsullar">ÜRÜNLER</a></li>
-                  <li><a href="users">ÜYELER</a></li>
-                  <li><a href="serhler">YORUMLAR</a></li>
-                  <li><a href="saytparametrleri">SİTE AYARLARI</a></li>
-                  <li><a href="menyular">MENÜLER</a></li>
-                  <li><a href="bankhesablari">BANKA HESAP AYARLARI</a></li>
-                  <li><a href="sozlesmemetunleri">SÖZLEŞMELER VE METİNLER</a></li>
-                  <li><a href="kargolar">KARGO AYARLARI</a></li>
-                  <li><a href="bannerler">BANNER AYARLARI</a></li>
-                  <li><a href="destek">DESTEK İÇERİKLERİ</a></li>
-                  <li><a href="adminler">YÖNETİCİLİER</a></li>
-                  <li><a href="chixish">ÇIKIŞ</a></li>
+                  <li><a href="sifarishler">Sifarişlər (<?=$bekleyenSifarisler["bekleyenSifarisler"]?>/<?=$tamamlananSifarisler["tamamlananSifarisler"]?>)</a></li>
+                  <li><a href="havalebildirimleri">HEVALE BİLDİRİMLƏRİ (<?=$hevaleler["hevalelerSayisi"]?>)</a></li>
+                  <li><a href="mehsullar">MƏHSULLAR</a></li>
+                  <li><a href="users">USERLƏR</a></li>
+                  <li><a href="serhler">ŞƏRHLƏR</a></li>
+                  <li><a href="saytparametrleri">SAYT PARAMETRLƏRİ  </a></li>
+                  <li><a href="menyular">MENYULAR</a></li>
+                  <li><a href="bankhesablari">BANK HESAP PARAMETRLƏRİ</a></li>
+                  <li><a href="sozlesmemetunleri">SÖZLƏŞMƏLƏR VƏ MƏTNLƏT</a></li>
+                  <li><a href="kargolar">KARGO PARAMETRLƏRİ</a></li>
+                  <li><a href="bannerler">BANNER PARAMETRLƏRİ</a></li>
+                  <li><a href="destek">DƏSTƏK İÇERİKLƏRİ</a></li>
+                  <li><a href="adminler">ADMİNLƏR</a></li>
+                  <li><a href="chixish">ÇIXIŞ</a></li>
                </ul>
             </div>
             <div class="panelWrapper__content">

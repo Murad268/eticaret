@@ -20,3 +20,5 @@ RewriteRule	^adminler$  /eticaret/adminPanel/index.php?sayfaKoduDis=0&sayfaKoduI
 RewriteRule	^chixish$  /eticaret/adminPanel/index.php?sayfaKoduDis=3&sayfaKoduIc=0 [L,NC]
 RewriteRule	^tamamlanansifarisler$  /eticaret/adminPanel/index.php?sayfaKoduDis=0&sayfaKoduIc=57 [L,NC]
 RewriteRule	^admingiris$  /eticaret/adminPanel/index.php?sayfaKoduDis=1 [L,NC]
+
+

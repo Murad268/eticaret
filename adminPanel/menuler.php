@@ -7,10 +7,10 @@
   
    ?>
       <div class="panel__header">
-         MENÜ AYARLARI
+         Menyu Parametrləri
       </div>
       <div class="addBank">
-         <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=33">yeni menü elave ele</a>
+         <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=33">yeni menyu əlavə ele</a>
       </div>
       <?php
           if(isset($_SESSION["bankDel"])) {

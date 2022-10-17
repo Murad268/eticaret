@@ -10,7 +10,7 @@
          BANNER AYARLARI
       </div>
       <div class="addBank">
-         <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=21">yeni banner elave ele</a>
+         <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=21">yeni banner əlavə elə</a>
       </div>
       <?php
           if(isset($_SESSION["bankDel"])) {

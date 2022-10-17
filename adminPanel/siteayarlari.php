@@ -6,7 +6,7 @@
 ?>
 <div class="siteayarlari">
    <div class="panel__header">
-      SİTE AYARLARI
+      Sayt Parametrləri
    </div>
    <form action="index.php?sayfaKoduDis=0&sayfaKoduIc=2" method="post" enctype="multipart/form-data">
       <?php

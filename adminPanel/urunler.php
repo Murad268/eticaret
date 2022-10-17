@@ -7,7 +7,7 @@
   
    ?>
       <div class="panel__header">
-         MƏHSUL PARAMETRLƏRİ
+         Məhsul Parametrləri
       </div>
       <div class="addBank">
          <a href="index.php?sayfaKoduDis=0&sayfaKoduIc=49">yeni məhsul əlavə elə</a>
