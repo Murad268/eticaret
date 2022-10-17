@@ -48,7 +48,7 @@
             $MailGonder->Subject = DonusumleriGeriDondur($ad) . ' Şifre deyişme linki';
             $MailGonder->MsgHTML($MailIcerigiHazirla);
             $MailGonder->send();
-            $_SESSION["message"] = "Şifreni deyişmek linki poçt ünvanınıza gönderildi.";
+            $_SESSION["enterMess"] = "Şifreni deyişmek linki poçt ünvanınıza gönderildi.";
 
             header("Location: user-enter");
          }catch(Exception $e){

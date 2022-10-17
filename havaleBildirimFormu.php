@@ -1,3 +1,8 @@
+<?php
+   if(!isset($_SESSION["userName"])) {
+      header("Location: user-enter");
+   }
+?>
 <div class="havaleWrapper">
    <div class="havaleWrapper__form">
       <h4 class="havaleWrapper__form__title">Havale Bildirim Formu</h4>

@@ -30,14 +30,14 @@
       $havaleKaydet->execute([$gelenNameSurname, $email, $phone, $bank, $text, $unix, 0]);
       $haveleKaydetKontrol = $havaleKaydet->rowCount();
       if($haveleKaydetKontrol > 0) {
-         header("Location: index.php?sayfaKodu=11");
+         header("Location: hevaletamam");
          exit();
       } else {
-         header("Location: index.php?sayfaKodu=12");
+         header("Location: hevalehata");
          exit();
       }
    } else {
-      header("Location: index.php?sayfaKodu=13");
+      header("Location: hevaleeksik");
       exit();
    }
 ?>

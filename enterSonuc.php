@@ -77,7 +77,7 @@
             $_SESSION["userName"] = $users["full_name"];
             $_SESSION["email"] = $users["email"];
             $_SESSION["phone"] = $users["phone"];
-            header("Location: index.php?sayfaKodu=27");
+            header("Location: user-bilgileri");
          }
       } else {
          $_SESSION["enterMess"] = "Belə bir hesab mövcud deyil.";

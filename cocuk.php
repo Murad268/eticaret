@@ -40,7 +40,7 @@
    <div class="manWrapper__menu">
       <h5 class="manWrapper__menu_title">MENÜLER</h5>
       <div class="manWrapper__menu__items">
-         <div class="manWrapper__menu__item"><a style="color: <?=$menuId==""?"orange":"black"?>" href="ushaq-ayakkabisi">Tüm Ürünler (<?=$menuCount["menununToplamUrunu"]?>)</a></div>
+         <div class="manWrapper__menu__item"><a style="color: <?=$menuId==""?"orange":"black"?>" href="ushaq-ayakkabilari">Tüm Ürünler (<?=$menuCount["menununToplamUrunu"]?>)</a></div>
          <?php
             $manFetch = $db->prepare("SELECT * FROM menuler WHERE urunTuru = 'cocuk'");
             $manFetch->execute();
@@ -53,7 +53,7 @@
                   $toMenu = $toMenuFetch->fetch(PDO::FETCH_ASSOC);
                   $urunSayinizDeyis=$db->prepare("UPDATE menuler SET urunSayisi = ? WHERE id=?");
                   $urunSayinizDeyis->execute([$toMenu["urunSayi"], $man["id"]])?>
-                    <div class="manWrapper__menu__item"><a style="color: <?=$menuId==$man["id"]?"orange":"black"?>" href="index.php?sayfaKodu=51&menuId=<?=$man["id"]?>"><?=$man["menuAdi"]?>  (<?=$toMenu["urunSayi"]?>)</a></div>
+                    <div class="manWrapper__menu__item"><a style="color: <?=$menuId==$man["id"]?"orange":"black"?>" href="ushaq-ayakkabilari/<?=$man["id"]?>"><?=$man["menuAdi"]?>  (<?=$toMenu["urunSayi"]?>)</a></div>
               <?php
                }
         
@@ -80,7 +80,7 @@
    <div class="manWrapper__items">
       <div class="manWrapper__items__search">
          <div class="row height d-flex justify-content-center align-items-center">
-            <form action="index.php?sayfaKodu=51" method="post" class="">
+            <form action="ushaq-ayakkabilari" method="post" class="">
                <?php
                   if($menuId !== "") {?>
                         <input type="hidden" name="menuId" value="<?=$menuId?>">
@@ -163,6 +163,8 @@
                <nav aria-label="Page navigation example ">
                   <ul class="pagination">
                   <li class="page-item"><a class="page-link" href="index.php?sayfaKodu=51&sayfalama=1&<?$sayfalamaKosulu?>">&laquo;</a></li>
+                  
+                  
                   <?php
                      for($i = $sayfalama-$sayfalamaIcinButonSayisi; $i <= $sayfalama+$sayfalamaIcinButonSayisi; $i++) {
                         if(($i > 0) and ($i <= $bulunanSafyaSayisi)) {

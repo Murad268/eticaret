@@ -4,7 +4,18 @@
    } else {
       $gelenId = "";
    }
-  
+   $urunuSorgula = $db->prepare("SELECT * FROM goods WHERE id = $gelenId LIMIT 1");
+   $urunuSorgula->execute();
+   $urun = $urunuSorgula->fetch(PDO::FETCH_ASSOC);
+   print_r($urun);
+   $urunAdi = $urun["urun_adi"];
+   if($urun["urunTuru"] == "erkek") {
+      $backLink = "kishi-ayakkabisi";
+   } else if($urun["urunTuru"] == "kadin") {
+      $backLink = "qadin-ayakkabisi";
+   } if($urun["urunTuru"] == "cocuk") {
+      $backLink = "ushaq-ayakkabisi";
+   }
    if($gelenId != "") {
       if(!isset($_SESSION["userName"])) {
          $_SESSION["enterMess"] = "Əvvəlcə giriş etməlisiniz.";
@@ -16,7 +27,7 @@
          if($addFavoriteFetchCount>0) {
             $_SESSION["addFav"] = "Məhsul favorilerden silindi";
             unset($_SESSION["goodDetailsMess"]);
-            header("Location: index.php?sayfaKodu=52&id=".$gelenId);
+            header("Location: $backLink/$urunAdi/$gelenId");
          } else {
             echo "error";
          }

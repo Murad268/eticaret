@@ -8,14 +8,14 @@
    if($gelenId !== "") {
       unset($_SESSION["favorite"]);
       $deleteFavori = $db->prepare("DELETE FROM favoriler WHERE id = ? AND uyeId = ?");
-      $deleteFavori->execute([$gelenId, $id]);
+      $deleteFavori->execute([(int)$gelenId, $id]);
       $deletedCount = $deleteFavori->rowCount();
       if($deletedCount > 0) {
        
-         header("Location: index.php?sayfaKodu=37");
+         header("Location: ../sevimliler");
       }
    } else {
       $_SESSION["favorite"] = "Error. Boş id.";
-      header("Location: index.php?sayfaKodu=37");
+      header("Location: ../sevimliler");
    }
 ?>
