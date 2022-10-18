@@ -7,8 +7,8 @@
 <form action="odemeSecimi" method="post">
    <div class="cartWrapper">
       <div class="cartWrapper__details">
-         <h5 class="cartWrapper__title">Alışveriş Sepeti</h5>
-         <div class="cartWrapper__subtitle">Adres ve Kargo Seçimini Aşağıdan Belirtebilirsin.</div>
+         <h5 class="cartWrapper__title">Alışveriş Sıbəti</h5>
+         <div class="cartWrapper__subtitle">Adres ve Kargo Seçimini Aşağıdan Edə Bilərsiniz.</div>
          <hr>
          <div class="cartWrapper__details__adress">
             <h5 class="cartWrapper__details__adress__title">Adres Seçimi</h5>
@@ -56,12 +56,12 @@
          </div>
       </div>
       <div class="cartWrapper__order">
-         <h5 class="cartWrapper__order__title">Sipariş Özeti</h5>
-         <div class="cartWrapper__order__subtitle">Toplam <strong style="color: red"><?=$sebet["toplamUrunler"]?></strong> Adet Ürün</div>
+         <h5 class="cartWrapper__order__title">Sifariş Xülasə</h5>
+         <div class="cartWrapper__order__subtitle">Toplam <strong style="color: red"><?=$sebet["toplamUrunler"]?></strong> Ədəd Məhsul</div>
          <hr>
-         <div>Ödenecek Tutar(KDV Dahil)</div>
+         <div>Ödənəcək Tutar(KDV Dahil)</div>
          <div class="cartWrapper__order__price"><?=fiyatBitimlerndir($_POST["fiyat"]+$_POST["kargo"])?>  TL</div>
-         <div>Ürünler Toplam Tutarı(KDV Dahil)</div>
+         <div>Məhsulların Toplam Tutarı(KDV Dahil)</div>
          <div class="cartWrapper__order__price"><?=fiyatBitimlerndir($_POST["fiyat"])?> TL</div>
          <div>Kargo Tutarı(KDV Dahil)</div>
          <input type="hidden" name="odenecektutar" value="<?=$_POST["fiyat"]+$_POST["kargo"]?>">
@@ -77,7 +77,13 @@
             <?php
             }
          ?>
-         <button class="btn cartWrapper__order__btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>DEVAM ET</span></и>
+         <?php
+            if($sebet["toplamUrunler"] > 0) {?>
+               <button class="btn cartWrapper__order__btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>DEVAM ET</span></и>
+            <?php
+            }
+         ?>
+        
       </div>
    </div>
 </form>

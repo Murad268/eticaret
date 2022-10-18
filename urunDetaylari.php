@@ -171,7 +171,6 @@
             </div>
             <div class="goodCount">
                <div style="cursor: pointer" class="goodCount__plus"><i class="fa fa-plus" aria-hidden="true"></i></div>
-            
                <input class="input" name="count"  value="1"  style="width: 30px;" type="text">
                <div style="cursor: pointer" class="goodCount__minus"><i class="fa fa-minus" aria-hidden="true"></i></div>
             </div>

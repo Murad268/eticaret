@@ -23,7 +23,7 @@
 
 
    $sayfalamaIcinButonSayisi = 2;
-   $sayfaBasinaGosterilecek = 10;
+   $sayfaBasinaGosterilecek = 8;
    $toplamKayitSayisiSorgusu = $db->prepare("SELECT * FROM goods WHERE durumu = 1 AND urunTuru = 'kadin'  $menuKosulu $aramaKosulu ORDER BY id DESC");
    $toplamKayitSayisiSorgusu->execute();
    $toplamKayitSayisi = $toplamKayitSayisiSorgusu->rowCount();
@@ -138,7 +138,7 @@
                      ?>
                      <div class="manWrapper__item">
                         <div class="manWrapper__item__img">
-                          <a href="qadin-ayakkabisi/<?=donusumleriGeriDondur($good["urun_adi"])?>/<?=donusumleriGeriDondur($good["id"])?>"><img src="assets/images/UrunResimleri/Kadin/<?=donusumleriGeriDondur($good["urun_resmi_bir"])?>" alt=""></a>
+                          <a href="qadin-ayakkabisi/<?=donusumleriGeriDondur($good["urun_adi"])?>/<?=donusumleriGeriDondur($good["id"])?>"><img style="height: 250px;" src="assets/images/UrunResimleri/Kadin/<?=donusumleriGeriDondur($good["urun_resmi_bir"])?>" alt=""></a>
                         </div>
                   
                         <div class="manWrapper__item__desc">

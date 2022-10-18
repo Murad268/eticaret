@@ -13,7 +13,7 @@
                <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Parol</label>
                   <input name="password" placeholder="parolunuzu daxil edin" type="password" class="form-control" id="exampleInputPassword1">
-                  <a href="shifreniUnutdum">şifreni unutdum</a>
+                  <a href="shifreniUnutdum">şifrəni unutdum</a>
                </div>
               
                <button type="submit" class="btn btn-primary">Daxil ol</button>

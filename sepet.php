@@ -13,8 +13,8 @@
          }
       ?>
    <div class="cartWrapper__details">
-      <h5 class="cartWrapper__title">Alışveriş Sepeti</h5>
-      <div class="cartWrapper__subtitle">Alışveriş Sepetine Eklemiş Olduğunuz Ürünler Aşağıdadır</div>
+      <h5 class="cartWrapper__title">Alışveriş Səbəti</h5>
+      <div class="cartWrapper__subtitle">Alış-veriş səbətinizə əlavə etdiyiniz məhsullar aşağıdadır</div>
       <hr>
    
       <div class="cartWrapper__details__items">
@@ -106,13 +106,19 @@
    <div class="cartWrapper__order">
      <form action="adresKargo" method="post">
      <h5 class="cartWrapper__order__title">Sipariş Özeti</h5>
-         <div class="cartWrapper__order__subtitle">Toplam <strong style="color: red; font-size: 16px"><?=$toplamUrunAdedi?></strong> Adet Ürün</div>
+         <div class="cartWrapper__order__subtitle">Toplam <strong style="color: red; font-size: 16px"><?=$toplamUrunAdedi?></strong> Ədəd Məhsul</div>
          <input type="hidden" name="fiyat" value="<?=$toplamKDVLiFiyat?>">
          <input type="hidden" name="kargo" value="<?=$toplamKargoUcreti?>">
          <hr>
-         <div>Ödenecek Tutar(KDV Dahil)</div>
+         <div>Ödəniləcək məbləğ(KDV Dahil)</div>
          <div class="cartWrapper__order__price"><?=fiyatBitimlerndir($toplamKDVLiFiyat)?> TL</div>
-         <button class="btn cartWrapper__order__btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>DEVAM ET</span></button>
+         <?php
+            if($toplamUrunAdedi > 0) {?>
+               <button class="btn cartWrapper__order__btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>DEVAM ET</span></button>
+            <?php
+            }
+         ?>
+         
      </form>
    </div>
 </div>

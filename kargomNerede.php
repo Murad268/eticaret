@@ -1,19 +1,19 @@
 <div class="kargoWrapper">
-   <h2 class="kargoWrapperMain__title">KARGOM NEREDE?</h2>
-   <div class="kargoWrapperMain__desc"> Sipariş Gönderilerinizi Bu Ekrandan Takip Edebilirsiniz.</div>
+   <h2 class="kargoWrapperMain__title">MƏNİM YÜK HARADIR?</h2>
+   <div class="kargoWrapperMain__desc"> Sifarişinizi Bu Ekrandan İzləyə Bilərsiniz.</div>
   
    <div class="kargoWrapper__img">
       <img src="assets/images/Kargocu.png" alt="">
    </div>
-   <div class="kargoWrapper__title">Gönderi Takip Numarası</div>
+   <div class="kargoWrapper__title">Göndərmə İzləmə Nömrəsi</div>
    <form action="index.php?sayfaKodu=15" method="post" >
       <div class="kargoWrapper__input">
          <input name="kargoKodu" type="text">
       </div>
-      <button class="kargoWrapper__btn">Kargo Durumunu Göster</button>
+      <button class="kargoWrapper__btn">Göndərmə Statusunu göstərin</button>
    </form>
    <div class="kargoWrapper__desc">
-      Siparişler Sayfasında ilgili sipariş ile alakalı takip numaranızı yukarıdakı alana girerek "Kargo Durumunu Göster" butonuna tıklayınız
+      Sifarişlər səhifəsində yuxarıdakı sahəyə müvafiq sifarişlə bağlı izləmə nömrənizi daxil edin və “Yük statusunu göstər” düyməsini sıxın.
    </div>
 
 </div>

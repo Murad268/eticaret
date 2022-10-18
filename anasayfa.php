@@ -14,17 +14,25 @@
             $goruntulemeArtir->execute([$banner["id"]]);
          ?>
       </div>
-      <div class="mainMenu__title">En Yeni Ürünler</div>
+      <div class="mainMenu__title">Ən Son Məhsullar</div>
       <div class="mainMenu__goods__wrapper">
          <?php
             $goodsFetch = $db->prepare("SELECT * FROM goods WHERE durumu=1 ORDER BY id DESC LIMIT 5");
             $goodsFetch->execute();
             $goodsCount = $goodsFetch->rowCount();
             $goods = $goodsFetch->fetchAll(PDO::FETCH_ASSOC);
-          
+         
             if($goodsCount>0) {
-               foreach($goods as $mal) {
-                  switch($mal["urunTuru"]) {
+               foreach($goods as $key => $mal) {
+                  if($mal["urunTuru"] == "erkek") {
+                     $link = "kishi-ayakkabisi";
+                  } else if($mal["urunTuru"] = "kadin") {
+                     $link = "qadin-ayakkabisi";
+                  } else if($mal["urunTuru"] = "cocuk") {
+                     $link = "ushaq-ayakkabisi";
+                  }
+            
+                  switch($$goods[$key]["urunTuru"]) {
                      case "erkek":
                         $klasor = "Erkek";
                         $type  = "Erkek Ayakkabısı";
@@ -69,7 +77,7 @@
 
                   <div class="mainMenu__goods__wrapper__item">
                      <div class="mainMenu__goods__wrapper__item__img">
-                        <img src="assets/images/UrunResimleri/<?=$klasor?>/<?=DonusumleriGeriDondur($mal["urun_resmi_bir"])?>" alt="">
+                        <a href="<?=$link?>/<?=donusumleriGeriDondur($mal["urun_adi"])?>/<?=donusumleriGeriDondur($mal["id"])?>"><img style="height: 250px;" src="assets/images/UrunResimleri/<?=$klasor?>/<?=DonusumleriGeriDondur($mal["urun_resmi_bir"])?>" alt=""></a>
                      </div>
                      <div style="color: orange; font-weight: 900; font-size: 16px" class="mainMenu__goods__wrapper__item__type"><?=$type?></div>
                      <div class="mainMenu__goods__wrapper__item__name"><?=DonusumleriGeriDondur($mal["urun_adi"])?></div>
@@ -84,17 +92,26 @@
          ?>
      
       </div>
-      <div class="mainMenu__title">En Popüler Ürünler</div>
+      <div class="mainMenu__title">Ən Populyar Məhsullar</div>
       <div class="mainMenu__goods__wrapper">
          <?php
             $goodsFetch = $db->prepare("SELECT * FROM goods WHERE durumu=1 ORDER BY goruntulenmeSayisi DESC LIMIT 5");
             $goodsFetch->execute();
             $goodsCount = $goodsFetch->rowCount();
             $goods = $goodsFetch->fetchAll(PDO::FETCH_ASSOC);
-          
+         
             if($goodsCount>0) {
-               foreach($goods as $mal) {
-                  switch($mal["urunTuru"]) {
+               foreach($goods as $key => $mal) {
+               
+                  if($mal["urunTuru"] == "erkek") {
+                     $link = "kishi-ayakkabisi";
+                  } else if($mal["urunTuru"] = "kadin") {
+                     $link = "qadin-ayakkabisi";
+                  } else if($mal["urunTuru"] = "cocuk") {
+                     $link = "ushaq-ayakkabisi";
+                  }
+                  switch($goods[$key]["urunTuru"]) {
+                     
                      case "erkek":
                         $klasor = "Erkek";
                         $type  = "Erkek Ayakkabısı";
@@ -139,7 +156,7 @@
 
                   <div class="mainMenu__goods__wrapper__item">
                      <div class="mainMenu__goods__wrapper__item__img">
-                        <img src="assets/images/UrunResimleri/<?=$klasor?>/<?=$mal["urun_resmi_bir"]?>" alt="">
+                        <a href="<?=$link?>/<?=donusumleriGeriDondur($mal["urun_adi"])?>/<?=donusumleriGeriDondur($mal["id"])?>"><img style="height: 250px;" src="assets/images/UrunResimleri/<?=$klasor?>/<?=$mal["urun_resmi_bir"]?>" alt=""></a>
                      </div>
                      <div style="color: orange; font-weight: 900; font-size: 16px" class="mainMenu__goods__wrapper__item__type"><?=DonusumleriGeriDondur($type)?></div>
                      <div class="mainMenu__goods__wrapper__item__name"><?=DonusumleriGeriDondur($mal["urun_adi"])?></div>
@@ -155,7 +172,7 @@
      
       </div>
 
-      <div class="mainMenu__title">En Çok Satan Ürünler</div>
+      <div class="mainMenu__title">Ən çox satılan məhsullar</div>
       <div class="mainMenu__goods__wrapper">
          <?php
             $goodsFetch = $db->prepare("SELECT * FROM goods WHERE durumu=1 ORDER BY toplamSatisSyisi DESC LIMIT 5");
@@ -164,7 +181,14 @@
             $goods = $goodsFetch->fetchAll(PDO::FETCH_ASSOC);
           
             if($goodsCount>0) {
-               foreach($goods as $mal) {
+               foreach($goods as $key => $mal) {
+                  if($goods[$key]["urunTuru"] == "erkek") {
+                     $link = "kishi-ayakkabisi";
+                  } else if($mal["urunTuru"] = "kadin") {
+                     $link = "qadin-ayakkabisi";
+                  } else if($mal["urunTuru"] = "cocuk") {
+                     $link = "ushaq-ayakkabisi";
+                  }
                   switch($mal["urunTuru"]) {
                      case "erkek":
                         $klasor = "Erkek";
@@ -210,7 +234,7 @@
 
                   <div class="mainMenu__goods__wrapper__item">
                      <div class="mainMenu__goods__wrapper__item__img">
-                        <img src="assets/images/UrunResimleri/<?=$klasor?>/<?=DonusumleriGeriDondur($mal["urun_resmi_bir"])?>" alt="">
+                        <a href="<?=$link?>/<?=donusumleriGeriDondur($mal["urun_adi"])?>/<?=donusumleriGeriDondur($mal["id"])?> "><img style="height: 250px;" src="assets/images/UrunResimleri/<?=$klasor?>/<?=DonusumleriGeriDondur($mal["urun_resmi_bir"])?>" alt=""></a>
                      </div>
                      <div style="color: orange; font-weight: 900; font-size: 16px" class="mainMenu__goods__wrapper__item__type"><?=$type?></div>
                      <div class="mainMenu__goods__wrapper__item__name"><?=DonusumleriGeriDondur($mal["urun_adi"])?></div>

@@ -31,6 +31,9 @@
    <meta name="keywords" content="<?=DonusumleriGeriDondur($keywords)?>">
    <base href="/eticaret/">
    <link rel="shortcut icon" href="assets/images/Favicon.png" type="image/x-icon">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Mukta:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Rubik+Burned&family=Russo+One&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -55,19 +58,19 @@
                         <td width="20"><img  src="assets/images/KullaniciBeyaz16x16.png" alt=""></td>  
                         <td class="maviAlanMenusu" width="70"><a  href="user-bilgileri">Hesabım</a></td>       
                         <td width="20"><img src="assets/images/CikisBeyaz16x16.png" alt=""></td>             
-                        <td class="maviAlanMenusu" width="85"><a href="index.php?sayfaKodu=32">Çıkış Yap</a></td>  
+                        <td class="maviAlanMenusu" width="85"><a href="index.php?sayfaKodu=32">Çıxış</a></td>  
                   <?php } else {?>
                      <td width="20"><img src="assets/images/KullaniciBeyaz16x16.png" alt=""></td>  
-                     <td class="maviAlanMenusu" width="70"><a  href="user-enter">Giriş Yap</a></td>       
+                     <td class="maviAlanMenusu" width="70"><a  href="user-enter">Daxil Ol</a></td>       
                      <td width="20"><img  src="assets/images/KullaniciEkleBeyaz16x16.png" alt=""></td>             
-                     <td class="maviAlanMenusu" width="85"><a href="qeydiyyat">Yeni üye ol</a></td>  
+                     <td class="maviAlanMenusu" width="85"><a href="qeydiyyat">Yeni Üzv Ol</a></td>  
                      <?php }
                   ?>
             
 
 
                   <td width="20"><img style="margin-top: -1px;" src="assets/images/SepetBeyaz16x16.png" alt=""></td>  
-                  <td class="maviAlanMenusu" width="103"><a  href="sepet">Alışveriş Sepeti</a></td>    
+                  <td class="maviAlanMenusu" width="103"><a  href="sepet">Alışveriş Səbəti</a></td>    
                </tr>
             </table>
             <table width="1065" height="80" align="center" border="0" cellpadding="0" cellspacing="0">
@@ -77,10 +80,10 @@
                      <table width="873" height="30" align="center" border="0" cellpadding="0" cellspacing="0">
                         <tr>
                            <td class="anaMenu" width="306">&nbsp;</td>     
-                           <td class="anaMenu" width="107"><a href="anaySehife">Ana Sayfa</a></td>    
-                           <td class="anaMenu" width="160"><a href="kishi-ayakkabilari"">Erkek Ayakkabıları</a></td>     
-                           <td class="anaMenu" width="160"><a href="qadin-ayakkabilari">Kadın Ayakkabıları</a></td>   
-                           <td class="anaMenu" width="140px"><a href="ushaq-ayakkabilari">Çocuk Ayakkabıları</a></td>             
+                           <td class="anaMenu" width="107"><a href="anaySehife">Ana Səhifə</a></td>    
+                           <td class="anaMenu" width="160"><a href="kishi-ayakkabilari"">Kişi Ayaqqabıları</a></td>     
+                           <td class="anaMenu" width="160"><a href="qadin-ayakkabilari">Qadın Ayaqqabıları</a></td>   
+                           <td class="anaMenu" width="140px"><a href="ushaq-ayakkabilari">Uşaq Ayaqqabıları</a></td>             
                         </tr>
                      </table>
                   </td>        
@@ -117,27 +120,27 @@
 
             <table bgcolor="#F9F9F9" width="1065"  align="center" border="0" cellpadding="0" cellspacing="0">
                <tr height="30">
-                  <td style="border-bottom: 1px dashed #CCCCCC;" width="250">&nbsp;<b>Kurumsal</b></td>   
+                  <td style="border-bottom: 1px dashed #CCCCCC;" width="250">&nbsp;<b>Qurumsal</b></td>   
                   <td width="22" width="20" width="">&nbsp;</td> 
-                  <td style="border-bottom: 1px dashed #CCCCCC;" width="250"><b>Üyelik & Hizmetler</b></td> 
+                  <td style="border-bottom: 1px dashed #CCCCCC;" width="250"><b>Üzvlük və Xidmətlər</b></td> 
                   <td width="22" width="20" width="">&nbsp;</td> 
-                  <td style="border-bottom: 1px dashed #CCCCCC;" width="250"><b>Sözleşmeler</b></td> 
+                  <td style="border-bottom: 1px dashed #CCCCCC;" width="250"><b>Müqavilələr</b></td> 
                   <td width="21" width="20" width="">&nbsp;</td> 
-                  <td style="border-bottom: 1px dashed #CCCCCC;" width="250"><b>Bizi takib edin</b></td>      
+                  <td style="border-bottom: 1px dashed #CCCCCC;" width="250"><b>Bizi izləyin</b></td>      
                </tr>
                <tr height="30">
-                  <td class="footer">&nbsp;<a href="hakkimizda">Hakkımızda</a></td>   
+                  <td class="footer">&nbsp;<a href="hakkimizda">Haqqımızda</a></td>   
                   <td>&nbsp;</td>
                   <?php
                      if(isset($_SESSION["userName"])) {?>
                         <td class="footer"><a href="user-bilgileri">Hesabım</a></td> 
                      <?php  } else {   ?> 
-                        <td class="footer"><a href="user-enter">Giriş Yap</a></td> 
+                        <td class="footer"><a href="user-enter">Daxil Ol</a></td> 
                   <?php }
                   ?> 
                   
                   <td>&nbsp;</td> 
-                  <td class="footer"><a href="uyelikSozlezmesi">Üyelik Sözleşmesi</a></td> 
+                  <td class="footer"><a href="uyelikSozlezmesi">Üzvlük Müqaviləsi</a></td> 
                   <td>&nbsp;</td> 
                   <td>
 
@@ -152,18 +155,18 @@
                   </td>      
                </tr>
                <tr height="30">
-                  <td class="footer">&nbsp;<a href="bankaheshablarimiz">Banka Hesaplarımız</a></td>   
+                  <td class="footer">&nbsp;<a href="bankaheshablarimiz">Bank hesablarımız</a></td>   
                   <td>&nbsp;</td> 
                   <?php
                      if(isset($_SESSION["userName"])) {  ?>
-                           <td class="footer"><a href="index.php?sayfaKodu=32">Çıkış Yap</a></td> 
+                           <td class="footer"><a href="index.php?sayfaKodu=32">Çıxış</a></td> 
                      <?php } else {  ?>
-                        <td class="footer"><a href="qeydiyyat">Yeni Üye Ol</a></td> 
+                        <td class="footer"><a href="qeydiyyat">Yeni Üzv Olun</a></td> 
                      <?php  }
                   ?>
                   
                   <td>&nbsp;</td> 
-                  <td class="footer"><a href="istifadeqaydalari">Kullanım Koşulları</a></td> 
+                  <td class="footer"><a href="istifadeqaydalari">İstifadə qaydaları</a></td> 
                   <td>&nbsp;</td> 
                   <td>
                      
@@ -178,11 +181,11 @@
                   </td>      
                </tr>
                <tr height="30">
-                  <td class="footer">&nbsp;<a href="havaleBildirimleriFormu">Havale Bildirim Formu</a></td>   
+                  <td class="footer">&nbsp;<a href="havaleBildirimleriFormu">Köçürmə bildiriş forması</a></td>   
                   <td>&nbsp;</td> 
-                  <td class="footer"><a href="faq">Sık Sorulan Sorular</a></td> 
+                  <td class="footer"><a href="faq">Tez-tez soruşulan suallar</a></td> 
                   <td>&nbsp;</td> 
-                  <td class="footer"><a href="gizliliksozlesmeshi">Gizlilik Sözleşmesi</a></td> 
+                  <td class="footer"><a href="gizliliksozlesmeshi">Məxfilik müqaviləsi</a></td> 
                   <td>&nbsp;</td> 
                   <td>
                      <table width="250" align="center" border="0" cellpadding="0" cellspacing="0">
@@ -196,11 +199,11 @@
                   </td>      
                </tr>
                <tr height="30">
-                  <td class="footer">&nbsp;<a href="kargomhardadi">Kargo Nerede?</a></td>   
+                  <td class="footer">&nbsp;<a href="kargomhardadi">Kargo Haradadır?</a></td>   
                   <td>&nbsp;</td> 
                   <td></td> 
                   <td>&nbsp;</td> 
-                  <td class="footer"><a href="meshafelisatissozlesmesi">Mesafeli Satış Sözleşmesi</a></td> 
+                  <td class="footer"><a href="meshafelisatissozlesmesi">Məsafəli satış müqaviləsi</a></td> 
                   <td>&nbsp;</td> 
                   <td>
                      <table width="250" align="center" border="0" cellpadding="0" cellspacing="0">
@@ -214,11 +217,11 @@
                   </td>      
                </tr>
                <tr height="30">
-                  <td class="footer">&nbsp;<a href="iletishim">İletişim</a></td>   
+                  <td class="footer">&nbsp;<a href="iletishim">Əlaqə</a></td>   
                   <td>&nbsp;</td> 
                   <td></td> 
                   <td>&nbsp;</td> 
-                  <td class="footer"><a href="teslimat">Teslimat</a></td> 
+                  <td class="footer"><a href="teslimat">Çatdırılma</a></td> 
                   <td>&nbsp;</td> 
                   <td>
                      <table width="250" align="center" border="0" cellpadding="0" cellspacing="0">
@@ -236,7 +239,7 @@
                   <td>&nbsp;</td> 
                   <td></td> 
                   <td>&nbsp;</td> 
-                  <td class="footer"><a href="iptalIade">İptal & İyade & Deyişim</a></td> 
+                  <td class="footer"><a href="iptalIade">İmtina & Qaytarmaq & Dəyişim</a></td> 
                   <td>&nbsp;</td> 
                   <td>
                      <table width="250" align="center" border="0" cellpadding="0" cellspacing="0">

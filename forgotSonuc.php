@@ -17,7 +17,7 @@
       $fetchNullRow = $fetchNull->rowCount();
       $users = $fetchNull->fetch(PDO::FETCH_ASSOC);
       if($fetchNullRow > 0) {
-         $link = $siteAdresi."index.php?sayfaKodu=30&email=".$users["email"]."&activationCode=".$users["activationCode"];
+         $link = $siteAdresi."/index.php?sayfaKodu=30&email=".$users["email"]."&activationCode=".$users["activationCode"];
          $MailIcerigiHazirla = "Xoş günlər cənab ".$users["full_name"].  "</br>".
          "saytımıza maraq göstərdiyiniz üçün sizə təşəkkür edirik". "</br>".
          "öz şifrenizi deyişmek için <a href=\"$link\">tıklayın</a>";

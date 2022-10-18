@@ -53,7 +53,7 @@
                <a href="sex/deyis">Cinsi Güncelle</a>   
             </div>
             <div class="mb-3">
-               <label for="exampleInputPassword1" class="form-label">Kayıt Tarihi</label>
+               <label for="exampleInputPassword1" class="form-label"> Tarihi</label>
                <input disabled type="text" value="<?=registrDate($registrationDate)?>" required name="regDate" class="form-control" id="exampleInputPassword1">
             </div>
             <div class="mb-3">

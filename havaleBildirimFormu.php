@@ -5,12 +5,12 @@
 ?>
 <div class="havaleWrapper">
    <div class="havaleWrapper__form">
-      <h4 class="havaleWrapper__form__title">Havale Bildirim Formu</h4>
-      <div class="havaleWrapper__form__subtitle">Tamamlanmış Olan Ödeme İşlemlerinizi Aşağıdakı Formdan İletiniz</div>
+      <h4 class="havaleWrapper__form__title">Köçürmə bildiriş forması</h4>
+      <div class="havaleWrapper__form__subtitle">Tamamlanmış Ödəniş Əməliyyatlarınızı Aşağıdakı Formadan Göndərin</div>
       <form action="index.php?sayfaKodu=10" method="post">
 
             <div class="mb-3">
-               <label for="exampleInputEmail1" class="form-label">İsim Soyisim (*)</label>
+               <label for="exampleInputEmail1" class="form-label">Ad Soyad (*)</label>
                <input type="text" name="full_name" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
@@ -18,11 +18,11 @@
                <input type="email" required name="email" class="form-control" id="exampleInputPassword1">
             </div>
             <div class="mb-3">
-               <label for="exampleInputPassword1" class="form-label">Telefon Numarası (*)</label>
+               <label for="exampleInputPassword1" class="form-label">Telefon Nömrəsi (*)</label>
                <input type="text" required name="phone" class="form-control" id="exampleInputPassword1">
             </div>
             <div class="mb-3">
-               <label for="Select" required class="form-label">Ödeme Yapılan Banka (*)</label>
+               <label for="Select" required class="form-label">Ödeme Edilən Bank (*)</label>
                <select name="bank" id="Select" class="form-select">
                   <?php
                      $fethHavale = $db->prepare("SELECT * FROM bankahesablarimiz");
@@ -38,55 +38,55 @@
                </select>
             </div>
             <div class="mb-3">
-               <label for="floatingTextarea2" class="form-label">Açıklama</label>
+               <label for="floatingTextarea2" class="form-label">Açıqlama</label>
                <textarea name="text" class="form-control"  id="floatingTextarea2" style="height: 100px"></textarea>
             </div>
-            <button type="submit" class="btn btn-success">Bildirimi Gönder</button>
+            <button type="submit" class="btn btn-success">Bildirişi Gönder</button>
 
       </form>
    </div>
    <div class="havaleWrapper__desc">
       <?php
-      echo "l"?>
-      <h4 class="havaleWrapper__form__title">İşleyiş</h4>
-      <div class="havaleWrapper__form__subtitle">Havale / EFT İşlemlerinin Kontrölü</div>
+     ?>
+      <h4 class="havaleWrapper__form__title">Mexanizm</h4>
+      <div class="havaleWrapper__form__subtitle">Pul köçürmələri / EFT əməliyyatlarına nəzarət</div>
       <div class="havaleWrapper__desc__item">
          <div class="havaleWrapper__desc__item__title">
             <img src="assets/images/Banka20x20.png" alt="">
-            Havale / EFT İşlemli
+            Pul köçürmə / EFT əməliyyatı
          </div>
          <div class="havaleWrapper__desc__item__desc">
-            Müşteri tarafından öncelikle banka hesaplarımız sayfasında bulunan herhangi bir hesaba ödeme işlemi gerçekleşdirilir.
+         Müştəri əvvəlcə bank hesabları səhifəsində istənilən hesaba ödəniş edir.
          </div>
       </div>
 
       <div class="havaleWrapper__desc__item">
          <div class="havaleWrapper__desc__item__title">
             <img src="assets/images/DokumanKirmiziKalemli20x20.png" alt="">
-            Bildirim İşlemi
+            Bildiriş Prosesi
          </div>
          <div class="havaleWrapper__desc__item__desc">
-            Ödeme işleminizi tamamladıktan sonra "Hevale Bildirim Formu" sayfasından müşteri yapmış olduğu ödeme için bildirim formunu doldurarak onlineolarak gönderir.
+         Müştəri ödəniş əməliyyatınızı tamamladıqdan sonra etdiyi ödəniş üçün bildiriş formasını dolduraraq “Hevale Bildiriş Formu” səhifəsindən onlayn göndərir.
          </div>
       </div>
 
       <div class="havaleWrapper__desc__item">
          <div class="havaleWrapper__desc__item__title">
             <img src="assets/images/CarklarSiyah20x20.png" alt="">
-            Kontroller
+            Nəzarətlər
          </div>
          <div class="havaleWrapper__desc__item__desc">
-            "Hevale Bildirim Formu"nuz tarafımıza ulaşdığı anda ilgili departman tarafından yapmış olduğunuz hevale / EFT işlemi ilgili banka üzerinden kontrol edilir.
+         “Köçürmə Bildiriş Formunuz bizə çatan kimi müvafiq şöbə tərəfindən etdiyiniz pul köçürmə/EFT əməliyyatı müvafiq bank vasitəsilə yoxlanılır.
          </div>
       </div>
 
       <div class="havaleWrapper__desc__item">
          <div class="havaleWrapper__desc__item__title">
             <img src="assets/images/InsanlarSiyah20x20.png" alt="">
-            Onay / Red
+            Təsdiq / Rədd etmə
          </div>
          <div class="havaleWrapper__desc__item__desc">
-            Hevale bildirimi ge,erli ise, yani hesaba ödeme geçmiş ise, yönetici ilgili ödeme onayını vererek, siparişinizi teslimat birimine iletir.
+         Pul köçürmə bildirişi etibarlıdırsa, yəni hesab ödənilibsə, menecer müvafiq ödəniş təsdiqini verir və sifarişinizi çatdırılma bölməsinə yönləndirir.
          </div>
       </div>
 
@@ -94,10 +94,10 @@
       <div class="havaleWrapper__desc__item">
          <div class="havaleWrapper__desc__item__title">
             <img src="assets/images/SaatEsnetikGri20x20.png" alt="">
-            Sipariş Hazırlama & Teslimat
+            Sifarişin Hazırlanması və Çatdırılması
          </div>
          <div class="havaleWrapper__desc__item__desc">
-            Yönetici ödeme onayından sonra sayfamız üzrinden vermiş olduğunuz sipariş en kısa sürede hazırlanarak kargoya teslim edilir və tarafınıza ulaştırılır.
+         Menecer ödənişi təsdiqlədikdən sonra səhifəmizdə yerləşdirdiyiniz sifariş ən qısa zamanda hazırlanaraq yükə çatdırılaraq sizə çatdırılacaq.
          </div>
       </div>
    </div>

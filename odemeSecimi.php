@@ -22,8 +22,7 @@
    } else {
       header("Location: index.php");
    }
-   echo $_POST["adres"];
-   echo $_POST["kargoId"];
+   
    if(isset($_POST["adres"]) && isset($_POST["kargoId"])) {
       $adres = $_POST["adres"];
       $kargoId = $_POST["kargoId"];
@@ -39,12 +38,12 @@
 <form action="index.php?sayfaKodu=62" method="post">
    <div class="cartWrapper">
       <div class="cartWrapper__details">
-         <h5 class="cartWrapper__title">Alışveriş Sepeti</h5>
-         <div class="cartWrapper__subtitle">Ödeme Türü Seçimini Aşağıdan Belirtebilirsin.</div>
+         <h5 class="cartWrapper__title">Alışveriş Səbəti</h5>
+         <div class="cartWrapper__subtitle">Ödeme Növü Seçimini Aşağıdan Edəbilərsiniz.</div>
          <hr>
    
          <div class="cartKargoWrapper">
-            <h5 class="cartWrapper__details__adress__title">Ödeme Türü Seçimi</h5>
+            <h5 class="cartWrapper__details__adress__title">Ödeme Növü Seçimi</h5>
             <div class="turWrapper">
                <div class="kart">
                   <img src="assets/images/KrediKarti92x75.png" alt="">
@@ -58,8 +57,8 @@
                </div>
             </div>
             <div class="kart__content content">
-               <h5 class="cartWrapper__details__adress__title">Kredi Kartı ile Ödeme</h5> 
-               Ödeme işleminizde aşağıdakı tüm kredi kartı markaları ile veya diğer markalar ile veya ATM(Bankamatik) kartı ile işlem yapabilirsiniz.
+               <h5 class="cartWrapper__details__adress__title">Kredit Kartı ile Ödeme</h5> 
+                  Ödəniş əməliyyatınızda aşağıdakı bütün kredit kartı markaları və ya digər markalarla və ya ATM (Debet) kartı ilə əməliyyatlar edə bilərsiniz.
                <div class="kart__content__wrapper">
                   <div class="kart__content__wrapper__item">
                      <img src="assets/images/AxessCard46x12.png" alt="">

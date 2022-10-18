@@ -38,11 +38,11 @@
       $slotYoxla->execute([$urunVariant]);
       $slotCount = $slotYoxla->rowCount();
       $slot=$slotYoxla->fetch(PDO::FETCH_ASSOC);
-      
+     
       if($urunSayi>$slot["stokAdedi"]) {
          $_SESSION["goodDetailsMess"] = "Hazırda stokda bu məhsuldan istədiyiniz sayda yoxdur";
          header("Location: $backLink/$urunAdi/$urunId");
-
+         exit();
       }
 
       
